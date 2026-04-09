@@ -1,0 +1,875 @@
+/* ============================================================
+   VB Analyzer — Volleyball Analytics Dashboard
+   Dark Navy Theme with Cyan Accents
+   ============================================================ */
+
+/* ---------- CSS Variables ---------- */
+:root {
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --surface2: #273549;
+  --border: #334155;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+  --green: #4ade80;
+  --red: #f87171;
+  --gold: #fbbf24;
+  --radius: 8px;
+
+  /* Derived */
+  --accent-dim: rgba(56, 189, 248, 0.12);
+  --accent-glow: rgba(56, 189, 248, 0.25);
+  --green-dim: rgba(74, 222, 128, 0.12);
+  --red-dim: rgba(248, 113, 113, 0.12);
+  --gold-dim: rgba(251, 191, 36, 0.12);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --nav-height: 60px;
+  --max-width: 1200px;
+  --transition: 0.15s ease;
+}
+
+/* ---------- Reset & Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  padding-top: var(--nav-height);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+/* ---------- Subtle Background Texture ---------- */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(56, 189, 248, 0.06), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 100%, rgba(56, 189, 248, 0.03), transparent);
+}
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: var(--nav-height);
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+}
+
+nav .nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.nav-logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-logo .logo-icon {
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, var(--accent), #818cf8);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #0f172a;
+  font-weight: 800;
+}
+
+.nav-tabs {
+  display: flex;
+  gap: 4px;
+  list-style: none;
+}
+
+.nav-tabs a {
+  display: block;
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  border-radius: var(--radius) var(--radius) 0 0;
+  transition: color var(--transition), border-color var(--transition), background var(--transition);
+  position: relative;
+}
+
+.nav-tabs a:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.04);
+  text-decoration: none;
+}
+
+.nav-tabs a.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+.main-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 28px 24px 60px;
+}
+
+.page-header {
+  margin-bottom: 28px;
+}
+
+.page-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.page-subtitle {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* ---------- Grid Helpers ---------- */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* ---------- Flex Row ---------- */
+.flex-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.flex-row > * {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ============================================================
+   CARD
+   ============================================================ */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition), border-color var(--transition);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+/* ============================================================
+   SECTION TITLES
+   ============================================================ */
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+/* ============================================================
+   KPI CARDS
+   ============================================================ */
+.kpi-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.kpi-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  flex: 1;
+  min-width: 140px;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.kpi-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.kpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.kpi-card:hover::before {
+  opacity: 1;
+}
+
+.kpi-value {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.kpi-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* KPI color variants */
+.kpi-card.green .kpi-value { color: var(--green); }
+.kpi-card.green:hover { border-color: rgba(74, 222, 128, 0.3); }
+.kpi-card.green::before { background: var(--green); }
+
+.kpi-card.red .kpi-value { color: var(--red); }
+.kpi-card.red:hover { border-color: rgba(248, 113, 113, 0.3); }
+.kpi-card.red::before { background: var(--red); }
+
+.kpi-card.gold .kpi-value { color: var(--gold); }
+.kpi-card.gold:hover { border-color: rgba(251, 191, 36, 0.3); }
+.kpi-card.gold::before { background: var(--gold); }
+
+/* ============================================================
+   DATA TABLE
+   ============================================================ */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.data-table thead th {
+  text-align: left;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.data-table thead th.num {
+  text-align: right;
+}
+
+.data-table tbody tr {
+  transition: background var(--transition);
+}
+
+.data-table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.data-table tbody tr:hover {
+  background: rgba(56, 189, 248, 0.06);
+}
+
+.data-table tbody td {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(51, 65, 85, 0.4);
+  color: var(--text);
+  vertical-align: middle;
+}
+
+.sortable {
+  cursor: pointer;
+  position: relative;
+}
+
+.sortable:hover {
+  color: var(--accent);
+}
+
+.sortable::after {
+  content: "⇅";
+  margin-left: 4px;
+  font-size: 0.65rem;
+  opacity: 0.5;
+}
+
+.sortable.asc::after {
+  content: "↑";
+  opacity: 1;
+  color: var(--accent);
+}
+
+.sortable.desc::after {
+  content: "↓";
+  opacity: 1;
+  color: var(--accent);
+}
+
+/* ---------- Numeric cells ---------- */
+.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* ---------- Muted ---------- */
+.muted {
+  color: var(--muted);
+}
+
+/* ============================================================
+   BADGES
+   ============================================================ */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 3px 10px;
+  border-radius: 999px;
+  line-height: 1.4;
+}
+
+.badge-win {
+  background: var(--green-dim);
+  color: var(--green);
+}
+
+.badge-loss {
+  background: var(--red-dim);
+  color: var(--red);
+}
+
+/* ============================================================
+   GAME STATE PILLS
+   ============================================================ */
+.game-state-pill {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.state-winning-big {
+  background: rgba(74, 222, 128, 0.18);
+  color: #4ade80;
+}
+
+.state-winning {
+  background: rgba(74, 222, 128, 0.10);
+  color: #86efac;
+}
+
+.state-close {
+  background: rgba(148, 163, 184, 0.12);
+  color: #94a3b8;
+}
+
+.state-losing {
+  background: rgba(248, 113, 113, 0.10);
+  color: #fca5a5;
+}
+
+.state-losing-big {
+  background: rgba(248, 113, 113, 0.18);
+  color: #f87171;
+}
+
+/* ============================================================
+   PILL ROW
+   ============================================================ */
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: var(--surface2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.pill:hover {
+  background: rgba(56, 189, 248, 0.08);
+  border-color: var(--accent);
+}
+
+.pill.active {
+  background: var(--accent-dim);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ============================================================
+   PLAYER PILL (multi-select)
+   ============================================================ */
+.player-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 5px 8px 5px 14px;
+  border-radius: 999px;
+  background: var(--accent-dim);
+  color: var(--accent);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.pill-remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--accent);
+  font-size: 0.7rem;
+  cursor: pointer;
+  border: none;
+  line-height: 1;
+  transition: background var(--transition);
+}
+
+.pill-remove:hover {
+  background: rgba(56, 189, 248, 0.3);
+}
+
+/* ============================================================
+   DROPDOWN
+   ============================================================ */
+.dropdown {
+  appearance: none;
+  background: var(--surface2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px 36px 8px 14px;
+  font-size: 0.875rem;
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%2394a3b8' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.dropdown:hover {
+  border-color: var(--accent);
+}
+
+.dropdown:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+}
+
+.dropdown option {
+  background: var(--surface);
+  color: var(--text);
+}
+
+/* ============================================================
+   CLUTCH COMPARISON BARS
+   ============================================================ */
+.clutch-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.clutch-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.clutch-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.clutch-bar-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  height: 28px;
+}
+
+.clutch-bar {
+  height: 100%;
+  border-radius: 4px;
+  min-width: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 8px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  transition: width 0.4s ease;
+}
+
+.clutch-bar.clutch {
+  background: linear-gradient(90deg, var(--accent), #818cf8);
+}
+
+.clutch-bar.normal {
+  background: var(--surface2);
+  color: var(--muted);
+}
+
+.clutch-legend {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.legend-dot.clutch {
+  background: linear-gradient(90deg, var(--accent), #818cf8);
+}
+
+.legend-dot.normal {
+  background: var(--surface2);
+}
+
+/* ============================================================
+   BEST VALUE HIGHLIGHT
+   ============================================================ */
+.best-value {
+  color: var(--gold);
+  font-weight: 700;
+  position: relative;
+}
+
+.best-value::after {
+  content: "";
+  position: absolute;
+  inset: -2px -6px;
+  background: var(--gold-dim);
+  border-radius: 4px;
+  z-index: -1;
+}
+
+/* ============================================================
+   PLOTLY CHART CONTAINERS
+   ============================================================ */
+.chart-container {
+  width: 100%;
+  min-height: 300px;
+}
+
+/* Plotly overrides for dark theme */
+.js-plotly-plot .plotly .modebar {
+  right: 8px !important;
+}
+
+/* ============================================================
+   LOADING / EMPTY STATES
+   ============================================================ */
+.loading-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.loading-placeholder::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  margin-right: 10px;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ============================================================
+   SECTION SPACING
+   ============================================================ */
+.section {
+  margin-bottom: 24px;
+}
+
+/* ============================================================
+   ANIMATIONS — Staggered Load
+   ============================================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: fadeInUp 0.4s ease forwards;
+  opacity: 0;
+}
+
+.animate-in:nth-child(1) { animation-delay: 0.05s; }
+.animate-in:nth-child(2) { animation-delay: 0.10s; }
+.animate-in:nth-child(3) { animation-delay: 0.15s; }
+.animate-in:nth-child(4) { animation-delay: 0.20s; }
+.animate-in:nth-child(5) { animation-delay: 0.25s; }
+.animate-in:nth-child(6) { animation-delay: 0.30s; }
+
+/* ============================================================
+   RESPONSIVE — 768px
+   ============================================================ */
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 56px;
+  }
+
+  nav {
+    padding: 0 16px;
+  }
+
+  .nav-logo {
+    font-size: 1.1rem;
+  }
+
+  .nav-tabs a {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  .main-content {
+    padding: 20px 16px 40px;
+  }
+
+  .page-title {
+    font-size: 1.35rem;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .kpi-row {
+    flex-direction: column;
+  }
+
+  .kpi-card {
+    min-width: unset;
+  }
+
+  .flex-row {
+    flex-direction: column;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .kpi-value {
+    font-size: 1.6rem;
+  }
+
+  .data-table {
+    font-size: 0.8rem;
+  }
+
+  .data-table thead th,
+  .data-table tbody td {
+    padding: 8px;
+  }
+}
+
+/* ============================================================
+   TABLE WRAPPER (horizontal scroll on mobile)
+   ============================================================ */
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ============================================================
+   UTILITY
+   ============================================================ */
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.mt-0 { margin-top: 0; }
+.mb-0 { margin-bottom: 0; }
+.mt-1 { margin-top: 8px; }
+.mb-1 { margin-bottom: 8px; }
+.mt-2 { margin-top: 16px; }
+.mb-2 { margin-bottom: 16px; }
+.mt-3 { margin-top: 24px; }
+.mb-3 { margin-bottom: 24px; }
+.gap-sm { gap: 12px; }
+.gap-md { gap: 20px; }
+.gap-lg { gap: 28px; }

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VB Analyzer — Player Detail</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.plot.ly/plotly-2.35.0.min.js"></script>
+</head>
+<body>
+
+  <!-- ======== NAVIGATION ======== -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="logo-icon">VB</span>
+        VB Analyzer
+      </div>
+      <div class="nav-tabs">
+        <a href="index.html">Overview</a>
+        <a href="players.html">Players</a>
+        <a href="comparison.html">Comparison</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======== MAIN CONTENT ======== -->
+  <main class="main-content">
+
+    <!-- Page Header -->
+    <header class="page-header">
+      <h1 class="page-title">Player Detail</h1>
+      <p class="page-subtitle">Individual statistics, clutch performance, and season trends</p>
+    </header>
+
+    <!-- Player Selector -->
+    <section class="section">
+      <div class="card">
+        <div id="player-selector">
+          <label class="section-label" for="player-dropdown">Select Player</label>
+          <!-- JS populates dropdown here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Player KPI Row -->
+    <section class="section">
+      <div id="player-kpis" class="kpi-row">
+        <!-- JS populates KPI cards here -->
+      </div>
+    </section>
+
+    <!-- Clutch + Game State (side by side) -->
+    <section class="section grid-2">
+      <div class="card">
+        <h2 class="section-title">Clutch Comparison</h2>
+        <div id="clutch-comparison"></div>
+      </div>
+      <div class="card">
+        <h2 class="section-title">Performance by Game State</h2>
+        <div id="player-game-state-chart" class="chart-container"></div>
+      </div>
+    </section>
+
+    <!-- Season Progression -->
+    <section class="section">
+      <div class="card">
+        <h2 class="section-title">Season Progression</h2>
+        <div id="season-progression-chart" class="chart-container"></div>
+      </div>
+    </section>
+
+    <!-- Consistency Index -->
+    <section class="section">
+      <div class="card">
+        <h2 class="section-title">Consistency Index</h2>
+        <div id="consistency-index"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/app.js"></script>
+  <script src="js/players.js"></script>
+</body>
+</html>

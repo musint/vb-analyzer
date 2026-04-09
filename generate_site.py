@@ -1,6 +1,7 @@
 """Generate static site data from cached match data."""
 
 import json
+import math
 import sys
 from pathlib import Path
 
@@ -11,6 +12,17 @@ from analytics.core import build_all
 from analytics.team import team_kpis, sideout_by_category
 
 SITE_DATA_DIR = Path(__file__).parent / "site" / "data"
+
+
+def _sanitize(obj):
+    """Recursively replace NaN/Infinity with None for valid JSON."""
+    if isinstance(obj, float) and (math.isnan(obj) or math.isinf(obj)):
+        return None
+    if isinstance(obj, dict):
+        return {k: _sanitize(v) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [_sanitize(v) for v in obj]
+    return obj
 
 
 def generate_overview(dfs):
@@ -303,17 +315,17 @@ def main():
 
     SITE_DATA_DIR.mkdir(parents=True, exist_ok=True)
 
-    overview = generate_overview(dfs)
+    overview = _sanitize(generate_overview(dfs))
     with open(SITE_DATA_DIR / "overview.json", "w") as f:
         json.dump(overview, f, indent=2, default=str)
     print("Generated overview.json", file=sys.stderr)
 
-    players = generate_players(dfs)
+    players = _sanitize(generate_players(dfs))
     with open(SITE_DATA_DIR / "players.json", "w") as f:
         json.dump(players, f, indent=2, default=str)
     print("Generated players.json", file=sys.stderr)
 
-    comparison = generate_comparison(dfs)
+    comparison = _sanitize(generate_comparison(dfs))
     with open(SITE_DATA_DIR / "comparison.json", "w") as f:
         json.dump(comparison, f, indent=2, default=str)
     print("Generated comparison.json", file=sys.stderr)

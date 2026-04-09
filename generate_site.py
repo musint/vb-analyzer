@@ -10,7 +10,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from data.loader import load_from_cache
 from analytics.core import build_all
 from analytics.team import team_kpis, sideout_by_category, detect_runs, run_triggers
-from analytics.advanced import expected_sideout_by_pass, serve_pressure_index, momentum_data, win_probability_table
+from analytics.advanced import expected_sideout_by_pass, momentum_data, win_probability_table
 from analytics.player import (
     player_season_stats, clutch_comparison, consistency_index,
     season_progression, player_stats_filtered, in_system_efficiency,
@@ -183,16 +183,44 @@ def generate_players(dfs):
         }
 
     clutch_df = clutch_comparison(actions_df)
+    # Get srv_total per player for clutch and non-clutch
+    clutch_stats = player_stats_filtered(actions_df, "is_clutch", True)
+    non_clutch_stats = player_stats_filtered(actions_df, "is_clutch", False)
+    clutch_srv_total = clutch_stats.set_index("player")["srv_total"] if not clutch_stats.empty else {}
+    non_clutch_srv_total = non_clutch_stats.set_index("player")["srv_total"] if not non_clutch_stats.empty else {}
+
     clutch_by_player = {}
     if not clutch_df.empty:
         for _, row in clutch_df.iterrows():
             p = row["player"]
             clutch_by_player[p] = {}
-            for col in ["hitting_eff", "kill_pct", "pass_avg", "aces", "srv_errors"]:
+            for col in ["hitting_eff", "kill_pct", "pass_avg"]:
                 c_val = row.get(f"{col}_clutch")
                 nc_val = row.get(f"{col}_non_clutch")
                 clutch_by_player[p][f"{col}_clutch"] = float(c_val) if c_val is not None and str(c_val) != "nan" else None
                 clutch_by_player[p][f"{col}_non_clutch"] = float(nc_val) if nc_val is not None and str(nc_val) != "nan" else None
+
+            # Compute ace% and srv_error% for clutch vs non-clutch
+            aces_c = row.get("aces_clutch")
+            aces_nc = row.get("aces_non_clutch")
+            srv_err_c = row.get("srv_errors_clutch")
+            srv_err_nc = row.get("srv_errors_non_clutch")
+            srv_tot_c = clutch_srv_total.get(p) if hasattr(clutch_srv_total, "get") else (clutch_srv_total[p] if p in clutch_srv_total else None)
+            srv_tot_nc = non_clutch_srv_total.get(p) if hasattr(non_clutch_srv_total, "get") else (non_clutch_srv_total[p] if p in non_clutch_srv_total else None)
+
+            def _safe(num, denom):
+                try:
+                    if num is None or denom is None or str(num) == "nan" or str(denom) == "nan" or float(denom) == 0:
+                        return None
+                    return round(float(num) / float(denom) * 100, 2)
+                except Exception:
+                    return None
+
+            clutch_by_player[p]["ace_pct_clutch"] = _safe(aces_c, srv_tot_c)
+            clutch_by_player[p]["ace_pct_non_clutch"] = _safe(aces_nc, srv_tot_nc)
+            clutch_by_player[p]["srv_err_pct_clutch"] = _safe(srv_err_c, srv_tot_c)
+            clutch_by_player[p]["srv_err_pct_non_clutch"] = _safe(srv_err_nc, srv_tot_nc)
+
             cr = row.get("clutch_rating")
             clutch_by_player[p]["clutch_rating"] = float(cr) if cr is not None and str(cr) != "nan" else None
 
@@ -255,6 +283,19 @@ def generate_players(dfs):
                 "matches": len(pass_per_match),
             }
 
+    # Add rankings to consistency scores per skill
+    for skill in ["hitting", "serving", "passing"]:
+        scored = [
+            (p, data[skill]["score"])
+            for p, data in consistency_by_player.items()
+            if skill in data
+        ]
+        scored.sort(key=lambda x: x[1], reverse=True)
+        total_ranked = len(scored)
+        for rank, (p, _) in enumerate(scored, start=1):
+            consistency_by_player[p][skill]["rank"] = rank
+            consistency_by_player[p][skill]["total_ranked"] = total_ranked
+
     prog = season_progression(actions_df)
     progression_by_player = {}
     for player, pdf in prog.items():
@@ -293,20 +334,6 @@ def generate_players(dfs):
                         "srv_total": srv_total,
                     })
 
-    # Serve pressure index per player
-    sp_df = serve_pressure_index(actions_df)
-    serve_pressure = []
-    if not sp_df.empty:
-        for _, row in sp_df.iterrows():
-            serve_pressure.append({
-                "player": row["player"],
-                "serves": int(row["serves"]),
-                "aces": int(row["aces"]),
-                "srv_errors": int(row["srv_errors"]),
-                "pressure_serves": int(row["pressure_serves"]),
-                "pressure_pct": float(row["pressure_pct"]),
-            })
-
     # In-system efficiency per player
     is_df = in_system_efficiency(actions_df)
     in_system = {}
@@ -329,7 +356,6 @@ def generate_players(dfs):
         "consistency": consistency_by_player,
         "progression": progression_by_player,
         "game_state": game_state_by_player,
-        "serve_pressure": serve_pressure,
         "in_system": in_system,
     }
 
@@ -340,6 +366,7 @@ def generate_comparison(dfs):
 
     all_stats = player_season_stats(actions_df)
     cons_df = consistency_index(actions_df)
+    clutch_df = clutch_comparison(actions_df)
 
     if all_stats.empty:
         return {"players": [], "radar_metrics": [], "radar_labels": []}
@@ -348,12 +375,14 @@ def generate_comparison(dfs):
 
     metrics_map = {}
     for _, row in all_stats.iterrows():
-        metrics_map[row["player"]] = {
-            "kills": int(row["kills"]),
+        p = row["player"]
+        srv_total = int(row["srv_total"])
+        serving_eff = round(int(row["aces"]) / srv_total * 100, 2) if srv_total > 0 else 0.0
+        metrics_map[p] = {
             "hitting_eff": float(row["hitting_eff"]),
-            "aces": int(row["aces"]),
-            "digs": int(row["digs"]),
+            "serving_eff": serving_eff,
             "pass_avg": float(row["pass_avg"]) if row["pass_avg"] is not None else None,
+            "digs": int(row["digs"]),
         }
 
     if not cons_df.empty:
@@ -362,8 +391,15 @@ def generate_comparison(dfs):
             if p in metrics_map:
                 metrics_map[p]["consistency"] = float(row["consistency_score"])
 
-    radar_metrics = ["kills", "hitting_eff", "aces", "digs", "pass_avg", "consistency"]
-    radar_labels = ["Kills", "Hitting Eff", "Aces", "Digs", "Pass Avg", "Consistency"]
+    if not clutch_df.empty:
+        for _, row in clutch_df.iterrows():
+            p = row["player"]
+            if p in metrics_map:
+                cr = row.get("clutch_rating")
+                metrics_map[p]["clutch_rating"] = float(cr) if cr is not None and str(cr) != "nan" else None
+
+    radar_metrics = ["hitting_eff", "serving_eff", "pass_avg", "digs", "consistency", "clutch_rating"]
+    radar_labels = ["Hitting Eff", "Serving Eff", "Pass Avg", "Digs", "Consistency", "Clutch Rating"]
 
     normalized = {}
     for metric in radar_metrics:
@@ -794,6 +830,42 @@ def generate_zones(dfs):
     }
 
 
+def filter_matches_by_date(matches, after_date=None):
+    """Filter matches to only include those on or after after_date (YYYY-MM-DD string)."""
+    if not after_date:
+        return matches
+    return [m for m in matches if m.get("date", "") >= after_date]
+
+
+def _generate_all(dfs, output_dir):
+    """Generate all JSON files to output_dir."""
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    overview = _sanitize(generate_overview(dfs))
+    with open(output_dir / "overview.json", "w") as f:
+        json.dump(overview, f, indent=2, default=str)
+
+    players = _sanitize(generate_players(dfs))
+    with open(output_dir / "players.json", "w") as f:
+        json.dump(players, f, indent=2, default=str)
+
+    comparison = _sanitize(generate_comparison(dfs))
+    with open(output_dir / "comparison.json", "w") as f:
+        json.dump(comparison, f, indent=2, default=str)
+
+    runs = _sanitize(generate_runs(dfs))
+    with open(output_dir / "runs.json", "w") as f:
+        json.dump(runs, f, indent=2, default=str)
+
+    games = _sanitize(generate_games(dfs))
+    with open(output_dir / "games.json", "w") as f:
+        json.dump(games, f, indent=2, default=str)
+
+    zones = _sanitize(generate_zones(dfs))
+    with open(output_dir / "zones.json", "w") as f:
+        json.dump(zones, f, indent=2, default=str)
+
+
 def main():
     matches = load_from_cache()
     if not matches:
@@ -801,39 +873,18 @@ def main():
         sys.exit(1)
 
     print(f"Loaded {len(matches)} matches from cache.", file=sys.stderr)
-    dfs = build_all(matches)
 
-    SITE_DATA_DIR.mkdir(parents=True, exist_ok=True)
+    # Full dataset
+    dfs_full = build_all(matches)
+    _generate_all(dfs_full, SITE_DATA_DIR / "full")
+    print("Generated full dataset", file=sys.stderr)
 
-    overview = _sanitize(generate_overview(dfs))
-    with open(SITE_DATA_DIR / "overview.json", "w") as f:
-        json.dump(overview, f, indent=2, default=str)
-    print("Generated overview.json", file=sys.stderr)
-
-    players = _sanitize(generate_players(dfs))
-    with open(SITE_DATA_DIR / "players.json", "w") as f:
-        json.dump(players, f, indent=2, default=str)
-    print("Generated players.json", file=sys.stderr)
-
-    comparison = _sanitize(generate_comparison(dfs))
-    with open(SITE_DATA_DIR / "comparison.json", "w") as f:
-        json.dump(comparison, f, indent=2, default=str)
-    print("Generated comparison.json", file=sys.stderr)
-
-    runs = _sanitize(generate_runs(dfs))
-    with open(SITE_DATA_DIR / "runs.json", "w") as f:
-        json.dump(runs, f, indent=2, default=str)
-    print("Generated runs.json", file=sys.stderr)
-
-    games = _sanitize(generate_games(dfs))
-    with open(SITE_DATA_DIR / "games.json", "w") as f:
-        json.dump(games, f, indent=2, default=str)
-    print("Generated games.json", file=sys.stderr)
-
-    zones = _sanitize(generate_zones(dfs))
-    with open(SITE_DATA_DIR / "zones.json", "w") as f:
-        json.dump(zones, f, indent=2, default=str)
-    print("Generated zones.json", file=sys.stderr)
+    # Recent dataset (after Feb 1)
+    recent_matches = filter_matches_by_date(matches, "2026-02-01")
+    if recent_matches:
+        dfs_recent = build_all(recent_matches)
+        _generate_all(dfs_recent, SITE_DATA_DIR / "recent")
+        print(f"Generated recent dataset ({len(recent_matches)} matches after 2026-02-01)", file=sys.stderr)
 
     print("Done! Open site/index.html to view.", file=sys.stderr)
 

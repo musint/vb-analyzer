@@ -377,7 +377,7 @@ def generate_comparison(dfs):
     for _, row in all_stats.iterrows():
         p = row["player"]
         srv_total = int(row["srv_total"])
-        serving_eff = round(int(row["aces"]) / srv_total * 100, 2) if srv_total > 0 else 0.0
+        serving_eff = round((int(row["aces"]) - int(row["srv_errors"])) / srv_total, 3) if srv_total > 0 else 0.0
         metrics_map[p] = {
             "hitting_eff": float(row["hitting_eff"]),
             "serving_eff": serving_eff,
@@ -385,11 +385,38 @@ def generate_comparison(dfs):
             "digs": int(row["digs"]),
         }
 
+    # Consistency for radar = average of hitting and serving consistency scores
     if not cons_df.empty:
+        # cons_df only has hitting consistency; we need serving too
+        # Recompute from the players.json consistency data pattern
+        import numpy as np
+        our_actions = actions_df[actions_df["is_our_team"]].copy()
+        match_order = our_actions.groupby("video_id")["match_date"].first().sort_values()
+
         for _, row in cons_df.iterrows():
             p = row["player"]
-            if p in metrics_map:
-                metrics_map[p]["consistency"] = float(row["consistency_score"])
+            if p not in metrics_map:
+                continue
+            hitting_score = float(row["consistency_score"])
+
+            # Compute serving consistency for this player
+            pdf = our_actions[our_actions["player"] == p]
+            srv_per_match = []
+            for vid in match_order.index:
+                mdf = pdf[(pdf["video_id"] == vid) & (pdf["action_type"] == "serve")]
+                if len(mdf) >= 3:
+                    aces = (mdf["quality"] == "ace").sum()
+                    errs = (mdf["quality"] == "error").sum()
+                    srv_per_match.append((aces - errs) / len(mdf))
+
+            if len(srv_per_match) >= 3:
+                srv_std = float(np.std(srv_per_match))
+                serving_score = round(1 / (1 + srv_std), 3)
+                # Blend: average of hitting and serving
+                metrics_map[p]["consistency"] = round((hitting_score + serving_score) / 2, 3)
+            else:
+                # Only hitting data available
+                metrics_map[p]["consistency"] = hitting_score
 
     if not clutch_df.empty:
         for _, row in clutch_df.iterrows():
@@ -401,6 +428,7 @@ def generate_comparison(dfs):
     radar_metrics = ["hitting_eff", "serving_eff", "pass_avg", "digs", "consistency", "clutch_rating"]
     radar_labels = ["Hitting Eff", "Serving Eff", "Pass Avg", "Digs", "Consistency", "Clutch Rating"]
 
+    # Normalize: min-max scale with floor at 0.2 (worst player = 0.2, best = 1.0)
     normalized = {}
     for metric in radar_metrics:
         values = [metrics_map[p].get(metric) for p in player_list]
@@ -416,9 +444,11 @@ def generate_comparison(dfs):
             if v is None:
                 normalized.setdefault(p, {})[metric] = None
             elif vmax == vmin:
-                normalized.setdefault(p, {})[metric] = 0.5
+                normalized.setdefault(p, {})[metric] = 0.6
             else:
-                normalized.setdefault(p, {})[metric] = round((v - vmin) / (vmax - vmin), 3)
+                # Scale to 0.2-1.0 range (floor at 0.2)
+                raw_norm = (v - vmin) / (vmax - vmin)
+                normalized.setdefault(p, {})[metric] = round(0.2 + raw_norm * 0.8, 3)
 
     colors = ["#38bdf8", "#a78bfa", "#4ade80", "#fbbf24", "#f472b6", "#fb923c", "#f87171", "#34d399"]
 

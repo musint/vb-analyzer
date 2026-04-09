@@ -32,7 +32,8 @@ def player_season_stats(actions_df: pd.DataFrame) -> pd.DataFrame:
         pass_avg = recv_q.mean() if len(recv_q) > 0 else None
         pass_total = len(recv_q)
 
-        digs = len(pdf[pdf["action_type"] == "dig"])
+        dig_actions = pdf[pdf["action_type"] == "dig"]
+        digs = len(dig_actions[dig_actions["quality"] != "error"]) if len(dig_actions) > 0 else 0
         blocks = len(pdf[(pdf["action_type"] == "block") & (pdf["quality"].isin(["kill", "block_kill", "solo"]))])
 
         rows.append({

@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   renderGameStateDefinitions();
   renderGameResults(data.game_results);
   renderSideoutByPhase(data.sideout_by_phase);
+  if (data.expected_sideout) renderExpectedSideout(data.expected_sideout);
 });
 
 // ── 1. KPI Row ───────────────────────────────────────────────
@@ -346,4 +347,29 @@ function renderSideoutByPhase(sideoutByPhase) {
   });
 
   Plotly.newPlot(el, [trace], layout, PLOTLY_CONFIG);
+}
+
+// ── 8. Expected Sideout by Pass Quality ─────────────────────
+function renderExpectedSideout(data) {
+  const el = document.getElementById("expected-sideout-chart");
+  if (!el || !data || !data.length) return;
+
+  const colors = ["#f87171", "#fbbf24", "#86efac", "#4ade80"];
+  const trace = {
+    x: data.map(d => `Pass ${d.pass_quality}`),
+    y: data.map(d => d.sideout_pct),
+    type: "bar",
+    marker: { color: data.map((_, i) => colors[i] || "#38bdf8") },
+    text: data.map(d => d.sideout_pct.toFixed(1) + "%"),
+    textposition: "auto",
+    textfont: { color: "#0f172a", size: 12 },
+    hovertemplate: "%{x}<br>SO%%: %{y:.1f}<br>Rallies: %{customdata}<extra></extra>",
+    customdata: data.map(d => d.rallies),
+  };
+
+  Plotly.newPlot(el, [trace], darkLayout({
+    height: 300,
+    yaxis: { title: "Sideout %", range: [0, 100], ticksuffix: "%" },
+    margin: { t: 24, r: 16, b: 48, l: 56 },
+  }), PLOTLY_CONFIG);
 }

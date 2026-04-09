@@ -167,6 +167,8 @@ def generate_players(dfs):
 
     stats_by_player = {}
     for _, row in all_stats.iterrows():
+        srv_total = int(row["srv_total"])
+        serving_eff = round((int(row["aces"]) - int(row["srv_errors"])) / srv_total, 3) if srv_total > 0 else 0.0
         stats_by_player[row["player"]] = {
             "kills": int(row["kills"]),
             "att_errors": int(row["att_errors"]),
@@ -175,7 +177,8 @@ def generate_players(dfs):
             "kill_pct": float(row["kill_pct"]),
             "aces": int(row["aces"]),
             "srv_errors": int(row["srv_errors"]),
-            "srv_total": int(row["srv_total"]),
+            "srv_total": srv_total,
+            "serving_eff": serving_eff,
             "pass_avg": float(row["pass_avg"]) if row["pass_avg"] is not None else None,
             "pass_total": int(row["pass_total"]),
             "digs": int(row["digs"]),
@@ -251,13 +254,14 @@ def generate_players(dfs):
             continue
         consistency_by_player.setdefault(player, {})
 
-        # Serving consistency: per-match ace%
+        # Serving consistency: per-match serving eff = (aces - errors) / total
         srv_per_match = []
         for vid in match_order.index:
             mdf = pdf[(pdf["video_id"] == vid) & (pdf["action_type"] == "serve")]
             if len(mdf) >= 3:
                 aces = (mdf["quality"] == "ace").sum()
-                srv_per_match.append(aces / len(mdf))
+                errs = (mdf["quality"] == "error").sum()
+                srv_per_match.append((aces - errs) / len(mdf))
         if len(srv_per_match) >= 3:
             std = float(np.std(srv_per_match))
             consistency_by_player[player]["serving"] = {
@@ -323,6 +327,7 @@ def generate_players(dfs):
                     srv_total = int(r["srv_total"])
                     ace_pct = round(r["aces"] / srv_total * 100, 1) if srv_total > 0 else None
                     srv_err_pct = round(r["srv_errors"] / srv_total * 100, 1) if srv_total > 0 else None
+                    serving_eff = round((int(r["aces"]) - int(r["srv_errors"])) / srv_total, 3) if srv_total > 0 else None
                     game_state_by_player[player].append({
                         "situation": sit,
                         "hitting_eff": float(r["hitting_eff"]),
@@ -331,6 +336,7 @@ def generate_players(dfs):
                         "att_total": int(r["att_total"]),
                         "ace_pct": ace_pct,
                         "srv_err_pct": srv_err_pct,
+                        "serving_eff": serving_eff,
                         "srv_total": srv_total,
                     })
 

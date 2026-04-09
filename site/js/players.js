@@ -85,13 +85,14 @@ function renderKPIs(name) {
     ? Number(s.pass_avg).toFixed(3)
     : "N/A";
 
+  const servingEff = s.srv_total > 0 ? (s.aces - s.srv_errors) / s.srv_total : 0;
   const cards = [
-    { label: "Kills",       value: s.kills ?? "—",                      color: "green" },
-    { label: "Hitting Eff", value: Number(s.hitting_eff).toFixed(3),    color: s.hitting_eff >= 0.2 ? "green" : s.hitting_eff >= 0.1 ? "gold" : "red" },
-    { label: "Aces",        value: s.aces ?? "—",                       color: "gold" },
-    { label: "Digs",        value: s.digs ?? "—",                       color: "" },
-    { label: "Pass Avg",    value: passDisplay,                         color: "" },
-    { label: "Errors",      value: totalErrors,                         color: totalErrors > 20 ? "red" : "" },
+    { label: "Kills",        value: s.kills ?? "—",                      color: "green" },
+    { label: "Hitting Eff",  value: Number(s.hitting_eff).toFixed(3),    color: s.hitting_eff >= 0.2 ? "green" : s.hitting_eff >= 0.1 ? "gold" : "red" },
+    { label: "Serving Eff",  value: servingEff.toFixed(3),               color: servingEff >= 0.05 ? "green" : servingEff >= 0 ? "gold" : "red" },
+    { label: "Digs",         value: s.digs ?? "—",                       color: "" },
+    { label: "Pass Avg",     value: passDisplay,                         color: "" },
+    { label: "Errors",       value: totalErrors,                         color: totalErrors > 20 ? "red" : "" },
   ];
 
   cards.forEach(({ label, value, color }) => {
@@ -193,7 +194,7 @@ function renderGameStateHitting(name) {
     hovertemplate: "%{x}<br>Eff: %{y:.3f}<br>Attempts: %{customdata}<extra></extra>",
     customdata: attempts,
   }], darkLayout({
-    yaxis: { title: "Hitting Efficiency" },
+    yaxis: { title: "Hitting Efficiency", range: [0, 0.5] },
     height: 280,
     margin: { t: 16, r: 16, b: 48, l: 52 },
   }), PLOTLY_CONFIG);
@@ -224,7 +225,7 @@ function renderGameStatePassing(name) {
     textfont: { color: "#0f172a", size: 11 },
     hovertemplate: "%{x}<br>Pass Avg: %{y:.2f}<extra></extra>",
   }], darkLayout({
-    yaxis: { title: "Pass Average", range: [0, 3] },
+    yaxis: { title: "Pass Average", range: [0, 2.5] },
     height: 280,
     margin: { t: 16, r: 16, b: 48, l: 52 },
   }), PLOTLY_CONFIG);
@@ -244,35 +245,22 @@ function renderGameStateServing(name) {
   raw.forEach(r => { byState[r.situation] = r; });
 
   const labels = STATE_ORDER.map(k => STATE_LABELS[k]);
-  const aceVals = STATE_ORDER.map(k => byState[k]?.ace_pct ?? null);
-  const errVals = STATE_ORDER.map(k => byState[k]?.srv_err_pct ?? null);
+  const colors = STATE_ORDER.map(k => STATE_COLORS[k]);
+  const srvEffVals = STATE_ORDER.map(k => byState[k]?.serving_eff ?? null);
   const totals = STATE_ORDER.map(k => byState[k]?.srv_total ?? 0);
 
-  Plotly.react(el, [
-    {
-      name: "Ace %", x: labels, y: aceVals, type: "bar",
-      marker: { color: "rgba(74,222,128,0.8)" },
-      text: aceVals.map(v => v != null ? v.toFixed(1) + "%" : ""),
-      textposition: "auto",
-      textfont: { color: "#0f172a", size: 11 },
-      hovertemplate: "%{x}<br>Ace%%: %{y:.1f}<br>Serves: %{customdata}<extra></extra>",
-      customdata: totals,
-    },
-    {
-      name: "Error %", x: labels, y: errVals, type: "bar",
-      marker: { color: "rgba(248,113,113,0.8)" },
-      text: errVals.map(v => v != null ? v.toFixed(1) + "%" : ""),
-      textposition: "auto",
-      textfont: { color: "#0f172a", size: 11 },
-      hovertemplate: "%{x}<br>Err%%: %{y:.1f}<br>Serves: %{customdata}<extra></extra>",
-      customdata: totals,
-    },
-  ], darkLayout({
-    barmode: "group",
-    yaxis: { title: "Percentage" },
+  Plotly.react(el, [{
+    x: labels, y: srvEffVals, type: "bar",
+    marker: { color: colors },
+    text: srvEffVals.map(v => v != null ? v.toFixed(3) : ""),
+    textposition: "auto",
+    textfont: { color: "#0f172a", size: 11 },
+    hovertemplate: "%{x}<br>Srv Eff: %{y:.3f}<br>Serves: %{customdata}<extra></extra>",
+    customdata: totals,
+  }], darkLayout({
+    yaxis: { title: "Serving Efficiency" },
     height: 300,
     margin: { t: 16, r: 16, b: 48, l: 52 },
-    legend: { orientation: "h", y: -0.2 },
   }), PLOTLY_CONFIG);
 }
 
@@ -344,7 +332,7 @@ function renderConsistency(name) {
 
   const skills = [
     { key: "hitting",  label: "Hitting",  icon: "Eff" },
-    { key: "serving",  label: "Serving",  icon: "Ace%" },
+    { key: "serving",  label: "Serving",  icon: "Srv Eff" },
     { key: "passing",  label: "Passing",  icon: "Avg" },
   ];
 

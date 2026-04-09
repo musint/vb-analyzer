@@ -62,6 +62,8 @@ function renderPlayer(name) {
   renderGameStateServing(name);
   renderSeasonProgression(name);
   renderConsistency(name);
+  renderServePressure(name);
+  renderInSystem(name);
 }
 
 // ── KPI Cards ─────────────────────────────────────────────────
@@ -379,4 +381,60 @@ function renderConsistency(name) {
   html += '<p style="color:var(--muted);font-size:0.75rem;margin-top:12px">Consistency = 1 / (1 + std_dev). Higher = more consistent match-to-match. Based on per-match stat variance across games with 3+ attempts.</p>';
 
   container.innerHTML = html;
+}
+
+// ── Serve Pressure Index ──────────────────────────────────────
+function renderServePressure(name) {
+  const el = document.getElementById("serve-pressure");
+  const sp = (playersData.serve_pressure || {})[name];
+
+  if (!sp) {
+    el.innerHTML = '<p style="color:var(--muted);font-size:0.875rem">No serve pressure data.</p>';
+    return;
+  }
+
+  const items = [
+    { label: "Total Serves", value: sp.serves, color: "var(--accent)" },
+    { label: "Aces", value: sp.aces, color: "var(--green)" },
+    { label: "Serve Errors", value: sp.srv_errors, color: "var(--red)" },
+    { label: "Pressure Serves", value: sp.pressure_serves, color: "var(--gold)" },
+    { label: "Pressure %", value: sp.pressure_pct.toFixed(1) + "%", color: "var(--gold)" },
+  ];
+
+  el.innerHTML = '<div class="kpi-row">' + items.map(i => `
+    <div class="kpi-card">
+      <div class="kpi-value" style="color:${i.color}">${i.value}</div>
+      <div class="kpi-label">${i.label}</div>
+    </div>`).join("") + '</div>' +
+    '<p style="color:var(--muted);font-size:0.75rem;margin-top:8px">Pressure = aces + serves causing opponent 0 or 1 pass</p>';
+}
+
+// ── In-System vs Out-of-System Efficiency ─────────────────────
+function renderInSystem(name) {
+  const el = document.getElementById("in-system-eff");
+  const data = (playersData.in_system || {})[name];
+
+  if (!data || (!data.in_system && !data.out_of_system)) {
+    el.innerHTML = '<p style="color:var(--muted);font-size:0.875rem">No in-system data available.</p>';
+    return;
+  }
+
+  const inSys = data.in_system || { hitting_eff: 0, attempts: 0 };
+  const outSys = data.out_of_system || { hitting_eff: 0, attempts: 0 };
+
+  Plotly.react(el, [{
+    x: ["In System", "Out of System"],
+    y: [inSys.hitting_eff, outSys.hitting_eff],
+    type: "bar",
+    marker: { color: ["rgba(74,222,128,0.8)", "rgba(248,113,113,0.8)"] },
+    text: [inSys.hitting_eff.toFixed(3), outSys.hitting_eff.toFixed(3)],
+    textposition: "auto",
+    textfont: { color: "#0f172a", size: 12 },
+    hovertemplate: "%{x}<br>Eff: %{y:.3f}<br>Attempts: %{customdata}<extra></extra>",
+    customdata: [inSys.attempts, outSys.attempts],
+  }], darkLayout({
+    height: 280,
+    yaxis: { title: "Hitting Efficiency" },
+    margin: { t: 16, r: 16, b: 48, l: 52 },
+  }), PLOTLY_CONFIG);
 }

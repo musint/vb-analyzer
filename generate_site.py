@@ -125,6 +125,173 @@ def generate_overview(dfs):
     }
 
 
+def generate_players(dfs):
+    """Build players.json with per-player stats, clutch, consistency, progression, game-state splits."""
+    actions_df = dfs["actions"]
+    from analytics.player import (
+        player_season_stats, clutch_comparison, consistency_index,
+        season_progression, player_stats_filtered,
+    )
+
+    all_stats = player_season_stats(actions_df)
+    if all_stats.empty:
+        return {"players": [], "player_list": []}
+
+    player_list = all_stats["player"].tolist()
+
+    stats_by_player = {}
+    for _, row in all_stats.iterrows():
+        stats_by_player[row["player"]] = {
+            "kills": int(row["kills"]),
+            "att_errors": int(row["att_errors"]),
+            "att_total": int(row["att_total"]),
+            "hitting_eff": float(row["hitting_eff"]),
+            "kill_pct": float(row["kill_pct"]),
+            "aces": int(row["aces"]),
+            "srv_errors": int(row["srv_errors"]),
+            "srv_total": int(row["srv_total"]),
+            "pass_avg": float(row["pass_avg"]) if row["pass_avg"] is not None else None,
+            "pass_total": int(row["pass_total"]),
+            "digs": int(row["digs"]),
+            "blocks": int(row["blocks"]),
+        }
+
+    clutch_df = clutch_comparison(actions_df)
+    clutch_by_player = {}
+    if not clutch_df.empty:
+        for _, row in clutch_df.iterrows():
+            p = row["player"]
+            clutch_by_player[p] = {}
+            for col in ["hitting_eff", "kill_pct", "pass_avg"]:
+                c_val = row.get(f"{col}_clutch")
+                nc_val = row.get(f"{col}_non_clutch")
+                clutch_by_player[p][f"{col}_clutch"] = float(c_val) if c_val is not None and str(c_val) != "nan" else None
+                clutch_by_player[p][f"{col}_non_clutch"] = float(nc_val) if nc_val is not None and str(nc_val) != "nan" else None
+            cr = row.get("clutch_rating")
+            clutch_by_player[p]["clutch_rating"] = float(cr) if cr is not None and str(cr) != "nan" else None
+
+    cons_df = consistency_index(actions_df)
+    consistency_by_player = {}
+    if not cons_df.empty:
+        for _, row in cons_df.iterrows():
+            consistency_by_player[row["player"]] = {
+                "consistency_score": float(row["consistency_score"]),
+                "eff_std_dev": float(row["eff_std_dev"]),
+                "avg_eff": float(row["avg_eff"]),
+                "matches_with_attacks": int(row["matches_with_attacks"]),
+            }
+
+    prog = season_progression(actions_df)
+    progression_by_player = {}
+    for player, pdf in prog.items():
+        progression_by_player[player] = []
+        for _, row in pdf.iterrows():
+            progression_by_player[player].append({
+                "date": str(row["date"]),
+                "match_title": row["match_title"],
+                "hitting_eff": float(row["hitting_eff"]) if row["hitting_eff"] is not None else None,
+                "pass_avg": float(row["pass_avg"]) if row["pass_avg"] is not None else None,
+                "hitting_eff_rolling": float(row["hitting_eff_rolling"]) if row["hitting_eff_rolling"] is not None else None,
+                "pass_avg_rolling": float(row["pass_avg_rolling"]) if row["pass_avg_rolling"] is not None else None,
+            })
+
+    situations = ["winning_big", "winning", "close", "losing", "losing_big"]
+    game_state_by_player = {}
+    for player in player_list:
+        game_state_by_player[player] = []
+        for sit in situations:
+            sit_stats = player_stats_filtered(actions_df, "score_situation", sit)
+            if not sit_stats.empty:
+                sp = sit_stats[sit_stats["player"] == player]
+                if not sp.empty:
+                    r = sp.iloc[0]
+                    game_state_by_player[player].append({
+                        "situation": sit,
+                        "hitting_eff": float(r["hitting_eff"]),
+                        "kill_pct": float(r["kill_pct"]),
+                        "pass_avg": float(r["pass_avg"]) if r["pass_avg"] is not None else None,
+                        "att_total": int(r["att_total"]),
+                    })
+
+    return {
+        "player_list": player_list,
+        "stats": stats_by_player,
+        "clutch": clutch_by_player,
+        "consistency": consistency_by_player,
+        "progression": progression_by_player,
+        "game_state": game_state_by_player,
+    }
+
+
+def generate_comparison(dfs):
+    """Build comparison.json with normalized radar data and trend data."""
+    actions_df = dfs["actions"]
+    from analytics.player import player_season_stats, consistency_index
+
+    all_stats = player_season_stats(actions_df)
+    cons_df = consistency_index(actions_df)
+
+    if all_stats.empty:
+        return {"players": [], "radar_metrics": [], "radar_labels": []}
+
+    player_list = all_stats["player"].tolist()
+
+    metrics_map = {}
+    for _, row in all_stats.iterrows():
+        metrics_map[row["player"]] = {
+            "kills": int(row["kills"]),
+            "hitting_eff": float(row["hitting_eff"]),
+            "aces": int(row["aces"]),
+            "digs": int(row["digs"]),
+            "pass_avg": float(row["pass_avg"]) if row["pass_avg"] is not None else None,
+        }
+
+    if not cons_df.empty:
+        for _, row in cons_df.iterrows():
+            p = row["player"]
+            if p in metrics_map:
+                metrics_map[p]["consistency"] = float(row["consistency_score"])
+
+    radar_metrics = ["kills", "hitting_eff", "aces", "digs", "pass_avg", "consistency"]
+    radar_labels = ["Kills", "Hitting Eff", "Aces", "Digs", "Pass Avg", "Consistency"]
+
+    normalized = {}
+    for metric in radar_metrics:
+        values = [metrics_map[p].get(metric) for p in player_list]
+        numeric = [v for v in values if v is not None]
+        if not numeric:
+            for p in player_list:
+                normalized.setdefault(p, {})[metric] = None
+            continue
+        vmin = min(numeric)
+        vmax = max(numeric)
+        for i, p in enumerate(player_list):
+            v = values[i]
+            if v is None:
+                normalized.setdefault(p, {})[metric] = None
+            elif vmax == vmin:
+                normalized.setdefault(p, {})[metric] = 0.5
+            else:
+                normalized.setdefault(p, {})[metric] = round((v - vmin) / (vmax - vmin), 3)
+
+    colors = ["#38bdf8", "#a78bfa", "#4ade80", "#fbbf24", "#f472b6", "#fb923c", "#f87171", "#34d399"]
+
+    players_data = []
+    for i, p in enumerate(player_list):
+        players_data.append({
+            "name": p,
+            "color": colors[i % len(colors)],
+            "raw": metrics_map.get(p, {}),
+            "normalized": normalized.get(p, {}),
+        })
+
+    return {
+        "players": players_data,
+        "radar_metrics": radar_metrics,
+        "radar_labels": radar_labels,
+    }
+
+
 def main():
     matches = load_from_cache()
     if not matches:
@@ -140,6 +307,18 @@ def main():
     with open(SITE_DATA_DIR / "overview.json", "w") as f:
         json.dump(overview, f, indent=2, default=str)
     print("Generated overview.json", file=sys.stderr)
+
+    players = generate_players(dfs)
+    with open(SITE_DATA_DIR / "players.json", "w") as f:
+        json.dump(players, f, indent=2, default=str)
+    print("Generated players.json", file=sys.stderr)
+
+    comparison = generate_comparison(dfs)
+    with open(SITE_DATA_DIR / "comparison.json", "w") as f:
+        json.dump(comparison, f, indent=2, default=str)
+    print("Generated comparison.json", file=sys.stderr)
+
+    print("Done! Open site/index.html to view.", file=sys.stderr)
 
 
 if __name__ == "__main__":

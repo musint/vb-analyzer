@@ -242,6 +242,98 @@ def _build_player_content(player, actions_df, rallies_df):
                 ], style={"marginTop": "5px"}),
             ))
 
+    # --- 9. Attack Stats by Game Phase & Score Situation ---
+    attack_phase_rows = []
+    for phase in ["early", "middle", "final"]:
+        ph = player_stats_filtered(actions_df, "game_phase", phase)
+        if not ph.empty:
+            pp = ph[ph["player"] == player]
+            if not pp.empty:
+                r = pp.iloc[0]
+                attack_phase_rows.append({
+                    "Phase": phase.title(),
+                    "Kills": int(r["kills"]), "Errors": int(r["att_errors"]),
+                    "Attempts": int(r["att_total"]),
+                    "Kill%": round(r["kill_pct"], 1),
+                    "Eff": r["hitting_eff"],
+                })
+    if attack_phase_rows:
+        sections.append(_section(
+            "Attack Stats by Game Phase",
+            stat_table(pd.DataFrame(attack_phase_rows), "atk-phase-table", page_size=5),
+        ))
+
+    attack_sit_rows = []
+    for sit in ["winning_big", "winning", "close", "losing", "losing_big"]:
+        s = player_stats_filtered(actions_df, "score_situation", sit)
+        if not s.empty:
+            sp = s[s["player"] == player]
+            if not sp.empty:
+                r = sp.iloc[0]
+                labels = {"winning_big": "Winning Big (+5+)", "winning": "Winning (+2-4)",
+                          "close": "Close (-1 to +1)", "losing": "Losing (-2-4)",
+                          "losing_big": "Losing Big (-5+)"}
+                attack_sit_rows.append({
+                    "Situation": labels[sit],
+                    "Kills": int(r["kills"]), "Errors": int(r["att_errors"]),
+                    "Attempts": int(r["att_total"]),
+                    "Kill%": round(r["kill_pct"], 1),
+                    "Eff": r["hitting_eff"],
+                })
+    if attack_sit_rows:
+        sections.append(_section(
+            "Attack Stats by Score Situation",
+            stat_table(pd.DataFrame(attack_sit_rows), "atk-sit-table", page_size=5),
+        ))
+
+    # --- 10. Serve Stats by Game Phase & Score Situation ---
+    serve_phase_rows = []
+    for phase in ["early", "middle", "final"]:
+        ph = player_stats_filtered(actions_df, "game_phase", phase)
+        if not ph.empty:
+            pp = ph[ph["player"] == player]
+            if not pp.empty:
+                r = pp.iloc[0]
+                total = int(r["srv_total"])
+                if total > 0:
+                    serve_phase_rows.append({
+                        "Phase": phase.title(),
+                        "Aces": int(r["aces"]), "Errors": int(r["srv_errors"]),
+                        "Total": total,
+                        "Ace%": round(r["aces"] / total * 100, 1),
+                        "Err%": round(r["srv_errors"] / total * 100, 1),
+                    })
+    if serve_phase_rows:
+        sections.append(_section(
+            "Serve Stats by Game Phase",
+            stat_table(pd.DataFrame(serve_phase_rows), "srv-phase-table", page_size=5),
+        ))
+
+    serve_sit_rows = []
+    for sit in ["winning_big", "winning", "close", "losing", "losing_big"]:
+        s = player_stats_filtered(actions_df, "score_situation", sit)
+        if not s.empty:
+            sp = s[s["player"] == player]
+            if not sp.empty:
+                r = sp.iloc[0]
+                total = int(r["srv_total"])
+                if total > 0:
+                    labels = {"winning_big": "Winning Big (+5+)", "winning": "Winning (+2-4)",
+                              "close": "Close (-1 to +1)", "losing": "Losing (-2-4)",
+                              "losing_big": "Losing Big (-5+)"}
+                    serve_sit_rows.append({
+                        "Situation": labels[sit],
+                        "Aces": int(r["aces"]), "Errors": int(r["srv_errors"]),
+                        "Total": total,
+                        "Ace%": round(r["aces"] / total * 100, 1),
+                        "Err%": round(r["srv_errors"] / total * 100, 1),
+                    })
+    if serve_sit_rows:
+        sections.append(_section(
+            "Serve Stats by Score Situation",
+            stat_table(pd.DataFrame(serve_sit_rows), "srv-sit-table", page_size=5),
+        ))
+
     if not sections:
         sections.append(html.P("No data available for this player.", style={"color": "#999"}))
 

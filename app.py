@@ -13,6 +13,14 @@ matches = load_data()
 dfs = build_all(matches) if matches else {"matches": [], "rallies": None, "actions": None}
 print(f"Loaded {len(matches)} matches", file=sys.stderr)
 
+# Import ALL page modules at startup so their callbacks register with Dash
+import pages.overview
+import pages.player_detail
+import pages.runs
+import pages.game_detail
+import pages.zones
+import pages.comparison
+
 app = dash.Dash(
     __name__,
     suppress_callback_exceptions=True,

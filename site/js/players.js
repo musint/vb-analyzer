@@ -41,6 +41,10 @@ window.addEventListener("dataset-changed", initPage);
 // ── Dropdown ──────────────────────────────────────────────────
 function buildDropdown() {
   const container = document.getElementById("player-selector");
+  // Remove existing dropdown if re-initializing (dataset switch)
+  const existing = document.getElementById("player-dropdown");
+  if (existing) existing.remove();
+
   const select = document.createElement("select");
   select.id = "player-dropdown";
   select.className = "dropdown";

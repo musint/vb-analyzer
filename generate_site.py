@@ -620,6 +620,7 @@ def generate_games(dfs):
         sets_won = int(first["sets_won"])
         sets_lost = int(first["sets_lost"])
         result = "W" if sets_won > sets_lost else "L"
+        expected_sets = sets_won + sets_lost  # only include real sets, not warmup/extra
 
         # Sideout %
         receive = vgroup[vgroup["is_receive"]]
@@ -655,10 +656,12 @@ def generate_games(dfs):
             "pass_avg": pass_avg,
         })
 
-        # Momentum data: per-rally data for this match
+        # Momentum data: per-rally data for this match (only real sets)
         mom_df = momentum_data(rallies_df, vid)
         momentum = []
         if not mom_df.empty:
+            if expected_sets > 0:
+                mom_df = mom_df[mom_df["set_number"] <= expected_sets]
             for _, row in mom_df.iterrows():
                 os_ = int(row["our_score_before"]) if "our_score_before" in row else None
                 opp_s = int(row["opp_score_before"]) if "opp_score_before" in row else None
@@ -678,9 +681,11 @@ def generate_games(dfs):
                     "win_prob": win_prob,
                 })
 
-        # Per-set box scores
+        # Per-set box scores (only real sets)
         set_scores = []
         for sn, sgroup in vgroup.groupby("set_number"):
+            if expected_sets > 0 and int(sn) > expected_sets:
+                continue
             set_actions = game_actions[game_actions["set_number"] == sn]
             last_rally = sgroup.sort_values("rally_id").iloc[-1]
             our_s = int(last_rally["our_score"])
@@ -708,10 +713,12 @@ def generate_games(dfs):
                 "sideout_pct": s_so_pct,
             })
 
-        # Per-set per-player box scores
+        # Per-set per-player box scores (only real sets)
         box_scores = {}
         our_game_actions = game_actions[game_actions["is_our_team"]]
         for sn, set_actions in our_game_actions.groupby("set_number"):
+            if expected_sets > 0 and int(sn) > expected_sets:
+                continue
             set_rows = []
             for player, pacts in set_actions.groupby("player"):
                 if not player:

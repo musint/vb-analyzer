@@ -636,6 +636,29 @@ def generate_games(dfs):
                 "sideout_pct": s_so_pct,
             })
 
+        # Per-set per-player box scores
+        box_scores = {}
+        our_game_actions = game_actions[game_actions["is_our_team"]]
+        for sn, set_actions in our_game_actions.groupby("set_number"):
+            set_rows = []
+            for player, pacts in set_actions.groupby("player"):
+                if not player:
+                    continue
+                attacks = pacts[(pacts["action_type"] == "attack") & (pacts["quality"].isin(["kill", "error", "in_play", "block_kill"]))]
+                k = int((attacks["quality"] == "kill").sum())
+                e = int((attacks["quality"] == "error").sum())
+                t = len(attacks)
+                eff = round((k - e) / t, 3) if t > 0 else 0
+                serves = pacts[pacts["action_type"] == "serve"]
+                aces = int((serves["quality"] == "ace").sum())
+                digs = int(len(pacts[(pacts["action_type"] == "dig") & (pacts["quality"] != "error")]))
+                set_rows.append({
+                    "player": player, "kills": k, "errors": e, "attempts": t,
+                    "hitting_eff": eff, "aces": aces, "digs": digs,
+                })
+            set_rows.sort(key=lambda x: x["kills"], reverse=True)
+            box_scores[str(int(sn))] = set_rows
+
         games[vid] = {
             "video_id": vid,
             "date": first["match_date"],
@@ -648,6 +671,7 @@ def generate_games(dfs):
             "pass_avg": pass_avg,
             "momentum": momentum,
             "set_scores": set_scores,
+            "box_scores": box_scores,
         }
 
     # Sort game list by date

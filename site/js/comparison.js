@@ -12,10 +12,10 @@ let playersData = null;   // players.json
 let selectedNames = [];
 
 // ── Init ──────────────────────────────────────────────────────
-document.addEventListener("DOMContentLoaded", async () => {
+async function initPage() {
   [compData, playersData] = await Promise.all([
-    loadJSON("data/comparison.json"),
-    loadJSON("data/players.json"),
+    loadJSON("comparison.json"),
+    loadJSON("players.json"),
   ]);
 
   if (!compData || !playersData) {
@@ -32,7 +32,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   buildMultiSelect();
   renderAll();
-});
+}
+
+document.addEventListener("DOMContentLoaded", initPage);
+window.addEventListener("dataset-changed", initPage);
 
 // ── Helpers ───────────────────────────────────────────────────
 function getPlayerObj(name) {

@@ -19,8 +19,8 @@ const STATE_COLORS = {
 };
 
 // ── Entry Point ─────────────────────────────────────────────
-document.addEventListener("DOMContentLoaded", async () => {
-  const data = await loadJSON("data/overview.json");
+async function initPage() {
+  const data = await loadJSON("overview.json");
   if (!data) return;
 
   renderKPIs(data.kpis);
@@ -31,7 +31,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   renderGameResults(data.game_results);
   renderSideoutByPhase(data.sideout_by_phase);
   if (data.expected_sideout) renderExpectedSideout(data.expected_sideout);
-});
+}
+
+document.addEventListener("DOMContentLoaded", initPage);
+window.addEventListener("dataset-changed", initPage);
 
 // ── 1. KPI Row ───────────────────────────────────────────────
 function renderKPIs(kpis) {

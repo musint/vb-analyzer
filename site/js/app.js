@@ -2,6 +2,9 @@
    13-2 Statistical Deep Dive — Shared Application Logic
    ============================================================ */
 
+// Dataset toggle: "full" or "recent"
+let currentDataset = "full";
+
 // Highlight active nav tab based on current page
 document.addEventListener("DOMContentLoaded", () => {
   const path = window.location.pathname.split("/").pop() || "index.html";
@@ -17,18 +20,44 @@ document.addEventListener("DOMContentLoaded", () => {
     el.classList.add("animate-in");
     el.style.animationDelay = `${0.05 + i * 0.05}s`;
   });
+
+  initDatasetToggle();
 });
 
 // Shared data loading utility
-async function loadJSON(path) {
+async function loadJSON(filename) {
   try {
-    const response = await fetch(path);
-    if (!response.ok) throw new Error(`Failed to load ${path}`);
+    const response = await fetch(`data/${currentDataset}/${filename}`);
+    if (!response.ok) throw new Error(`Failed to load ${filename}`);
     return await response.json();
   } catch (e) {
     console.error(e);
     return null;
   }
+}
+
+// Dataset toggle renderer
+function initDatasetToggle() {
+  const nav = document.querySelector(".nav-inner");
+  if (!nav) return;
+  const toggle = document.createElement("div");
+  toggle.className = "dataset-toggle";
+  toggle.innerHTML = `
+    <button class="toggle-btn active" data-dataset="full">Full Season</button>
+    <button class="toggle-btn" data-dataset="recent">After Feb 1</button>
+  `;
+  nav.appendChild(toggle);
+
+  toggle.querySelectorAll(".toggle-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      if (btn.dataset.dataset === currentDataset) return;
+      toggle.querySelectorAll(".toggle-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      currentDataset = btn.dataset.dataset;
+      // Dispatch custom event that page JS listens for
+      window.dispatchEvent(new Event("dataset-changed"));
+    });
+  });
 }
 
 // Shared Plotly layout defaults for dark theme

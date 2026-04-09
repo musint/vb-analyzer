@@ -18,8 +18,8 @@ const ZONE_H = 150;
 let zonesData = null;
 
 // ── Entry Point ─────────────────────────────────────────────
-document.addEventListener("DOMContentLoaded", async () => {
-  zonesData = await loadJSON("data/zones.json");
+async function initPage() {
+  zonesData = await loadJSON("zones.json");
   if (!zonesData) {
     document.querySelector(".main-content").innerHTML =
       '<p style="color:var(--red);padding:2rem">Failed to load zones data.</p>';
@@ -27,8 +27,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   buildPlayerFilter();
-  renderAll("all");
-});
+  const dropdown = document.getElementById("zone-player-select");
+  const selectedPlayer = dropdown ? dropdown.value : "all";
+  renderAll(selectedPlayer);
+}
+
+document.addEventListener("DOMContentLoaded", initPage);
+window.addEventListener("dataset-changed", initPage);
 
 // ── Player Filter ────────────────────────────────────────────
 function buildPlayerFilter() {

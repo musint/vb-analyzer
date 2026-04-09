@@ -873,3 +873,26 @@ nav .nav-inner {
 .gap-sm { gap: 12px; }
 .gap-md { gap: 20px; }
 .gap-lg { gap: 28px; }
+
+/* ============================================================
+   DATASET TOGGLE
+   ============================================================ */
+.dataset-toggle {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  margin-left: auto;
+  padding: 0 16px;
+}
+.toggle-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: 6px 14px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.15s;
+}
+.toggle-btn:hover { color: var(--text); border-color: var(--muted); }
+.toggle-btn.active { background: var(--accent); color: #0f172a; border-color: var(--accent); font-weight: 600; }

@@ -21,8 +21,8 @@ const STATE_COLORS = {
 let playersData = null;
 
 // ── Initialise ────────────────────────────────────────────────
-document.addEventListener("DOMContentLoaded", async () => {
-  playersData = await loadJSON("data/players.json");
+async function initPage() {
+  playersData = await loadJSON("players.json");
   if (!playersData) {
     document.querySelector(".main-content").innerHTML =
       '<p style="color:var(--red);padding:2rem">Failed to load player data.</p>';
@@ -30,9 +30,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   buildDropdown();
-  const firstPlayer = playersData.player_list[0];
-  if (firstPlayer) renderPlayer(firstPlayer);
-});
+  const dropdown = document.getElementById("player-dropdown");
+  const selectedPlayer = dropdown ? dropdown.value : playersData.player_list[0];
+  if (selectedPlayer) renderPlayer(selectedPlayer);
+}
+
+document.addEventListener("DOMContentLoaded", initPage);
+window.addEventListener("dataset-changed", initPage);
 
 // ── Dropdown ──────────────────────────────────────────────────
 function buildDropdown() {
@@ -62,7 +66,6 @@ function renderPlayer(name) {
   renderGameStateServing(name);
   renderSeasonProgression(name);
   renderConsistency(name);
-  renderServePressure(name);
   renderInSystem(name);
 }
 
@@ -128,8 +131,8 @@ function renderClutch(name) {
     ["Hitting Eff", c.hitting_eff_clutch, c.hitting_eff_non_clutch, v => v != null ? Number(v).toFixed(3) : "N/A"],
     ["Kill %",      c.kill_pct_clutch,    c.kill_pct_non_clutch,    v => v != null ? Number(v).toFixed(1) + "%" : "N/A"],
     ["Pass Avg",    c.pass_avg_clutch,    c.pass_avg_non_clutch,    v => v != null ? Number(v).toFixed(2) : "N/A"],
-    ["Aces",        c.aces_clutch,        c.aces_non_clutch,        v => v != null ? Math.round(v).toString() : "N/A"],
-    ["Srv Errors",  c.srv_errors_clutch,  c.srv_errors_non_clutch,  v => v != null ? Math.round(v).toString() : "N/A"],
+    ["Ace %",       c.ace_pct_clutch,     c.ace_pct_non_clutch,     v => v != null ? v.toFixed(1) + "%" : "N/A"],
+    ["Srv Error %", c.srv_err_pct_clutch, c.srv_err_pct_non_clutch, v => v != null ? v.toFixed(1) + "%" : "N/A"],
   ];
 
   const allVals = metrics.flatMap(([, cv, nv]) => [cv, nv]).filter(v => v != null && !isNaN(v));
@@ -363,6 +366,8 @@ function renderConsistency(name) {
     if (score >= 0.7) pillColor = "green";
     else if (score >= 0.4) pillColor = "gold";
 
+    const rankText = data.rank ? `#${data.rank} of ${data.total_ranked}` : "";
+
     html += `
       <div style="flex:1;min-width:200px;background:var(--surface2);border-radius:var(--radius);padding:16px">
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
@@ -373,6 +378,7 @@ function renderConsistency(name) {
           <span>Std Dev: <strong style="color:var(--text)">${data.std_dev.toFixed(4)}</strong></span>
           <span>Avg ${icon}: <strong style="color:var(--text)">${data.avg.toFixed(3)}</strong></span>
           <span>Matches: <strong style="color:var(--text)">${data.matches}</strong></span>
+          ${rankText ? `<span>Rank: <strong style="color:var(--accent)">${rankText}</strong></span>` : ""}
         </div>
       </div>`;
   });
@@ -381,32 +387,6 @@ function renderConsistency(name) {
   html += '<p style="color:var(--muted);font-size:0.75rem;margin-top:12px">Consistency = 1 / (1 + std_dev). Higher = more consistent match-to-match. Based on per-match stat variance across games with 3+ attempts.</p>';
 
   container.innerHTML = html;
-}
-
-// ── Serve Pressure Index ──────────────────────────────────────
-function renderServePressure(name) {
-  const el = document.getElementById("serve-pressure");
-  const sp = (playersData.serve_pressure || {})[name];
-
-  if (!sp) {
-    el.innerHTML = '<p style="color:var(--muted);font-size:0.875rem">No serve pressure data.</p>';
-    return;
-  }
-
-  const items = [
-    { label: "Total Serves", value: sp.serves, color: "var(--accent)" },
-    { label: "Aces", value: sp.aces, color: "var(--green)" },
-    { label: "Serve Errors", value: sp.srv_errors, color: "var(--red)" },
-    { label: "Pressure Serves", value: sp.pressure_serves, color: "var(--gold)" },
-    { label: "Pressure %", value: sp.pressure_pct.toFixed(1) + "%", color: "var(--gold)" },
-  ];
-
-  el.innerHTML = '<div class="kpi-row">' + items.map(i => `
-    <div class="kpi-card">
-      <div class="kpi-value" style="color:${i.color}">${i.value}</div>
-      <div class="kpi-label">${i.label}</div>
-    </div>`).join("") + '</div>' +
-    '<p style="color:var(--muted);font-size:0.75rem;margin-top:8px">Pressure = aces + serves causing opponent 0 or 1 pass</p>';
 }
 
 // ── In-System vs Out-of-System Efficiency ─────────────────────

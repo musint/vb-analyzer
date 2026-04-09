@@ -15,8 +15,8 @@ const PHASE_LABELS = { early: "Early", middle: "Middle", final: "Final" };
 const PHASE_ORDER  = ["early", "middle", "final"];
 
 // ── Initialise ────────────────────────────────────────────────
-document.addEventListener("DOMContentLoaded", async () => {
-  const data = await loadJSON("data/runs.json");
+async function initPage() {
+  const data = await loadJSON("runs.json");
   if (!data) {
     document.querySelector(".main-content").innerHTML =
       '<p style="color:var(--red);padding:2rem">Failed to load runs data.</p>';
@@ -28,7 +28,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   renderKillersTable(data.killers || []);
   renderPhaseChart(data.runs_by_phase || []);
   renderSituationChart(data.runs_by_situation || []);
-});
+}
+
+document.addEventListener("DOMContentLoaded", initPage);
+window.addEventListener("dataset-changed", initPage);
 
 // ── KPI Cards ─────────────────────────────────────────────────
 function renderRunsKPIs(s) {

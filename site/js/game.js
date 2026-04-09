@@ -7,8 +7,8 @@ let _gamesData = null;      // Full games.json payload
 let _currentGameId = null;  // Currently selected video_id
 
 // ── Entry Point ──────────────────────────────────────────────
-document.addEventListener("DOMContentLoaded", async () => {
-  _gamesData = await loadJSON("data/games.json");
+async function initPage() {
+  _gamesData = await loadJSON("games.json");
   if (!_gamesData || !_gamesData.game_list || !_gamesData.game_list.length) {
     const main = document.querySelector(".main-content");
     if (main) main.innerHTML =
@@ -17,7 +17,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   renderGameSelector(_gamesData.game_list);
-});
+}
+
+document.addEventListener("DOMContentLoaded", initPage);
+window.addEventListener("dataset-changed", initPage);
 
 // ── 1. Game Selector ─────────────────────────────────────────
 function renderGameSelector(gameList) {

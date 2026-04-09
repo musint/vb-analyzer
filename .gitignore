@@ -3,3 +3,9 @@ __pycache__/
 *.pyc
 .env
 seed_cache.py
+
+# Generated static site data
+site/data/
+
+# Superpowers brainstorm sessions
+.superpowers/

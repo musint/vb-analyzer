@@ -785,32 +785,8 @@ nav .nav-inner {
 /* ============================================================
    RESPONSIVE — 768px
    ============================================================ */
-@media (max-width: 768px) {
-  :root {
-    --nav-height: 56px;
-  }
-
-  nav {
-    padding: 0 16px;
-  }
-
-  .nav-logo {
-    font-size: 1.1rem;
-  }
-
-  .nav-tabs a {
-    padding: 6px 10px;
-    font-size: 0.8rem;
-  }
-
-  .main-content {
-    padding: 20px 16px 40px;
-  }
-
-  .page-title {
-    font-size: 1.35rem;
-  }
-
+/* ---------- Tablet (≤ 900px) ---------- */
+@media (max-width: 900px) {
   .grid-2 {
     grid-template-columns: 1fr;
   }
@@ -818,34 +794,199 @@ nav .nav-inner {
   .grid-3 {
     grid-template-columns: 1fr;
   }
+}
 
+/* ---------- Mobile (≤ 768px) ---------- */
+@media (max-width: 768px) {
+  :root {
+    --nav-height: auto;
+  }
+
+  /* Stack nav vertically: logo + toggle on top, tabs below */
+  nav {
+    padding: 8px 12px;
+    height: auto;
+  }
+
+  nav .nav-inner {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .nav-logo {
+    font-size: 1rem;
+    gap: 6px;
+  }
+
+  .nav-logo .logo-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+  }
+
+  /* Dataset toggle stays inline with logo */
+  .dataset-toggle {
+    margin-left: auto;
+    padding: 0;
+  }
+
+  .toggle-btn {
+    padding: 4px 10px;
+    font-size: 0.7rem;
+  }
+
+  /* Tabs scroll horizontally on their own row */
+  .nav-tabs {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 2px;
+    scrollbar-width: none;
+  }
+
+  .nav-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-tabs a {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* Main content */
+  .main-content {
+    padding: 16px 12px 40px;
+  }
+
+  .page-header {
+    margin-bottom: 16px;
+  }
+
+  .page-title {
+    font-size: 1.25rem;
+  }
+
+  .page-subtitle {
+    font-size: 0.8rem;
+  }
+
+  /* KPI row: 3-column grid instead of stacking vertically */
   .kpi-row {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
   }
 
   .kpi-card {
     min-width: unset;
+    padding: 10px 6px;
+  }
+
+  .kpi-card::before {
+    display: none;
+  }
+
+  .kpi-value {
+    font-size: 1.2rem;
+  }
+
+  .kpi-label {
+    font-size: 0.6rem;
   }
 
   .flex-row {
     flex-direction: column;
   }
 
+  /* Cards */
   .card {
-    padding: 18px;
+    padding: 14px;
   }
 
-  .kpi-value {
-    font-size: 1.6rem;
+  .section-title {
+    font-size: 1rem;
   }
 
+  .section {
+    margin-bottom: 16px;
+  }
+
+  /* Tables */
   .data-table {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
 
   .data-table thead th,
   .data-table tbody td {
-    padding: 8px;
+    padding: 6px 8px;
+  }
+
+  /* Charts: ensure they don't overflow */
+  .chart-container {
+    min-height: 200px;
+  }
+
+  /* Clutch bars */
+  .clutch-bars {
+    gap: 12px;
+  }
+
+  .clutch-bar {
+    font-size: 0.7rem;
+    min-height: 22px;
+  }
+
+  /* Game state pills */
+  .pill-row {
+    gap: 4px;
+  }
+
+  .game-state-pill {
+    font-size: 0.65rem;
+    padding: 4px 8px;
+  }
+
+  /* Player pills */
+  .player-pill {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+  }
+
+  /* Dropdown */
+  .dropdown {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Consistency cards stack at 1 column on very small */
+  #consistency-index > div {
+    flex-direction: column;
+  }
+}
+
+/* ---------- Small phone (≤ 480px) ---------- */
+@media (max-width: 480px) {
+  .kpi-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .kpi-value {
+    font-size: 1rem;
+  }
+
+  .page-title {
+    font-size: 1.1rem;
+  }
+
+  .nav-logo span:not(.logo-icon) {
+    display: none;
+  }
+
+  .nav-tabs a {
+    padding: 5px 8px;
+    font-size: 0.7rem;
   }
 }
 

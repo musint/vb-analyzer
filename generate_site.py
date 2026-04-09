@@ -9,7 +9,12 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 from data.loader import load_from_cache
 from analytics.core import build_all
-from analytics.team import team_kpis, sideout_by_category
+from analytics.team import team_kpis, sideout_by_category, detect_runs, run_triggers
+from analytics.advanced import expected_sideout_by_pass, serve_pressure_index, momentum_data, win_probability_table
+from analytics.player import (
+    player_season_stats, clutch_comparison, consistency_index,
+    season_progression, player_stats_filtered, in_system_efficiency,
+)
 
 SITE_DATA_DIR = Path(__file__).parent / "site" / "data"
 
@@ -127,6 +132,18 @@ def generate_overview(dfs):
                 "opportunities": int(row["opportunities"]),
             })
 
+    # Expected sideout by pass quality
+    exp_so_df = expected_sideout_by_pass(rallies_df, actions_df)
+    expected_sideout = []
+    if not exp_so_df.empty:
+        for _, row in exp_so_df.iterrows():
+            expected_sideout.append({
+                "pass_quality": int(row["pass_quality"]),
+                "rallies": int(row["rallies"]),
+                "sideouts": int(row["sideouts"]),
+                "sideout_pct": float(row["sideout_pct"]),
+            })
+
     return {
         "kpis": kpis,
         "progression": progression,
@@ -134,16 +151,13 @@ def generate_overview(dfs):
         "pass_by_state": pass_by_state,
         "game_results": game_results,
         "sideout_by_phase": sideout_by_phase,
+        "expected_sideout": expected_sideout,
     }
 
 
 def generate_players(dfs):
     """Build players.json with per-player stats, clutch, consistency, progression, game-state splits."""
     actions_df = dfs["actions"]
-    from analytics.player import (
-        player_season_stats, clutch_comparison, consistency_index,
-        season_progression, player_stats_filtered,
-    )
 
     all_stats = player_season_stats(actions_df)
     if all_stats.empty:
@@ -279,6 +293,35 @@ def generate_players(dfs):
                         "srv_total": srv_total,
                     })
 
+    # Serve pressure index per player
+    sp_df = serve_pressure_index(actions_df)
+    serve_pressure = []
+    if not sp_df.empty:
+        for _, row in sp_df.iterrows():
+            serve_pressure.append({
+                "player": row["player"],
+                "serves": int(row["serves"]),
+                "aces": int(row["aces"]),
+                "srv_errors": int(row["srv_errors"]),
+                "pressure_serves": int(row["pressure_serves"]),
+                "pressure_pct": float(row["pressure_pct"]),
+            })
+
+    # In-system efficiency per player
+    is_df = in_system_efficiency(actions_df)
+    in_system = {}
+    if not is_df.empty:
+        for _, row in is_df.iterrows():
+            p = row["player"]
+            in_system.setdefault(p, {})
+            key = "in_system" if row["in_system"] else "out_of_system"
+            in_system[p][key] = {
+                "kills": int(row["kills"]),
+                "errors": int(row["errors"]),
+                "attempts": int(row["attempts"]),
+                "hitting_eff": float(row["hitting_eff"]),
+            }
+
     return {
         "player_list": player_list,
         "stats": stats_by_player,
@@ -286,13 +329,14 @@ def generate_players(dfs):
         "consistency": consistency_by_player,
         "progression": progression_by_player,
         "game_state": game_state_by_player,
+        "serve_pressure": serve_pressure,
+        "in_system": in_system,
     }
 
 
 def generate_comparison(dfs):
     """Build comparison.json with normalized radar data and trend data."""
     actions_df = dfs["actions"]
-    from analytics.player import player_season_stats, consistency_index
 
     all_stats = player_season_stats(actions_df)
     cons_df = consistency_index(actions_df)
@@ -358,6 +402,374 @@ def generate_comparison(dfs):
     }
 
 
+def generate_runs(dfs):
+    """Build runs.json with scoring run analysis."""
+    rallies_df = dfs["rallies"]
+    actions_df = dfs["actions"]
+    matches = dfs["matches"]
+
+    # Get our team name from first match
+    our_team_name = matches[0].get("our_team_name", "") if matches else ""
+
+    # Detect runs
+    runs_data = detect_runs(rallies_df)
+    our_runs = runs_data["our_runs"]
+    opp_runs = runs_data["opp_runs"]
+
+    # Summary stats
+    our_lengths = [len(r) for r in our_runs]
+    opp_lengths = [len(r) for r in opp_runs]
+    summary = {
+        "our_runs": len(our_runs),
+        "opp_runs": len(opp_runs),
+        "avg_our_length": round(sum(our_lengths) / len(our_lengths), 2) if our_lengths else 0,
+        "avg_opp_length": round(sum(opp_lengths) / len(opp_lengths), 2) if opp_lengths else 0,
+        "longest_our": max(our_lengths) if our_lengths else 0,
+        "longest_opp": max(opp_lengths) if opp_lengths else 0,
+    }
+
+    # Rallies played per player (unique rally IDs from actions)
+    our_actions = actions_df[actions_df["is_our_team"]]
+    rallies_per_player = (
+        our_actions.groupby("player")["rally_id"].nunique().to_dict()
+    )
+
+    # Run starters: who triggers our runs
+    starters = []
+    if our_runs:
+        triggers_df = run_triggers(our_runs, actions_df, our_team_name)
+        if not triggers_df.empty:
+            our_starters = triggers_df[triggers_df["is_our_team"]]
+            if not our_starters.empty:
+                grp = our_starters.groupby("player")
+                for player, g in grp:
+                    if not player:
+                        continue
+                    runs_started = len(g)
+                    rp = rallies_per_player.get(player, 0)
+                    rate = round(runs_started / rp * 100, 1) if rp > 0 else None
+                    breakdown = {}
+                    for (act, qual), subg in g.groupby(["action", "quality"]):
+                        breakdown[f"{act}_{qual}"] = len(subg)
+                    starters.append({
+                        "player": player,
+                        "runs_started": runs_started,
+                        "rallies_played": rp,
+                        "start_rate_pct": rate,
+                        "breakdown": breakdown,
+                    })
+                starters.sort(key=lambda x: x["runs_started"], reverse=True)
+
+    # Run killers: who triggers opponent runs (our team errors)
+    killers = []
+    if opp_runs:
+        opp_triggers_df = run_triggers(opp_runs, actions_df, our_team_name)
+        if not opp_triggers_df.empty:
+            our_errors = opp_triggers_df[
+                opp_triggers_df["is_our_team"] &
+                opp_triggers_df["quality"].isin(["error"])
+            ]
+            if not our_errors.empty:
+                grp = our_errors.groupby("player")
+                for player, g in grp:
+                    if not player:
+                        continue
+                    runs_triggered = len(g)
+                    rp = rallies_per_player.get(player, 0)
+                    rate = round(runs_triggered / rp * 100, 1) if rp > 0 else None
+                    breakdown = {}
+                    for (act, qual), subg in g.groupby(["action", "quality"]):
+                        breakdown[f"{act}_{qual}"] = len(subg)
+                    killers.append({
+                        "player": player,
+                        "runs_triggered": runs_triggered,
+                        "rallies_played": rp,
+                        "trigger_rate_pct": rate,
+                        "breakdown": breakdown,
+                    })
+                killers.sort(key=lambda x: x["runs_triggered"], reverse=True)
+
+    # Runs by game phase
+    phases = ["early", "middle", "final"]
+    runs_by_phase = []
+    for phase in phases:
+        our_count = sum(1 for r in our_runs if r and r[0].get("game_phase") == phase)
+        opp_count = sum(1 for r in opp_runs if r and r[0].get("game_phase") == phase)
+        runs_by_phase.append({
+            "phase": phase,
+            "our_runs": our_count,
+            "opp_runs": opp_count,
+        })
+
+    # Runs by score situation
+    sit_values = ["winning_big", "winning", "close", "losing", "losing_big"]
+    runs_by_situation = []
+    for sit in sit_values:
+        our_count = sum(1 for r in our_runs if r and r[0].get("score_situation") == sit)
+        opp_count = sum(1 for r in opp_runs if r and r[0].get("score_situation") == sit)
+        runs_by_situation.append({
+            "situation": sit,
+            "our_runs": our_count,
+            "opp_runs": opp_count,
+        })
+
+    return {
+        "summary": summary,
+        "starters": starters,
+        "killers": killers,
+        "runs_by_phase": runs_by_phase,
+        "runs_by_situation": runs_by_situation,
+    }
+
+
+def generate_games(dfs):
+    """Build games.json with per-game KPIs, momentum, and win probability."""
+    rallies_df = dfs["rallies"]
+    actions_df = dfs["actions"]
+    matches = dfs["matches"]
+
+    q_map = {"3": 3, "2": 2, "1": 1, "0": 0}
+
+    # Build global win probability lookup
+    wp_df = win_probability_table(rallies_df)
+    wp_lookup = {}
+    if not wp_df.empty:
+        for _, row in wp_df.iterrows():
+            wp_lookup[(int(row["our_score"]), int(row["opp_score"]))] = float(row["win_pct"])
+
+    game_list = []
+    games = {}
+
+    for vid, vgroup in rallies_df.groupby("video_id"):
+        first = vgroup.iloc[0]
+        game_actions = actions_df[actions_df["video_id"] == vid]
+
+        # Result and sets
+        sets_won = int(first["sets_won"])
+        sets_lost = int(first["sets_lost"])
+        result = "W" if sets_won > sets_lost else "L"
+
+        # Sideout %
+        receive = vgroup[vgroup["is_receive"]]
+        so_pct = round(receive["is_sideout"].mean() * 100, 1) if len(receive) > 0 else 0
+
+        # Hitting efficiency
+        our_attacks = game_actions[
+            (game_actions["is_our_team"])
+            & (game_actions["action_type"] == "attack")
+            & (game_actions["quality"].isin(["kill", "error", "in_play", "block_kill"]))
+        ]
+        kills = (our_attacks["quality"] == "kill").sum()
+        errors = (our_attacks["quality"] == "error").sum()
+        att_total = len(our_attacks)
+        hitting_eff = round((kills - errors) / att_total, 3) if att_total > 0 else 0
+
+        # Pass average
+        receives = game_actions[
+            (game_actions["is_our_team"]) & (game_actions["action_type"] == "receive")
+        ]
+        rq = receives["quality"].map(q_map).dropna()
+        pass_avg = round(rq.mean(), 3) if len(rq) > 0 else 0
+
+        game_list.append({
+            "video_id": vid,
+            "date": first["match_date"],
+            "title": first["match_title"],
+            "result": result,
+            "sets_won": sets_won,
+            "sets_lost": sets_lost,
+            "sideout_pct": so_pct,
+            "hitting_eff": hitting_eff,
+            "pass_avg": pass_avg,
+        })
+
+        # Momentum data: per-rally data for this match
+        mom_df = momentum_data(rallies_df, vid)
+        momentum = []
+        if not mom_df.empty:
+            for _, row in mom_df.iterrows():
+                os_ = int(row["our_score_before"]) if "our_score_before" in row else None
+                opp_s = int(row["opp_score_before"]) if "opp_score_before" in row else None
+                # Use our_score / opp_score from momentum_data output
+                os_cur = int(row["our_score"])
+                opp_cur = int(row["opp_score"])
+                win_prob = wp_lookup.get((os_cur, opp_cur))
+                momentum.append({
+                    "set_number": int(row["set_number"]),
+                    "rally_num": int(row["rally_num"]),
+                    "our_score": os_cur,
+                    "opp_score": opp_cur,
+                    "score_diff": int(row["score_diff"]),
+                    "point_winner": row["point_winner"],
+                    "game_phase": row["game_phase"],
+                    "score_situation": row["score_situation"],
+                    "win_prob": win_prob,
+                })
+
+        # Per-set box scores
+        set_scores = []
+        for sn, sgroup in vgroup.groupby("set_number"):
+            set_actions = game_actions[game_actions["set_number"] == sn]
+            last_rally = sgroup.sort_values("rally_id").iloc[-1]
+            our_s = int(last_rally["our_score"])
+            opp_s = int(last_rally["opp_score"])
+
+            s_attacks = set_actions[
+                (set_actions["is_our_team"])
+                & (set_actions["action_type"] == "attack")
+                & (set_actions["quality"].isin(["kill", "error", "in_play", "block_kill"]))
+            ]
+            sk = (s_attacks["quality"] == "kill").sum()
+            se = (s_attacks["quality"] == "error").sum()
+            st = len(s_attacks)
+            s_eff = round((sk - se) / st, 3) if st > 0 else 0
+
+            s_recv = sgroup[sgroup["is_receive"]]
+            s_so_pct = round(s_recv["is_sideout"].mean() * 100, 1) if len(s_recv) > 0 else 0
+
+            set_scores.append({
+                "set_number": int(sn),
+                "our_score": our_s,
+                "opp_score": opp_s,
+                "won": our_s > opp_s,
+                "hitting_eff": s_eff,
+                "sideout_pct": s_so_pct,
+            })
+
+        games[vid] = {
+            "video_id": vid,
+            "date": first["match_date"],
+            "title": first["match_title"],
+            "result": result,
+            "sets_won": sets_won,
+            "sets_lost": sets_lost,
+            "sideout_pct": so_pct,
+            "hitting_eff": hitting_eff,
+            "pass_avg": pass_avg,
+            "momentum": momentum,
+            "set_scores": set_scores,
+        }
+
+    # Sort game list by date
+    game_list.sort(key=lambda x: x["date"])
+
+    return {
+        "game_list": game_list,
+        "games": games,
+    }
+
+
+def generate_zones(dfs):
+    """Build zones.json with attack and receive heatmaps by zone."""
+    actions_df = dfs["actions"]
+
+    # Attack zones: our team attacks with known src_zone
+    attack_actions = actions_df[
+        (actions_df["is_our_team"])
+        & (actions_df["action_type"] == "attack")
+        & (actions_df["quality"].isin(["kill", "error", "in_play", "block_kill"]))
+        & (actions_df["src_zone"].notna())
+        & (actions_df["src_zone"] != "")
+        & (actions_df["src_zone"] != "None")
+    ].copy()
+
+    # Receive zones: our team receives with known src_zone
+    q_map = {"3": 3, "2": 2, "1": 1, "0": 0}
+    receive_actions = actions_df[
+        (actions_df["is_our_team"])
+        & (actions_df["action_type"] == "receive")
+        & (actions_df["src_zone"].notna())
+        & (actions_df["src_zone"] != "")
+        & (actions_df["src_zone"] != "None")
+    ].copy()
+
+    # Team-level attack zones
+    attack_zones = []
+    for zone, zg in attack_actions.groupby("src_zone"):
+        k = (zg["quality"] == "kill").sum()
+        e = (zg["quality"] == "error").sum()
+        t = len(zg)
+        eff = round((k - e) / t, 3) if t > 0 else 0
+        # Top player by kills in this zone
+        top_player = None
+        if not zg.empty:
+            player_kills = zg[zg["quality"] == "kill"].groupby("player").size()
+            if not player_kills.empty:
+                top_player = player_kills.idxmax()
+        attack_zones.append({
+            "zone": str(zone),
+            "kills": int(k),
+            "errors": int(e),
+            "attempts": int(t),
+            "hitting_eff": eff,
+            "top_player": top_player,
+        })
+
+    # Team-level receive zones
+    receive_zones = []
+    if not receive_actions.empty:
+        receive_actions["pass_quality"] = receive_actions["quality"].map(q_map)
+        for zone, zg in receive_actions.groupby("src_zone"):
+            rq = zg["pass_quality"].dropna()
+            pass_avg = round(rq.mean(), 3) if len(rq) > 0 else None
+            t = len(zg)
+            # Top receiver by volume
+            top_player = None
+            player_counts = zg.groupby("player").size()
+            if not player_counts.empty:
+                top_player = player_counts.idxmax()
+            receive_zones.append({
+                "zone": str(zone),
+                "attempts": int(t),
+                "pass_avg": pass_avg,
+                "top_player": top_player,
+            })
+
+    # Per-player attack zones
+    player_attack_zones = {}
+    for player, pg in attack_actions.groupby("player"):
+        if not player:
+            continue
+        zones = []
+        for zone, zg in pg.groupby("src_zone"):
+            k = (zg["quality"] == "kill").sum()
+            e = (zg["quality"] == "error").sum()
+            t = len(zg)
+            eff = round((k - e) / t, 3) if t > 0 else 0
+            zones.append({
+                "zone": str(zone),
+                "kills": int(k),
+                "errors": int(e),
+                "attempts": int(t),
+                "hitting_eff": eff,
+            })
+        player_attack_zones[player] = zones
+
+    # Per-player receive zones
+    player_receive_zones = {}
+    if not receive_actions.empty:
+        for player, pg in receive_actions.groupby("player"):
+            if not player:
+                continue
+            zones = []
+            for zone, zg in pg.groupby("src_zone"):
+                rq = zg["pass_quality"].dropna()
+                pass_avg = round(rq.mean(), 3) if len(rq) > 0 else None
+                zones.append({
+                    "zone": str(zone),
+                    "attempts": int(len(zg)),
+                    "pass_avg": pass_avg,
+                })
+            player_receive_zones[player] = zones
+
+    return {
+        "attack_zones": attack_zones,
+        "receive_zones": receive_zones,
+        "player_attack_zones": player_attack_zones,
+        "player_receive_zones": player_receive_zones,
+    }
+
+
 def main():
     matches = load_from_cache()
     if not matches:
@@ -383,6 +795,21 @@ def main():
     with open(SITE_DATA_DIR / "comparison.json", "w") as f:
         json.dump(comparison, f, indent=2, default=str)
     print("Generated comparison.json", file=sys.stderr)
+
+    runs = _sanitize(generate_runs(dfs))
+    with open(SITE_DATA_DIR / "runs.json", "w") as f:
+        json.dump(runs, f, indent=2, default=str)
+    print("Generated runs.json", file=sys.stderr)
+
+    games = _sanitize(generate_games(dfs))
+    with open(SITE_DATA_DIR / "games.json", "w") as f:
+        json.dump(games, f, indent=2, default=str)
+    print("Generated games.json", file=sys.stderr)
+
+    zones = _sanitize(generate_zones(dfs))
+    with open(SITE_DATA_DIR / "zones.json", "w") as f:
+        json.dump(zones, f, indent=2, default=str)
+    print("Generated zones.json", file=sys.stderr)
 
     print("Done! Open site/index.html to view.", file=sys.stderr)
 

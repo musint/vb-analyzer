@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>13-2 Statistical Deep Dive — Player Comparison</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.plot.ly/plotly-2.35.0.min.js"></script>
+</head>
+<body>
+
+  <!-- ======== NAVIGATION ======== -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="logo-icon">13</span>
+        13-2 Statistical Deep Dive
+      </div>
+      <div class="nav-tabs">
+        <a href="index.html">Overview</a>
+        <a href="players.html">Players</a>
+        <a href="comparison.html">Comparison</a>
+        <a href="runs.html">Runs</a>
+        <a href="game.html">Game</a>
+        <a href="zones.html">Zones</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======== MAIN CONTENT ======== -->
+  <main class="main-content">
+
+    <!-- Page Header -->
+    <header class="page-header">
+      <h1 class="page-title">Player Comparison</h1>
+      <p class="page-subtitle">Side-by-side radar charts, trends, and stat tables</p>
+    </header>
+
+    <!-- Multi-Player Select -->
+    <section class="section">
+      <div class="card">
+        <h2 class="section-title">Select Players</h2>
+        <div id="player-multi-select">
+          <!-- JS populates multi-select area here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Radar Chart -->
+    <section class="section">
+      <div class="card">
+        <h2 class="section-title">Skill Radar</h2>
+        <div id="radar-chart" class="chart-container" style="min-height: 420px;"></div>
+      </div>
+    </section>
+
+    <!-- Trend Chart -->
+    <section class="section">
+      <div class="card">
+        <h2 class="section-title">Performance Trends</h2>
+        <div id="trend-chart" class="chart-container"></div>
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="section">
+      <div class="card">
+        <h2 class="section-title">Stat Comparison</h2>
+        <div id="comparison-table" class="table-wrap"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/app.js"></script>
+  <script src="js/comparison.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>13-2 Statistical Deep Dive — Scoring Runs</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.plot.ly/plotly-2.35.0.min.js"></script>
+</head>
+<body>
+
+  <!-- ======== NAVIGATION ======== -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="logo-icon">13</span>
+        13-2 Statistical Deep Dive
+      </div>
+      <div class="nav-tabs">
+        <a href="index.html">Overview</a>
+        <a href="players.html">Players</a>
+        <a href="comparison.html">Comparison</a>
+        <a href="runs.html">Runs</a>
+        <a href="game.html">Game</a>
+        <a href="zones.html">Zones</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======== MAIN CONTENT ======== -->
+  <main class="main-content">
+
+    <!-- Page Header -->
+    <header class="page-header">
+      <h1 class="page-title">Scoring Runs</h1>
+      <p class="page-subtitle">Momentum swings, run starters, and run killers</p>
+    </header>
+
+    <!-- KPI Row -->
+    <section class="section">
+      <div id="runs-kpi-row" class="kpi-row">
+        <!-- JS populates 6 KPI cards here -->
+      </div>
+    </section>
+
+    <!-- Run Starters + Run Killers (side by side) -->
+    <section class="section grid-2">
+      <div class="card">
+        <h2 class="section-title">Run Starters</h2>
+        <div id="starters-table" class="table-wrap"></div>
+      </div>
+      <div class="card">
+        <h2 class="section-title">Run Killers</h2>
+        <div id="killers-table" class="table-wrap"></div>
+      </div>
+    </section>
+
+    <!-- Runs by Phase + Runs by Situation (side by side) -->
+    <section class="section grid-2">
+      <div class="card">
+        <h2 class="section-title">Runs by Game Phase</h2>
+        <div id="runs-by-phase-chart" class="chart-container"></div>
+      </div>
+      <div class="card">
+        <h2 class="section-title">Runs by Score Situation</h2>
+        <div id="runs-by-situation-chart" class="chart-container"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/app.js"></script>
+  <script src="js/runs.js"></script>
+</body>
+</html>

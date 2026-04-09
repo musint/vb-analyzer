@@ -1,0 +1,891 @@
+{
+  "kpis": {
+    "record": "32-23",
+    "wins": 32,
+    "losses": 23,
+    "total_matches": 55,
+    "total_sets": 121,
+    "total_rallies": 5105,
+    "point_win_pct": 51.9,
+    "sideout_pct": 46.9,
+    "breakpoint_pct": 56.4,
+    "hitting_eff": 0.096,
+    "kill_pct": 28.2,
+    "pass_avg": 1.604
+  },
+  "progression": [
+    {
+      "date": "2025-12-14",
+      "title": "Vibe Vb - Game",
+      "sideout_pct": 50.0,
+      "hitting_eff": 0.304,
+      "pass_avg": 1.538
+    },
+    {
+      "date": "2025-12-14",
+      "title": "Marin-14 Slate - Game",
+      "sideout_pct": 70.4,
+      "hitting_eff": 0.034,
+      "pass_avg": 1.429
+    },
+    {
+      "date": "2025-12-14",
+      "title": "Union Volleyball Academy 14 Jel",
+      "sideout_pct": 33.3,
+      "hitting_eff": -0.106,
+      "pass_avg": 1.615
+    },
+    {
+      "date": "2025-12-14",
+      "title": "Marin 13 Green - Game",
+      "sideout_pct": 41.7,
+      "hitting_eff": 0.057,
+      "pass_avg": 1.6
+    },
+    {
+      "date": "2025-12-15",
+      "title": "Richmond SOL 14 Premier ",
+      "sideout_pct": 47.2,
+      "hitting_eff": -0.045,
+      "pass_avg": 1.606
+    },
+    {
+      "date": "2025-12-15",
+      "title": "Marin 14 Green - Game",
+      "sideout_pct": 48.5,
+      "hitting_eff": 0.022,
+      "pass_avg": 1.739
+    },
+    {
+      "date": "2026-01-18",
+      "title": "@ Academy Volleyball - Game",
+      "sideout_pct": 44.4,
+      "hitting_eff": -0.086,
+      "pass_avg": 1.533
+    },
+    {
+      "date": "2026-01-18",
+      "title": "@ Rage Volleyball - Game",
+      "sideout_pct": 54.8,
+      "hitting_eff": 0.182,
+      "pass_avg": 1.767
+    },
+    {
+      "date": "2026-01-18",
+      "title": "@ SynergyForce 13 National",
+      "sideout_pct": 50.0,
+      "hitting_eff": 0.138,
+      "pass_avg": 1.636
+    },
+    {
+      "date": "2026-01-19",
+      "title": "@ Academy Volleyball - Game",
+      "sideout_pct": 42.9,
+      "hitting_eff": 0.0,
+      "pass_avg": 1.676
+    },
+    {
+      "date": "2026-01-19",
+      "title": "VVA 14-Oliveira",
+      "sideout_pct": 36.2,
+      "hitting_eff": -0.048,
+      "pass_avg": 1.357
+    },
+    {
+      "date": "2026-01-19",
+      "title": "Rage 13",
+      "sideout_pct": 38.8,
+      "hitting_eff": 0.08,
+      "pass_avg": 1.432
+    },
+    {
+      "date": "2026-01-20",
+      "title": "@ Vibe-14 Black - Game",
+      "sideout_pct": 40.8,
+      "hitting_eff": 0.022,
+      "pass_avg": 1.636
+    },
+    {
+      "date": "2026-02-01",
+      "title": "vs. MVVC-White - Game",
+      "sideout_pct": 62.5,
+      "hitting_eff": 0.23,
+      "pass_avg": 1.63
+    },
+    {
+      "date": "2026-02-01",
+      "title": "@ Red Rock Volleyball  - Game",
+      "sideout_pct": 52.6,
+      "hitting_eff": 0.087,
+      "pass_avg": 1.7
+    },
+    {
+      "date": "2026-02-01",
+      "title": "@ Academy Volleyball - Game",
+      "sideout_pct": 55.6,
+      "hitting_eff": 0.294,
+      "pass_avg": 1.7
+    },
+    {
+      "date": "2026-02-02",
+      "title": "@ SF Elite Volleyball Club - Game",
+      "sideout_pct": 44.9,
+      "hitting_eff": -0.078,
+      "pass_avg": 1.462
+    },
+    {
+      "date": "2026-02-02",
+      "title": "@Bay Area Eagles",
+      "sideout_pct": 45.0,
+      "hitting_eff": 0.133,
+      "pass_avg": 1.487
+    },
+    {
+      "date": "2026-02-15",
+      "title": "@ Golden State Volleyball Club - Game",
+      "sideout_pct": 42.0,
+      "hitting_eff": -0.032,
+      "pass_avg": 1.515
+    },
+    {
+      "date": "2026-02-15",
+      "title": "SynergyForce 13 Gold",
+      "sideout_pct": 54.2,
+      "hitting_eff": 0.245,
+      "pass_avg": 1.737
+    },
+    {
+      "date": "2026-02-15",
+      "title": "Vision 13 Blue",
+      "sideout_pct": 38.0,
+      "hitting_eff": 0.035,
+      "pass_avg": 1.457
+    },
+    {
+      "date": "2026-02-16",
+      "title": "Richmond SOL 14",
+      "sideout_pct": 60.6,
+      "hitting_eff": 0.3,
+      "pass_avg": 1.75
+    },
+    {
+      "date": "2026-02-16",
+      "title": "MVVC 13 Black",
+      "sideout_pct": 50.0,
+      "hitting_eff": 0.0,
+      "pass_avg": 1.822
+    },
+    {
+      "date": "2026-02-17",
+      "title": "@ Synergy Force 14 Gold - Game",
+      "sideout_pct": 53.5,
+      "hitting_eff": 0.045,
+      "pass_avg": 1.531
+    },
+    {
+      "date": "2026-02-17",
+      "title": "@ Academy Volleyball - Game",
+      "sideout_pct": 45.8,
+      "hitting_eff": 0.055,
+      "pass_avg": 1.677
+    },
+    {
+      "date": "2026-02-18",
+      "title": "@ Stingray-14 Black - Game",
+      "sideout_pct": 46.5,
+      "hitting_eff": 0.078,
+      "pass_avg": 1.743
+    },
+    {
+      "date": "2026-02-23",
+      "title": "@ MVVC 13 Red - Game",
+      "sideout_pct": 47.5,
+      "hitting_eff": 0.065,
+      "pass_avg": 1.796
+    },
+    {
+      "date": "2026-02-23",
+      "title": "@ Absolute Volleyball Club - Game",
+      "sideout_pct": 40.5,
+      "hitting_eff": 0.077,
+      "pass_avg": 1.5
+    },
+    {
+      "date": "2026-02-23",
+      "title": "@ MVVC 13 Black - Game",
+      "sideout_pct": 56.8,
+      "hitting_eff": 0.067,
+      "pass_avg": 1.63
+    },
+    {
+      "date": "2026-02-23",
+      "title": "@ OMNI Volleyball Club - Game",
+      "sideout_pct": 56.1,
+      "hitting_eff": 0.283,
+      "pass_avg": 1.741
+    },
+    {
+      "date": "2026-02-23",
+      "title": "@ Rage Volleyball - Game",
+      "sideout_pct": 40.7,
+      "hitting_eff": 0.033,
+      "pass_avg": 1.59
+    },
+    {
+      "date": "2026-03-08",
+      "title": "@ Vision 13 Gold - Game",
+      "sideout_pct": 26.5,
+      "hitting_eff": -0.094,
+      "pass_avg": 1.471
+    },
+    {
+      "date": "2026-03-08",
+      "title": "Absolute 13 Black",
+      "sideout_pct": 50.0,
+      "hitting_eff": 0.037,
+      "pass_avg": 1.5
+    },
+    {
+      "date": "2026-03-08",
+      "title": "@ Academy West 13 National - Game",
+      "sideout_pct": 47.5,
+      "hitting_eff": 0.221,
+      "pass_avg": 1.302
+    },
+    {
+      "date": "2026-03-08",
+      "title": "Panda 13-1",
+      "sideout_pct": 32.7,
+      "hitting_eff": 0.044,
+      "pass_avg": 1.364
+    },
+    {
+      "date": "2026-03-08",
+      "title": "@ Marin 13 Black - Game",
+      "sideout_pct": 44.0,
+      "hitting_eff": 0.077,
+      "pass_avg": 1.588
+    },
+    {
+      "date": "2026-03-22",
+      "title": "@ M1 13 Blue - Game",
+      "sideout_pct": 59.4,
+      "hitting_eff": 0.333,
+      "pass_avg": 1.696
+    },
+    {
+      "date": "2026-03-22",
+      "title": "@ STL Crossfire - Game",
+      "sideout_pct": 51.6,
+      "hitting_eff": 0.255,
+      "pass_avg": 1.722
+    },
+    {
+      "date": "2026-03-22",
+      "title": "H. Prep 14 Mizuno",
+      "sideout_pct": 37.3,
+      "hitting_eff": 0.122,
+      "pass_avg": 1.55
+    },
+    {
+      "date": "2026-03-23",
+      "title": "@ Arkansas Elite 13-1 - Game",
+      "sideout_pct": 42.6,
+      "hitting_eff": 0.147,
+      "pass_avg": 1.395
+    },
+    {
+      "date": "2026-03-23",
+      "title": "@ CJV 13 National - Game",
+      "sideout_pct": 39.6,
+      "hitting_eff": -0.015,
+      "pass_avg": 1.514
+    },
+    {
+      "date": "2026-03-23",
+      "title": "@ Shock 13 UA - Game",
+      "sideout_pct": 57.1,
+      "hitting_eff": 0.438,
+      "pass_avg": 1.471
+    },
+    {
+      "date": "2026-03-23",
+      "title": "@ Mineral Area 13 Elite - Game",
+      "sideout_pct": 58.1,
+      "hitting_eff": 0.132,
+      "pass_avg": 1.962
+    },
+    {
+      "date": "2026-03-23",
+      "title": "@ McAllen Fierce Volleyball - Game",
+      "sideout_pct": 54.8,
+      "hitting_eff": 0.207,
+      "pass_avg": 1.591
+    },
+    {
+      "date": "2026-03-30",
+      "title": "@ MVVC Red - Game",
+      "sideout_pct": 64.3,
+      "hitting_eff": 0.167,
+      "pass_avg": 1.889
+    },
+    {
+      "date": "2026-03-30",
+      "title": "@ NorCal Black - Game",
+      "sideout_pct": 53.3,
+      "hitting_eff": 0.066,
+      "pass_avg": 1.805
+    },
+    {
+      "date": "2026-03-30",
+      "title": "@ Marin Black - Game",
+      "sideout_pct": 30.6,
+      "hitting_eff": 0.127,
+      "pass_avg": 1.425
+    },
+    {
+      "date": "2026-03-30",
+      "title": "@ Synergy Force National - Game",
+      "sideout_pct": 39.5,
+      "hitting_eff": 0.079,
+      "pass_avg": 1.806
+    },
+    {
+      "date": "2026-04-07",
+      "title": "@ Uno Girls - Game",
+      "sideout_pct": 42.3,
+      "hitting_eff": 0.25,
+      "pass_avg": 1.737
+    },
+    {
+      "date": "2026-04-07",
+      "title": "@ Headlines VBC - Game",
+      "sideout_pct": 56.5,
+      "hitting_eff": 0.191,
+      "pass_avg": 1.625
+    },
+    {
+      "date": "2026-04-07",
+      "title": "@ Union Green - Game",
+      "sideout_pct": 49.1,
+      "hitting_eff": 0.0,
+      "pass_avg": 1.447
+    },
+    {
+      "date": "2026-04-07",
+      "title": "@ Rockwood Thunder - Game",
+      "sideout_pct": 49.2,
+      "hitting_eff": 0.088,
+      "pass_avg": 1.524
+    },
+    {
+      "date": "2026-04-07",
+      "title": "@ CVC 13 Royal - Game",
+      "sideout_pct": 58.8,
+      "hitting_eff": 0.083,
+      "pass_avg": 1.63
+    },
+    {
+      "date": "2026-04-07",
+      "title": "@ HP Illinois Select - Game",
+      "sideout_pct": 40.9,
+      "hitting_eff": 0.122,
+      "pass_avg": 1.794
+    },
+    {
+      "date": "2026-04-07",
+      "title": "@ TVC 13 Royal - Game",
+      "sideout_pct": 40.8,
+      "hitting_eff": 0.081,
+      "pass_avg": 1.744
+    }
+  ],
+  "attack_by_state": [
+    {
+      "situation": "winning_big",
+      "hitting_eff": 0.108,
+      "kills": 193,
+      "errors": 124,
+      "attempts": 636
+    },
+    {
+      "situation": "winning",
+      "hitting_eff": 0.119,
+      "kills": 189,
+      "errors": 112,
+      "attempts": 647
+    },
+    {
+      "situation": "close",
+      "hitting_eff": 0.117,
+      "kills": 288,
+      "errors": 169,
+      "attempts": 1013
+    },
+    {
+      "situation": "losing",
+      "hitting_eff": 0.051,
+      "kills": 137,
+      "errors": 110,
+      "attempts": 531
+    },
+    {
+      "situation": "losing_big",
+      "hitting_eff": 0.049,
+      "kills": 106,
+      "errors": 86,
+      "attempts": 409
+    }
+  ],
+  "pass_by_state": [
+    {
+      "situation": "winning_big",
+      "pass_avg": 1.614,
+      "total": 259
+    },
+    {
+      "situation": "winning",
+      "pass_avg": 1.683,
+      "total": 290
+    },
+    {
+      "situation": "close",
+      "pass_avg": 1.637,
+      "total": 520
+    },
+    {
+      "situation": "losing",
+      "pass_avg": 1.595,
+      "total": 351
+    },
+    {
+      "situation": "losing_big",
+      "pass_avg": 1.486,
+      "total": 333
+    }
+  ],
+  "game_results": [
+    {
+      "date": "2026-04-07",
+      "opponent": "@ Uno Girls - Game",
+      "sets_won": 2,
+      "sets_lost": 0,
+      "result": "W"
+    },
+    {
+      "date": "2026-04-07",
+      "opponent": "@ Headlines VBC - Game",
+      "sets_won": 2,
+      "sets_lost": 0,
+      "result": "W"
+    },
+    {
+      "date": "2026-04-07",
+      "opponent": "@ Union Green - Game",
+      "sets_won": 2,
+      "sets_lost": 1,
+      "result": "W"
+    },
+    {
+      "date": "2026-04-07",
+      "opponent": "@ Rockwood Thunder - Game",
+      "sets_won": 1,
+      "sets_lost": 2,
+      "result": "L"
+    },
+    {
+      "date": "2026-04-07",
+      "opponent": "@ CVC 13 Royal - Game",
+      "sets_won": 2,
+      "sets_lost": 0,
+      "result": "W"
+    },
+    {
+      "date": "2026-04-07",
+      "opponent": "@ HP Illinois Select - Game",
+      "sets_won": 2,
+      "sets_lost": 0,
+      "result": "W"
+    },
+    {
+      "date": "2026-04-07",
+      "opponent": "@ TVC 13 Royal - Game",
+      "sets_won": 0,
+      "sets_lost": 2,
+      "result": "L"
+    },
+    {
+      "date": "2026-03-30",
+      "opponent": "@ MVVC Red - Game",
+      "sets_won": 2,
+      "sets_lost": 0,
+      "result": "W"
+    },
+    {
+      "date": "2026-03-30",
+      "opponent": "@ NorCal Black - Game",
+      "sets_won": 2,
+      "sets_lost": 1,
+      "result": "W"
+    },
+    {
+      "date": "2026-03-30",
+      "opponent": "@ Marin Black - Game",
+      "sets_won": 0,
+      "sets_lost": 2,
+      "result": "L"
+    },
+    {
+      "date": "2026-03-30",
+      "opponent": "@ Synergy Force National - Game",
+      "sets_won": 2,
+      "sets_lost": 0,
+      "result": "W"
+    },
+    {
+      "date": "2026-03-23",
+      "opponent": "@ Arkansas Elite 13-1 - Game",
+      "sets_won": 2,
+      "sets_lost": 1,
+      "result": "W"
+    },
+    {
+      "date": "2026-03-23",
+      "opponent": "@ CJV 13 National - Game",
+      "sets_won": 0,
+      "sets_lost": 2,
+      "result": "L"
+    },
+    {
+      "date": "2026-03-23",
+      "opponent": "@ Shock 13 UA - Game",
+      "sets_won": 2,
+      "sets_lost": 0,
+      "result": "W"
+    },
+    {
+      "date": "2026-03-23",
+      "opponent": "@ Mineral Area 13 Elite - Game",
+      "sets_won": 2,
+      "sets_lost": 0,
+      "result": "W"
+    },
+    {
+      "date": "2026-03-23",
+      "opponent": "@ McAllen Fierce Volleyball - Game",
+      "sets_won": 2,
+      "sets_lost": 0,
+      "result": "W"
+    },
+    {
+      "date": "2026-03-22",
+      "opponent": "@ M1 13 Blue - Game",
+      "sets_won": 2,
+      "sets_lost": 0,
+      "result": "W"
+    },
+    {
+      "date": "2026-03-22",
+      "opponent": "@ STL Crossfire - Game",
+      "sets_won": 2,
+      "sets_lost": 0,
+      "result": "W"
+    },
+    {
+      "date": "2026-03-22",
+      "opponent": "H. Prep 14 Mizuno",
+      "sets_won": 1,
+      "sets_lost": 2,
+      "result": "L"
+    },
+    {
+      "date": "2026-03-08",
+      "opponent": "@ Vision 13 Gold - Game",
+      "sets_won": 0,
+      "sets_lost": 2,
+      "result": "L"
+    },
+    {
+      "date": "2026-03-08",
+      "opponent": "Absolute 13 Black",
+      "sets_won": 2,
+      "sets_lost": 1,
+      "result": "W"
+    },
+    {
+      "date": "2026-03-08",
+      "opponent": "@ Academy West 13 National - Game",
+      "sets_won": 2,
+      "sets_lost": 1,
+      "result": "W"
+    },
+    {
+      "date": "2026-03-08",
+      "opponent": "Panda 13-1",
+      "sets_won": 0,
+      "sets_lost": 2,
+      "result": "L"
+    },
+    {
+      "date": "2026-03-08",
+      "opponent": "@ Marin 13 Black - Game",
+      "sets_won": 0,
+      "sets_lost": 0,
+      "result": "L"
+    },
+    {
+      "date": "2026-02-23",
+      "opponent": "@ MVVC 13 Red - Game",
+      "sets_won": 2,
+      "sets_lost": 1,
+      "result": "W"
+    },
+    {
+      "date": "2026-02-23",
+      "opponent": "@ Absolute Volleyball Club - Game",
+      "sets_won": 2,
+      "sets_lost": 0,
+      "result": "W"
+    },
+    {
+      "date": "2026-02-23",
+      "opponent": "@ MVVC 13 Black - Game",
+      "sets_won": 2,
+      "sets_lost": 0,
+      "result": "W"
+    },
+    {
+      "date": "2026-02-23",
+      "opponent": "@ OMNI Volleyball Club - Game",
+      "sets_won": 2,
+      "sets_lost": 0,
+      "result": "W"
+    },
+    {
+      "date": "2026-02-23",
+      "opponent": "@ Rage Volleyball - Game",
+      "sets_won": 1,
+      "sets_lost": 2,
+      "result": "L"
+    },
+    {
+      "date": "2026-02-18",
+      "opponent": "@ Stingray-14 Black - Game",
+      "sets_won": 2,
+      "sets_lost": 1,
+      "result": "W"
+    },
+    {
+      "date": "2026-02-17",
+      "opponent": "@ Synergy Force 14 Gold - Game",
+      "sets_won": 0,
+      "sets_lost": 0,
+      "result": "L"
+    },
+    {
+      "date": "2026-02-17",
+      "opponent": "@ Academy Volleyball - Game",
+      "sets_won": 2,
+      "sets_lost": 0,
+      "result": "W"
+    },
+    {
+      "date": "2026-02-16",
+      "opponent": "Richmond SOL 14",
+      "sets_won": 2,
+      "sets_lost": 0,
+      "result": "W"
+    },
+    {
+      "date": "2026-02-16",
+      "opponent": "MVVC 13 Black",
+      "sets_won": 1,
+      "sets_lost": 2,
+      "result": "L"
+    },
+    {
+      "date": "2026-02-15",
+      "opponent": "@ Golden State Volleyball Club - Game",
+      "sets_won": 0,
+      "sets_lost": 2,
+      "result": "L"
+    },
+    {
+      "date": "2026-02-15",
+      "opponent": "SynergyForce 13 Gold",
+      "sets_won": 2,
+      "sets_lost": 0,
+      "result": "W"
+    },
+    {
+      "date": "2026-02-15",
+      "opponent": "Vision 13 Blue",
+      "sets_won": 0,
+      "sets_lost": 2,
+      "result": "L"
+    },
+    {
+      "date": "2026-02-02",
+      "opponent": "@ SF Elite Volleyball Club - Game",
+      "sets_won": 0,
+      "sets_lost": 2,
+      "result": "L"
+    },
+    {
+      "date": "2026-02-02",
+      "opponent": "@Bay Area Eagles",
+      "sets_won": 1,
+      "sets_lost": 2,
+      "result": "L"
+    },
+    {
+      "date": "2026-02-01",
+      "opponent": "vs. MVVC-White - Game",
+      "sets_won": 2,
+      "sets_lost": 1,
+      "result": "W"
+    },
+    {
+      "date": "2026-02-01",
+      "opponent": "@ Red Rock Volleyball  - Game",
+      "sets_won": 2,
+      "sets_lost": 0,
+      "result": "W"
+    },
+    {
+      "date": "2026-02-01",
+      "opponent": "@ Academy Volleyball - Game",
+      "sets_won": 2,
+      "sets_lost": 0,
+      "result": "W"
+    },
+    {
+      "date": "2026-01-20",
+      "opponent": "@ Vibe-14 Black - Game",
+      "sets_won": 0,
+      "sets_lost": 2,
+      "result": "L"
+    },
+    {
+      "date": "2026-01-19",
+      "opponent": "@ Academy Volleyball - Game",
+      "sets_won": 0,
+      "sets_lost": 2,
+      "result": "L"
+    },
+    {
+      "date": "2026-01-19",
+      "opponent": "VVA 14-Oliveira",
+      "sets_won": 0,
+      "sets_lost": 2,
+      "result": "L"
+    },
+    {
+      "date": "2026-01-19",
+      "opponent": "Rage 13",
+      "sets_won": 0,
+      "sets_lost": 2,
+      "result": "L"
+    },
+    {
+      "date": "2026-01-18",
+      "opponent": "@ Academy Volleyball - Game",
+      "sets_won": 1,
+      "sets_lost": 2,
+      "result": "L"
+    },
+    {
+      "date": "2026-01-18",
+      "opponent": "@ Rage Volleyball - Game",
+      "sets_won": 2,
+      "sets_lost": 0,
+      "result": "W"
+    },
+    {
+      "date": "2026-01-18",
+      "opponent": "@ SynergyForce 13 National",
+      "sets_won": 1,
+      "sets_lost": 2,
+      "result": "L"
+    },
+    {
+      "date": "2025-12-15",
+      "opponent": "Richmond SOL 14 Premier ",
+      "sets_won": 2,
+      "sets_lost": 1,
+      "result": "W"
+    },
+    {
+      "date": "2025-12-15",
+      "opponent": "Marin 14 Green - Game",
+      "sets_won": 1,
+      "sets_lost": 2,
+      "result": "L"
+    },
+    {
+      "date": "2025-12-14",
+      "opponent": "Vibe Vb - Game",
+      "sets_won": 2,
+      "sets_lost": 0,
+      "result": "W"
+    },
+    {
+      "date": "2025-12-14",
+      "opponent": "Marin-14 Slate - Game",
+      "sets_won": 2,
+      "sets_lost": 0,
+      "result": "W"
+    },
+    {
+      "date": "2025-12-14",
+      "opponent": "Union Volleyball Academy 14 Jel",
+      "sets_won": 0,
+      "sets_lost": 0,
+      "result": "L"
+    },
+    {
+      "date": "2025-12-14",
+      "opponent": "Marin 13 Green - Game",
+      "sets_won": 2,
+      "sets_lost": 0,
+      "result": "W"
+    }
+  ],
+  "sideout_by_phase": [
+    {
+      "phase": "early",
+      "sideout_pct": 48.9,
+      "opportunities": 1059
+    },
+    {
+      "phase": "final",
+      "sideout_pct": 47.7,
+      "opportunities": 421
+    },
+    {
+      "phase": "middle",
+      "sideout_pct": 44.5,
+      "opportunities": 983
+    }
+  ],
+  "expected_sideout": [
+    {
+      "pass_quality": 1,
+      "rallies": 983,
+      "sideouts": 426,
+      "sideout_pct": 43.3
+    },
+    {
+      "pass_quality": 2,
+      "rallies": 481,
+      "sideouts": 260,
+      "sideout_pct": 54.1
+    },
+    {
+      "pass_quality": 3,
+      "rallies": 289,
+      "sideouts": 150,
+      "sideout_pct": 51.9
+    }
+  ]
+}

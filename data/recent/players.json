@@ -1,0 +1,5650 @@
+{
+  "player_list": [
+    "Brenna O'Connor",
+    "Ava Nguyen",
+    "Emma Lares",
+    "Emma Ferro",
+    "Isabella Fernandez",
+    "Tanisha Verma",
+    "Zlata Lutska",
+    "Amelia Rae Diaz",
+    "Tatiana Rogers",
+    "Ava Shahnazari",
+    "Sophia Fernandez",
+    "Jenna Gad",
+    "Aarnavi Muthyala",
+    "None"
+  ],
+  "stats": {
+    "Brenna O'Connor": {
+      "kills": 63,
+      "att_errors": 29,
+      "att_total": 191,
+      "hitting_eff": 0.178,
+      "kill_pct": 33.0,
+      "aces": 93,
+      "srv_errors": 38,
+      "srv_total": 445,
+      "serving_eff": 0.124,
+      "pass_avg": 1.667,
+      "pass_total": 6,
+      "digs": 210,
+      "blocks": 0
+    },
+    "Ava Nguyen": {
+      "kills": 180,
+      "att_errors": 103,
+      "att_total": 623,
+      "hitting_eff": 0.124,
+      "kill_pct": 28.9,
+      "aces": 76,
+      "srv_errors": 37,
+      "srv_total": 271,
+      "serving_eff": 0.144,
+      "pass_avg": 1.591,
+      "pass_total": 325,
+      "digs": 229,
+      "blocks": 0
+    },
+    "Emma Lares": {
+      "kills": 89,
+      "att_errors": 69,
+      "att_total": 409,
+      "hitting_eff": 0.049,
+      "kill_pct": 21.8,
+      "aces": 89,
+      "srv_errors": 48,
+      "srv_total": 348,
+      "serving_eff": 0.118,
+      "pass_avg": 1.714,
+      "pass_total": 280,
+      "digs": 203,
+      "blocks": 0
+    },
+    "Emma Ferro": {
+      "kills": 6,
+      "att_errors": 8,
+      "att_total": 26,
+      "hitting_eff": -0.077,
+      "kill_pct": 23.1,
+      "aces": 34,
+      "srv_errors": 23,
+      "srv_total": 129,
+      "serving_eff": 0.085,
+      "pass_avg": 1.679,
+      "pass_total": 293,
+      "digs": 187,
+      "blocks": 0
+    },
+    "Isabella Fernandez": {
+      "kills": 138,
+      "att_errors": 82,
+      "att_total": 424,
+      "hitting_eff": 0.132,
+      "kill_pct": 32.5,
+      "aces": 46,
+      "srv_errors": 27,
+      "srv_total": 236,
+      "serving_eff": 0.081,
+      "pass_avg": 1.8,
+      "pass_total": 5,
+      "digs": 83,
+      "blocks": 0
+    },
+    "Tanisha Verma": {
+      "kills": 1,
+      "att_errors": 1,
+      "att_total": 14,
+      "hitting_eff": 0.0,
+      "kill_pct": 7.1,
+      "aces": 2,
+      "srv_errors": 1,
+      "srv_total": 4,
+      "serving_eff": 0.25,
+      "pass_avg": 2.0,
+      "pass_total": 1,
+      "digs": 94,
+      "blocks": 0
+    },
+    "Zlata Lutska": {
+      "kills": 1,
+      "att_errors": 1,
+      "att_total": 3,
+      "hitting_eff": 0.0,
+      "kill_pct": 33.3,
+      "aces": 6,
+      "srv_errors": 2,
+      "srv_total": 32,
+      "serving_eff": 0.125,
+      "pass_avg": 1.572,
+      "pass_total": 250,
+      "digs": 157,
+      "blocks": 0
+    },
+    "Amelia Rae Diaz": {
+      "kills": 101,
+      "att_errors": 75,
+      "att_total": 330,
+      "hitting_eff": 0.079,
+      "kill_pct": 30.6,
+      "aces": 34,
+      "srv_errors": 23,
+      "srv_total": 151,
+      "serving_eff": 0.073,
+      "pass_avg": 1.3,
+      "pass_total": 60,
+      "digs": 69,
+      "blocks": 0
+    },
+    "Tatiana Rogers": {
+      "kills": 69,
+      "att_errors": 32,
+      "att_total": 198,
+      "hitting_eff": 0.187,
+      "kill_pct": 34.8,
+      "aces": 31,
+      "srv_errors": 26,
+      "srv_total": 143,
+      "serving_eff": 0.035,
+      "pass_avg": 1.412,
+      "pass_total": 34,
+      "digs": 50,
+      "blocks": 0
+    },
+    "Ava Shahnazari": {
+      "kills": 59,
+      "att_errors": 18,
+      "att_total": 182,
+      "hitting_eff": 0.225,
+      "kill_pct": 32.4,
+      "aces": 34,
+      "srv_errors": 16,
+      "srv_total": 189,
+      "serving_eff": 0.095,
+      "pass_avg": 1.2,
+      "pass_total": 5,
+      "digs": 33,
+      "blocks": 0
+    },
+    "Sophia Fernandez": {
+      "kills": 2,
+      "att_errors": 1,
+      "att_total": 6,
+      "hitting_eff": 0.167,
+      "kill_pct": 33.3,
+      "aces": 14,
+      "srv_errors": 13,
+      "srv_total": 72,
+      "serving_eff": 0.014,
+      "pass_avg": 1.429,
+      "pass_total": 70,
+      "digs": 60,
+      "blocks": 0
+    },
+    "Jenna Gad": {
+      "kills": 5,
+      "att_errors": 17,
+      "att_total": 63,
+      "hitting_eff": -0.19,
+      "kill_pct": 7.9,
+      "aces": 3,
+      "srv_errors": 2,
+      "srv_total": 22,
+      "serving_eff": 0.045,
+      "pass_avg": null,
+      "pass_total": 0,
+      "digs": 4,
+      "blocks": 0
+    },
+    "Aarnavi Muthyala": {
+      "kills": 15,
+      "att_errors": 10,
+      "att_total": 56,
+      "hitting_eff": 0.089,
+      "kill_pct": 26.8,
+      "aces": 5,
+      "srv_errors": 1,
+      "srv_total": 18,
+      "serving_eff": 0.222,
+      "pass_avg": null,
+      "pass_total": 0,
+      "digs": 7,
+      "blocks": 0
+    },
+    "None": {
+      "kills": 0,
+      "att_errors": 0,
+      "att_total": 0,
+      "hitting_eff": 0.0,
+      "kill_pct": 0.0,
+      "aces": 0,
+      "srv_errors": 0,
+      "srv_total": 0,
+      "serving_eff": 0.0,
+      "pass_avg": null,
+      "pass_total": 0,
+      "digs": 0,
+      "blocks": 0
+    }
+  },
+  "clutch": {
+    "Brenna O'Connor": {
+      "hitting_eff_clutch": 0.3,
+      "hitting_eff_non_clutch": 0.164,
+      "kill_pct_clutch": 45.0,
+      "kill_pct_non_clutch": 31.6,
+      "pass_avg_clutch": null,
+      "pass_avg_non_clutch": 1.667,
+      "ace_pct_clutch": 20.0,
+      "ace_pct_non_clutch": 20.94,
+      "srv_err_pct_clutch": 0.0,
+      "srv_err_pct_non_clutch": 8.94,
+      "clutch_rating": 0.122
+    },
+    "Ava Nguyen": {
+      "hitting_eff_clutch": 0.182,
+      "hitting_eff_non_clutch": 0.12,
+      "kill_pct_clutch": 30.3,
+      "kill_pct_non_clutch": 28.8,
+      "pass_avg_clutch": 1.467,
+      "pass_avg_non_clutch": 1.597,
+      "ace_pct_clutch": 0.0,
+      "ace_pct_non_clutch": 29.23,
+      "srv_err_pct_clutch": 9.09,
+      "srv_err_pct_non_clutch": 13.85,
+      "clutch_rating": 0.057999999999999996
+    },
+    "Emma Lares": {
+      "hitting_eff_clutch": 0.0,
+      "hitting_eff_non_clutch": 0.052,
+      "kill_pct_clutch": 7.7,
+      "kill_pct_non_clutch": 22.7,
+      "pass_avg_clutch": 1.692,
+      "pass_avg_non_clutch": 1.715,
+      "ace_pct_clutch": 25.0,
+      "ace_pct_non_clutch": 25.59,
+      "srv_err_pct_clutch": 25.0,
+      "srv_err_pct_non_clutch": 13.53,
+      "clutch_rating": -0.049
+    },
+    "Emma Ferro": {
+      "hitting_eff_clutch": 0.5,
+      "hitting_eff_non_clutch": -0.125,
+      "kill_pct_clutch": 50.0,
+      "kill_pct_non_clutch": 20.8,
+      "pass_avg_clutch": 1.833,
+      "pass_avg_non_clutch": 1.669,
+      "ace_pct_clutch": 14.29,
+      "ace_pct_non_clutch": 27.05,
+      "srv_err_pct_clutch": 14.29,
+      "srv_err_pct_non_clutch": 18.03,
+      "clutch_rating": 0.577
+    },
+    "Isabella Fernandez": {
+      "hitting_eff_clutch": -0.059,
+      "hitting_eff_non_clutch": 0.14,
+      "kill_pct_clutch": 29.4,
+      "kill_pct_non_clutch": 32.7,
+      "pass_avg_clutch": null,
+      "pass_avg_non_clutch": 1.8,
+      "ace_pct_clutch": 21.43,
+      "ace_pct_non_clutch": 19.37,
+      "srv_err_pct_clutch": 14.29,
+      "srv_err_pct_non_clutch": 11.26,
+      "clutch_rating": -0.191
+    },
+    "Tanisha Verma": {
+      "hitting_eff_clutch": 0.0,
+      "hitting_eff_non_clutch": 0.0,
+      "kill_pct_clutch": 0.0,
+      "kill_pct_non_clutch": 8.3,
+      "pass_avg_clutch": null,
+      "pass_avg_non_clutch": 2.0,
+      "ace_pct_clutch": null,
+      "ace_pct_non_clutch": 50.0,
+      "srv_err_pct_clutch": null,
+      "srv_err_pct_non_clutch": 25.0,
+      "clutch_rating": 0.0
+    },
+    "Zlata Lutska": {
+      "hitting_eff_clutch": 0.0,
+      "hitting_eff_non_clutch": 0.0,
+      "kill_pct_clutch": 0.0,
+      "kill_pct_non_clutch": 33.3,
+      "pass_avg_clutch": 1.556,
+      "pass_avg_non_clutch": 1.573,
+      "ace_pct_clutch": 0.0,
+      "ace_pct_non_clutch": 19.35,
+      "srv_err_pct_clutch": 0.0,
+      "srv_err_pct_non_clutch": 6.45,
+      "clutch_rating": 0.0
+    },
+    "Amelia Rae Diaz": {
+      "hitting_eff_clutch": 0.059,
+      "hitting_eff_non_clutch": 0.08,
+      "kill_pct_clutch": 29.4,
+      "kill_pct_non_clutch": 30.7,
+      "pass_avg_clutch": 1.333,
+      "pass_avg_non_clutch": 1.296,
+      "ace_pct_clutch": 0.0,
+      "ace_pct_non_clutch": 22.97,
+      "srv_err_pct_clutch": 33.33,
+      "srv_err_pct_non_clutch": 14.86,
+      "clutch_rating": -0.020000000000000004
+    },
+    "Tatiana Rogers": {
+      "hitting_eff_clutch": 0.0,
+      "hitting_eff_non_clutch": 0.199,
+      "kill_pct_clutch": 16.7,
+      "kill_pct_non_clutch": 36.0,
+      "pass_avg_clutch": 1.5,
+      "pass_avg_non_clutch": 1.4,
+      "ace_pct_clutch": 10.0,
+      "ace_pct_non_clutch": 22.56,
+      "srv_err_pct_clutch": 20.0,
+      "srv_err_pct_non_clutch": 18.05,
+      "clutch_rating": -0.187
+    },
+    "Ava Shahnazari": {
+      "hitting_eff_clutch": 0.6,
+      "hitting_eff_non_clutch": 0.215,
+      "kill_pct_clutch": 60.0,
+      "kill_pct_non_clutch": 31.6,
+      "pass_avg_clutch": null,
+      "pass_avg_non_clutch": 1.2,
+      "ace_pct_clutch": 11.11,
+      "ace_pct_non_clutch": 18.33,
+      "srv_err_pct_clutch": 11.11,
+      "srv_err_pct_non_clutch": 8.33,
+      "clutch_rating": 0.375
+    },
+    "Sophia Fernandez": {
+      "hitting_eff_clutch": 0.0,
+      "hitting_eff_non_clutch": 0.167,
+      "kill_pct_clutch": 0.0,
+      "kill_pct_non_clutch": 33.3,
+      "pass_avg_clutch": null,
+      "pass_avg_non_clutch": 1.429,
+      "ace_pct_clutch": 16.67,
+      "ace_pct_non_clutch": 19.7,
+      "srv_err_pct_clutch": 33.33,
+      "srv_err_pct_non_clutch": 16.67,
+      "clutch_rating": -0.167
+    },
+    "Jenna Gad": {
+      "hitting_eff_clutch": -0.125,
+      "hitting_eff_non_clutch": -0.2,
+      "kill_pct_clutch": 12.5,
+      "kill_pct_non_clutch": 7.3,
+      "pass_avg_clutch": null,
+      "pass_avg_non_clutch": null,
+      "ace_pct_clutch": null,
+      "ace_pct_non_clutch": 13.64,
+      "srv_err_pct_clutch": null,
+      "srv_err_pct_non_clutch": 9.09,
+      "clutch_rating": 0.065
+    },
+    "Aarnavi Muthyala": {
+      "hitting_eff_clutch": 0.0,
+      "hitting_eff_non_clutch": 0.1,
+      "kill_pct_clutch": 16.7,
+      "kill_pct_non_clutch": 28.0,
+      "pass_avg_clutch": null,
+      "pass_avg_non_clutch": null,
+      "ace_pct_clutch": 42.86,
+      "ace_pct_non_clutch": 18.18,
+      "srv_err_pct_clutch": 0.0,
+      "srv_err_pct_non_clutch": 9.09,
+      "clutch_rating": -0.089
+    },
+    "None": {
+      "hitting_eff_clutch": 0.0,
+      "hitting_eff_non_clutch": 0.0,
+      "kill_pct_clutch": 0.0,
+      "kill_pct_non_clutch": 0.0,
+      "pass_avg_clutch": null,
+      "pass_avg_non_clutch": null,
+      "ace_pct_clutch": null,
+      "ace_pct_non_clutch": null,
+      "srv_err_pct_clutch": null,
+      "srv_err_pct_non_clutch": null,
+      "clutch_rating": 0.0
+    }
+  },
+  "consistency": {
+    "Ava Nguyen": {
+      "hitting": {
+        "score": 0.841,
+        "std_dev": 0.1897,
+        "avg": 0.136,
+        "matches": 41,
+        "rank": 1,
+        "total_ranked": 9
+      },
+      "serving": {
+        "score": 0.762,
+        "std_dev": 0.3129,
+        "avg": 0.082,
+        "matches": 38,
+        "rank": 11,
+        "total_ranked": 11
+      },
+      "passing": {
+        "score": 0.748,
+        "std_dev": 0.3376,
+        "avg": 1.661,
+        "matches": 39,
+        "rank": 7,
+        "total_ranked": 7
+      }
+    },
+    "Aarnavi Muthyala": {
+      "hitting": {
+        "score": 0.834,
+        "std_dev": 0.1987,
+        "avg": 0.085,
+        "matches": 9,
+        "rank": 2,
+        "total_ranked": 9
+      }
+    },
+    "Emma Lares": {
+      "hitting": {
+        "score": 0.81,
+        "std_dev": 0.2352,
+        "avg": 0.033,
+        "matches": 34,
+        "rank": 3,
+        "total_ranked": 9
+      },
+      "serving": {
+        "score": 0.835,
+        "std_dev": 0.1978,
+        "avg": 0.093,
+        "matches": 34,
+        "rank": 4,
+        "total_ranked": 11
+      },
+      "passing": {
+        "score": 0.758,
+        "std_dev": 0.3197,
+        "avg": 1.726,
+        "matches": 29,
+        "rank": 6,
+        "total_ranked": 7
+      }
+    },
+    "Isabella Fernandez": {
+      "hitting": {
+        "score": 0.791,
+        "std_dev": 0.265,
+        "avg": 0.13,
+        "matches": 37,
+        "rank": 4,
+        "total_ranked": 9
+      },
+      "serving": {
+        "score": 0.83,
+        "std_dev": 0.2045,
+        "avg": 0.076,
+        "matches": 29,
+        "rank": 5,
+        "total_ranked": 11
+      }
+    },
+    "Brenna O'Connor": {
+      "hitting": {
+        "score": 0.779,
+        "std_dev": 0.284,
+        "avg": 0.211,
+        "matches": 30,
+        "rank": 5,
+        "total_ranked": 9
+      },
+      "serving": {
+        "score": 0.864,
+        "std_dev": 0.1576,
+        "avg": 0.108,
+        "matches": 42,
+        "rank": 2,
+        "total_ranked": 11
+      }
+    },
+    "Amelia Rae Diaz": {
+      "hitting": {
+        "score": 0.769,
+        "std_dev": 0.2999,
+        "avg": 0.069,
+        "matches": 37,
+        "rank": 6,
+        "total_ranked": 9
+      },
+      "serving": {
+        "score": 0.87,
+        "std_dev": 0.1496,
+        "avg": 0.087,
+        "matches": 15,
+        "rank": 1,
+        "total_ranked": 11
+      },
+      "passing": {
+        "score": 0.876,
+        "std_dev": 0.1414,
+        "avg": 1.283,
+        "matches": 8,
+        "rank": 1,
+        "total_ranked": 7
+      }
+    },
+    "Ava Shahnazari": {
+      "hitting": {
+        "score": 0.768,
+        "std_dev": 0.3022,
+        "avg": 0.219,
+        "matches": 30,
+        "rank": 7,
+        "total_ranked": 9
+      },
+      "serving": {
+        "score": 0.814,
+        "std_dev": 0.2291,
+        "avg": 0.097,
+        "matches": 26,
+        "rank": 6,
+        "total_ranked": 11
+      }
+    },
+    "Tatiana Rogers": {
+      "hitting": {
+        "score": 0.768,
+        "std_dev": 0.3018,
+        "avg": 0.19,
+        "matches": 30,
+        "rank": 8,
+        "total_ranked": 9
+      },
+      "serving": {
+        "score": 0.765,
+        "std_dev": 0.308,
+        "avg": -0.04,
+        "matches": 25,
+        "rank": 10,
+        "total_ranked": 11
+      },
+      "passing": {
+        "score": 0.8,
+        "std_dev": 0.25,
+        "avg": 1.417,
+        "matches": 4,
+        "rank": 2,
+        "total_ranked": 7
+      }
+    },
+    "Jenna Gad": {
+      "hitting": {
+        "score": 0.732,
+        "std_dev": 0.366,
+        "avg": -0.258,
+        "matches": 10,
+        "rank": 9,
+        "total_ranked": 9
+      },
+      "serving": {
+        "score": 0.789,
+        "std_dev": 0.2667,
+        "avg": 0.033,
+        "matches": 5,
+        "rank": 8,
+        "total_ranked": 11
+      }
+    },
+    "Emma Ferro": {
+      "serving": {
+        "score": 0.773,
+        "std_dev": 0.2937,
+        "avg": 0.058,
+        "matches": 21,
+        "rank": 9,
+        "total_ranked": 11
+      },
+      "passing": {
+        "score": 0.772,
+        "std_dev": 0.2956,
+        "avg": 1.723,
+        "matches": 35,
+        "rank": 5,
+        "total_ranked": 7
+      }
+    },
+    "None": {},
+    "Sophia Fernandez": {
+      "serving": {
+        "score": 0.803,
+        "std_dev": 0.2453,
+        "avg": 0.032,
+        "matches": 13,
+        "rank": 7,
+        "total_ranked": 11
+      },
+      "passing": {
+        "score": 0.778,
+        "std_dev": 0.2848,
+        "avg": 1.496,
+        "matches": 12,
+        "rank": 4,
+        "total_ranked": 7
+      }
+    },
+    "Tanisha Verma": {},
+    "Zlata Lutska": {
+      "serving": {
+        "score": 0.844,
+        "std_dev": 0.1855,
+        "avg": 0.148,
+        "matches": 7,
+        "rank": 3,
+        "total_ranked": 11
+      },
+      "passing": {
+        "score": 0.799,
+        "std_dev": 0.251,
+        "avg": 1.588,
+        "matches": 30,
+        "rank": 3,
+        "total_ranked": 7
+      }
+    }
+  },
+  "progression": {
+    "Aarnavi Muthyala": [
+      {
+        "date": "2026-02-01",
+        "match_title": "vs. MVVC-White - Game",
+        "hitting_eff": -1.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": -1.0,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-01",
+        "match_title": "@ Academy Volleyball - Game",
+        "hitting_eff": 0.5,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.25,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-02",
+        "match_title": "@Bay Area Eagles",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.16666666666666666,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "@ Golden State Volleyball Club - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.125,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "SynergyForce 13 Gold",
+        "hitting_eff": 1.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.1,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-16",
+        "match_title": "MVVC 13 Black",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.3,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-16",
+        "match_title": "Richmond SOL 14",
+        "hitting_eff": -0.25,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.15,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-17",
+        "match_title": "@ Synergy Force 14 Gold - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.15,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-17",
+        "match_title": "@ Academy Volleyball - Game",
+        "hitting_eff": -0.5,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.05,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-18",
+        "match_title": "@ Stingray-14 Black - Game",
+        "hitting_eff": -0.5,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.25,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ MVVC 13 Red - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.3125,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ Absolute Volleyball Club - Game",
+        "hitting_eff": 0.25,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.1875,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ OMNI Volleyball Club - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.1875,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ Rage Volleyball - Game",
+        "hitting_eff": 1.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.1875,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Marin 13 Black - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.3125,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "Panda 13-1",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.3125,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Academy West 13 National - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.3333333333333333,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ Synergy Force National - Game",
+        "hitting_eff": -0.5,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.16666666666666666,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ Marin Black - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.25,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ MVVC Red - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.25,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ NorCal Black - Game",
+        "hitting_eff": 0.5,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ HP Illinois Select - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Uno Girls - Game",
+        "hitting_eff": 0.3333333333333333,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.20833333333333331,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Headlines VBC - Game",
+        "hitting_eff": 0.42857142857142855,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.2523809523809524,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Union Green - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.2523809523809524,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Rockwood Thunder - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.15238095238095237,
+        "pass_avg_rolling": null
+      }
+    ],
+    "Amelia Rae Diaz": [
+      {
+        "date": "2026-02-01",
+        "match_title": "vs. MVVC-White - Game",
+        "hitting_eff": 0.23076923076923078,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": 0.23076923076923078,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-02-01",
+        "match_title": "@ Red Rock Volleyball  - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": 0.11538461538461539,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-02-01",
+        "match_title": "@ Academy Volleyball - Game",
+        "hitting_eff": 0.1111111111111111,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.11396011396011396,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-02-02",
+        "match_title": "@ SF Elite Volleyball Club - Game",
+        "hitting_eff": 0.14285714285714285,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.12118437118437118,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-02-02",
+        "match_title": "@Bay Area Eagles",
+        "hitting_eff": 0.3333333333333333,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.16361416361416362,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "@ Golden State Volleyball Club - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.11746031746031745,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "SynergyForce 13 Gold",
+        "hitting_eff": 0.0,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": 0.11746031746031745,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "Vision 13 Blue",
+        "hitting_eff": 0.3333333333333333,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.1619047619047619,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-02-16",
+        "match_title": "MVVC 13 Black",
+        "hitting_eff": -0.25,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": 0.08333333333333334,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-02-16",
+        "match_title": "Richmond SOL 14",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.016666666666666663,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-02-17",
+        "match_title": "@ Synergy Force 14 Gold - Game",
+        "hitting_eff": 0.09090909090909091,
+        "pass_avg": 1.3333333333333333,
+        "hitting_eff_rolling": 0.034848484848484844,
+        "pass_avg_rolling": 1.111111111111111
+      },
+      {
+        "date": "2026-02-17",
+        "match_title": "@ Academy Volleyball - Game",
+        "hitting_eff": 0.1,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.05484848484848485,
+        "pass_avg_rolling": 1.1666666666666665
+      },
+      {
+        "date": "2026-02-18",
+        "match_title": "@ Stingray-14 Black - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.011818181818181816,
+        "pass_avg_rolling": 1.1666666666666665
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ MVVC 13 Red - Game",
+        "hitting_eff": 0.2,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.07818181818181819,
+        "pass_avg_rolling": 1.3333333333333333
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ Absolute Volleyball Club - Game",
+        "hitting_eff": -0.6666666666666666,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.05515151515151514,
+        "pass_avg_rolling": 1.3333333333333333
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ MVVC 13 Black - Game",
+        "hitting_eff": -0.6,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.1933333333333333,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ OMNI Volleyball Club - Game",
+        "hitting_eff": 0.5,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.11333333333333333,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ Rage Volleyball - Game",
+        "hitting_eff": 0.18181818181818182,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.07696969696969697,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Marin 13 Black - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.11696969696969695,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "Panda 13-1",
+        "hitting_eff": -0.25,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.033636363636363645,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Academy West 13 National - Game",
+        "hitting_eff": 0.6666666666666666,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.21969696969696967,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "Absolute 13 Black",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.1496212121212121,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Vision 13 Gold - Game",
+        "hitting_eff": -0.2,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.05416666666666664,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-22",
+        "match_title": "@ M1 13 Blue - Game",
+        "hitting_eff": 0.5,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": 0.17916666666666664,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-03-22",
+        "match_title": "@ STL Crossfire - Game",
+        "hitting_eff": 0.3333333333333333,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": 0.32499999999999996,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-03-22",
+        "match_title": "H. Prep 14 Mizuno",
+        "hitting_eff": 0.5714285714285714,
+        "pass_avg": 1.5,
+        "hitting_eff_rolling": 0.3011904761904761,
+        "pass_avg_rolling": 1.1666666666666667
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ Arkansas Elite 13-1 - Game",
+        "hitting_eff": 0.047619047619047616,
+        "pass_avg": 1.3,
+        "hitting_eff_rolling": 0.2504761904761904,
+        "pass_avg_rolling": 1.2
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ CJV 13 National - Game",
+        "hitting_eff": -0.0625,
+        "pass_avg": 1.5,
+        "hitting_eff_rolling": 0.27797619047619043,
+        "pass_avg_rolling": 1.26
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ Shock 13 UA - Game",
+        "hitting_eff": 0.6,
+        "pass_avg": 1.4,
+        "hitting_eff_rolling": 0.29797619047619045,
+        "pass_avg_rolling": 1.34
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ Mineral Area 13 Elite - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": 2.5,
+        "hitting_eff_rolling": 0.2313095238095238,
+        "pass_avg_rolling": 1.64
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ McAllen Fierce Volleyball - Game",
+        "hitting_eff": -0.0625,
+        "pass_avg": 1.2,
+        "hitting_eff_rolling": 0.1045238095238095,
+        "pass_avg_rolling": 1.58
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ Synergy Force National - Game",
+        "hitting_eff": -0.3333333333333333,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.02833333333333332,
+        "pass_avg_rolling": 1.6500000000000001
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ Marin Black - Game",
+        "hitting_eff": -0.1,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": 0.020833333333333322,
+        "pass_avg_rolling": 1.5250000000000001
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ MVVC Red - Game",
+        "hitting_eff": 0.25,
+        "pass_avg": 3.0,
+        "hitting_eff_rolling": -0.04916666666666667,
+        "pass_avg_rolling": 1.925
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ NorCal Black - Game",
+        "hitting_eff": -0.18181818181818182,
+        "pass_avg": 1.2,
+        "hitting_eff_rolling": -0.08553030303030304,
+        "pass_avg_rolling": 1.6
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ HP Illinois Select - Game",
+        "hitting_eff": -1.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.27303030303030307,
+        "pass_avg_rolling": 1.7333333333333334
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Uno Girls - Game",
+        "hitting_eff": 0.5,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": -0.1063636363636364,
+        "pass_avg_rolling": 1.55
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Headlines VBC - Game",
+        "hitting_eff": -0.16666666666666666,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": -0.1196969696969697,
+        "pass_avg_rolling": 1.55
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Union Green - Game",
+        "hitting_eff": -0.18181818181818182,
+        "pass_avg": 1.3333333333333333,
+        "hitting_eff_rolling": -0.20606060606060606,
+        "pass_avg_rolling": 1.1333333333333333
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Rockwood Thunder - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.1696969696969697,
+        "pass_avg_rolling": 1.111111111111111
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ CVC 13 Royal - Game",
+        "hitting_eff": 0.13333333333333333,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.05696969696969697,
+        "pass_avg_rolling": 1.111111111111111
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ TVC 13 Royal - Game",
+        "hitting_eff": 0.3,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.016969696969696968,
+        "pass_avg_rolling": 1.1666666666666665
+      }
+    ],
+    "Ava Nguyen": [
+      {
+        "date": "2026-02-01",
+        "match_title": "vs. MVVC-White - Game",
+        "hitting_eff": 0.2962962962962963,
+        "pass_avg": 1.25,
+        "hitting_eff_rolling": 0.2962962962962963,
+        "pass_avg_rolling": 1.25
+      },
+      {
+        "date": "2026-02-01",
+        "match_title": "@ Red Rock Volleyball  - Game",
+        "hitting_eff": 0.2631578947368421,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": 0.27972709551656916,
+        "pass_avg_rolling": 1.625
+      },
+      {
+        "date": "2026-02-01",
+        "match_title": "@ Academy Volleyball - Game",
+        "hitting_eff": 0.4,
+        "pass_avg": 1.8333333333333333,
+        "hitting_eff_rolling": 0.3198180636777128,
+        "pass_avg_rolling": 1.6944444444444444
+      },
+      {
+        "date": "2026-02-02",
+        "match_title": "@ SF Elite Volleyball Club - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": 1.6666666666666667,
+        "hitting_eff_rolling": 0.2398635477582846,
+        "pass_avg_rolling": 1.6875
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "@ Golden State Volleyball Club - Game",
+        "hitting_eff": 0.038461538461538464,
+        "pass_avg": 1.3636363636363635,
+        "hitting_eff_rolling": 0.1995831458989354,
+        "pass_avg_rolling": 1.6227272727272726
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "SynergyForce 13 Gold",
+        "hitting_eff": 0.3157894736842105,
+        "pass_avg": 1.8571428571428572,
+        "hitting_eff_rolling": 0.20348178137651823,
+        "pass_avg_rolling": 1.7441558441558442
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "Vision 13 Blue",
+        "hitting_eff": -0.05555555555555555,
+        "pass_avg": 1.2,
+        "hitting_eff_rolling": 0.1397390913180387,
+        "pass_avg_rolling": 1.584155844155844
+      },
+      {
+        "date": "2026-02-16",
+        "match_title": "MVVC 13 Black",
+        "hitting_eff": 0.034482758620689655,
+        "pass_avg": 2.125,
+        "hitting_eff_rolling": 0.06663564304217662,
+        "pass_avg_rolling": 1.6424891774891777
+      },
+      {
+        "date": "2026-02-16",
+        "match_title": "Richmond SOL 14",
+        "hitting_eff": 0.5333333333333333,
+        "pass_avg": 1.6,
+        "hitting_eff_rolling": 0.17330230970884328,
+        "pass_avg_rolling": 1.6291558441558442
+      },
+      {
+        "date": "2026-02-17",
+        "match_title": "@ Synergy Force 14 Gold - Game",
+        "hitting_eff": 0.23529411764705882,
+        "pass_avg": 1.4,
+        "hitting_eff_rolling": 0.21266882554594738,
+        "pass_avg_rolling": 1.6364285714285713
+      },
+      {
+        "date": "2026-02-17",
+        "match_title": "@ Academy Volleyball - Game",
+        "hitting_eff": -0.06666666666666667,
+        "pass_avg": 2.5,
+        "hitting_eff_rolling": 0.1361775974757719,
+        "pass_avg_rolling": 1.765
+      },
+      {
+        "date": "2026-02-18",
+        "match_title": "@ Stingray-14 Black - Game",
+        "hitting_eff": 0.03333333333333333,
+        "pass_avg": 1.7142857142857142,
+        "hitting_eff_rolling": 0.1539553752535497,
+        "pass_avg_rolling": 1.867857142857143
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ MVVC 13 Red - Game",
+        "hitting_eff": 0.05,
+        "pass_avg": 1.6666666666666667,
+        "hitting_eff_rolling": 0.15705882352941175,
+        "pass_avg_rolling": 1.7761904761904763
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ Absolute Volleyball Club - Game",
+        "hitting_eff": 0.2857142857142857,
+        "pass_avg": 1.6,
+        "hitting_eff_rolling": 0.10753501400560224,
+        "pass_avg_rolling": 1.7761904761904763
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ MVVC 13 Black - Game",
+        "hitting_eff": -0.2222222222222222,
+        "pass_avg": 1.8333333333333333,
+        "hitting_eff_rolling": 0.01603174603174603,
+        "pass_avg_rolling": 1.8628571428571425
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ OMNI Volleyball Club - Game",
+        "hitting_eff": 0.2727272727272727,
+        "pass_avg": 1.4545454545454546,
+        "hitting_eff_rolling": 0.08391053391053391,
+        "pass_avg_rolling": 1.6537662337662336
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ Rage Volleyball - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": 1.375,
+        "hitting_eff_rolling": 0.07724386724386724,
+        "pass_avg_rolling": 1.585909090909091
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Marin 13 Black - Game",
+        "hitting_eff": 0.14285714285714285,
+        "pass_avg": 1.4444444444444444,
+        "hitting_eff_rolling": 0.09581529581529581,
+        "pass_avg_rolling": 1.5414646464646464
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "Panda 13-1",
+        "hitting_eff": 0.3076923076923077,
+        "pass_avg": 1.1666666666666667,
+        "hitting_eff_rolling": 0.10021090021090022,
+        "pass_avg_rolling": 1.4547979797979798
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Academy West 13 National - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": 0.14465534465534463,
+        "pass_avg_rolling": 1.2881313131313132
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "Absolute 13 Black",
+        "hitting_eff": 0.1111111111111111,
+        "pass_avg": 1.2,
+        "hitting_eff_rolling": 0.11233211233211234,
+        "pass_avg_rolling": 1.2372222222222224
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Vision 13 Gold - Game",
+        "hitting_eff": -0.25,
+        "pass_avg": 1.2857142857142858,
+        "hitting_eff_rolling": 0.06233211233211233,
+        "pass_avg_rolling": 1.2193650793650794
+      },
+      {
+        "date": "2026-03-22",
+        "match_title": "@ M1 13 Blue - Game",
+        "hitting_eff": 0.09090909090909091,
+        "pass_avg": 1.8333333333333333,
+        "hitting_eff_rolling": 0.05194250194250194,
+        "pass_avg_rolling": 1.2971428571428572
+      },
+      {
+        "date": "2026-03-22",
+        "match_title": "@ STL Crossfire - Game",
+        "hitting_eff": 0.16666666666666666,
+        "pass_avg": 2.3333333333333335,
+        "hitting_eff_rolling": 0.023737373737373734,
+        "pass_avg_rolling": 1.5304761904761903
+      },
+      {
+        "date": "2026-03-22",
+        "match_title": "H. Prep 14 Mizuno",
+        "hitting_eff": 0.11764705882352941,
+        "pass_avg": 1.8333333333333333,
+        "hitting_eff_rolling": 0.04726678550207962,
+        "pass_avg_rolling": 1.697142857142857
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ Arkansas Elite 13-1 - Game",
+        "hitting_eff": -0.25,
+        "pass_avg": 1.3333333333333333,
+        "hitting_eff_rolling": -0.024955436720142603,
+        "pass_avg_rolling": 1.7238095238095241
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ CJV 13 National - Game",
+        "hitting_eff": -0.09523809523809523,
+        "pass_avg": 1.4444444444444444,
+        "hitting_eff_rolling": 0.005996944232238349,
+        "pass_avg_rolling": 1.7555555555555553
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ Shock 13 UA - Game",
+        "hitting_eff": 0.42857142857142855,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": 0.07352941176470587,
+        "pass_avg_rolling": 1.588888888888889
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ Mineral Area 13 Elite - Game",
+        "hitting_eff": 0.1875,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": 0.07769607843137254,
+        "pass_avg_rolling": 1.5222222222222221
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ McAllen Fierce Volleyball - Game",
+        "hitting_eff": 0.4444444444444444,
+        "pass_avg": 1.75,
+        "hitting_eff_rolling": 0.14305555555555555,
+        "pass_avg_rolling": 1.5055555555555555
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ Synergy Force National - Game",
+        "hitting_eff": 0.058823529411764705,
+        "pass_avg": 1.8333333333333333,
+        "hitting_eff_rolling": 0.2048202614379085,
+        "pass_avg_rolling": 1.6055555555555556
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ Marin Black - Game",
+        "hitting_eff": 0.16666666666666666,
+        "pass_avg": 1.0909090909090908,
+        "hitting_eff_rolling": 0.2572012138188608,
+        "pass_avg_rolling": 1.5348484848484847
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ MVVC Red - Game",
+        "hitting_eff": 0.1,
+        "pass_avg": 1.8,
+        "hitting_eff_rolling": 0.19148692810457515,
+        "pass_avg_rolling": 1.6948484848484848
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ NorCal Black - Game",
+        "hitting_eff": 0.14285714285714285,
+        "pass_avg": 2.3,
+        "hitting_eff_rolling": 0.18255835667600373,
+        "pass_avg_rolling": 1.7548484848484847
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ HP Illinois Select - Game",
+        "hitting_eff": 0.07692307692307693,
+        "pass_avg": 1.5,
+        "hitting_eff_rolling": 0.10905408317173022,
+        "pass_avg_rolling": 1.7048484848484846
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Uno Girls - Game",
+        "hitting_eff": 0.2,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": 0.13728937728937726,
+        "pass_avg_rolling": 1.7381818181818183
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Headlines VBC - Game",
+        "hitting_eff": 0.6,
+        "pass_avg": 1.5,
+        "hitting_eff_rolling": 0.22395604395604396,
+        "pass_avg_rolling": 1.8199999999999998
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Union Green - Game",
+        "hitting_eff": 0.07142857142857142,
+        "pass_avg": 1.6363636363636365,
+        "hitting_eff_rolling": 0.21824175824175823,
+        "pass_avg_rolling": 1.7872727272727271
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Rockwood Thunder - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": 1.3,
+        "hitting_eff_rolling": 0.18967032967032965,
+        "pass_avg_rolling": 1.5872727272727274
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ CVC 13 Royal - Game",
+        "hitting_eff": 0.16666666666666666,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": 0.2076190476190476,
+        "pass_avg_rolling": 1.6872727272727275
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ TVC 13 Royal - Game",
+        "hitting_eff": 0.15789473684210525,
+        "pass_avg": 1.7692307692307692,
+        "hitting_eff_rolling": 0.19919799498746865,
+        "pass_avg_rolling": 1.641118881118881
+      }
+    ],
+    "Ava Shahnazari": [
+      {
+        "date": "2026-02-01",
+        "match_title": "vs. MVVC-White - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-01",
+        "match_title": "@ Red Rock Volleyball  - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-01",
+        "match_title": "@ Academy Volleyball - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-02",
+        "match_title": "@ SF Elite Volleyball Club - Game",
+        "hitting_eff": -1.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.25,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-02",
+        "match_title": "@Bay Area Eagles",
+        "hitting_eff": 0.5,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.1,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "@ Golden State Volleyball Club - Game",
+        "hitting_eff": 0.5,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "SynergyForce 13 Gold",
+        "hitting_eff": 0.0,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "Vision 13 Blue",
+        "hitting_eff": 0.5,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.1,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-02-16",
+        "match_title": "MVVC 13 Black",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.3,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-02-16",
+        "match_title": "Richmond SOL 14",
+        "hitting_eff": 1.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.4,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-02-17",
+        "match_title": "@ Synergy Force 14 Gold - Game",
+        "hitting_eff": 0.3333333333333333,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.36666666666666664,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-02-17",
+        "match_title": "@ Academy Volleyball - Game",
+        "hitting_eff": 1.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.5666666666666667,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-18",
+        "match_title": "@ Stingray-14 Black - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.5833333333333333,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ MVVC 13 Red - Game",
+        "hitting_eff": 0.14285714285714285,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.6190476190476191,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ Absolute Volleyball Club - Game",
+        "hitting_eff": -0.3333333333333333,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.2857142857142857,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ MVVC 13 Black - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.20238095238095238,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ Rage Volleyball - Game",
+        "hitting_eff": 0.25,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.014880952380952384,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Marin 13 Black - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.011904761904761908,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "Panda 13-1",
+        "hitting_eff": -0.4,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.09666666666666666,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Academy West 13 National - Game",
+        "hitting_eff": 1.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.16999999999999998,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "Absolute 13 Black",
+        "hitting_eff": 0.3333333333333333,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.23666666666666666,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Vision 13 Gold - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.18666666666666668,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-22",
+        "match_title": "@ M1 13 Blue - Game",
+        "hitting_eff": 0.8,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.3466666666666667,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-22",
+        "match_title": "@ STL Crossfire - Game",
+        "hitting_eff": 0.2,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.4666666666666667,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-22",
+        "match_title": "H. Prep 14 Mizuno",
+        "hitting_eff": 0.125,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.29166666666666663,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ Arkansas Elite 13-1 - Game",
+        "hitting_eff": 0.75,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": 0.375,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ CJV 13 National - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.375,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ Shock 13 UA - Game",
+        "hitting_eff": 0.3333333333333333,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.2816666666666666,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ Mineral Area 13 Elite - Game",
+        "hitting_eff": 0.4,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.32166666666666666,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ McAllen Fierce Volleyball - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.2966666666666667,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ Synergy Force National - Game",
+        "hitting_eff": 0.2,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.18666666666666668,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ Marin Black - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.18666666666666668,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ MVVC Red - Game",
+        "hitting_eff": 0.3,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.18000000000000002,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ NorCal Black - Game",
+        "hitting_eff": 0.5,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.2,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ HP Illinois Select - Game",
+        "hitting_eff": 0.5,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.3,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Uno Girls - Game",
+        "hitting_eff": 0.7142857142857143,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.40285714285714286,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Headlines VBC - Game",
+        "hitting_eff": 0.5,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.5028571428571429,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Union Green - Game",
+        "hitting_eff": 0.125,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": 0.46785714285714286,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Rockwood Thunder - Game",
+        "hitting_eff": 0.2222222222222222,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.4123015873015873,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ CVC 13 Royal - Game",
+        "hitting_eff": -0.09090909090909091,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.2941197691197691,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ TVC 13 Royal - Game",
+        "hitting_eff": -0.3333333333333333,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.08459595959595959,
+        "pass_avg_rolling": 2.0
+      }
+    ],
+    "Brenna O'Connor": [
+      {
+        "date": "2026-02-01",
+        "match_title": "vs. MVVC-White - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-01",
+        "match_title": "@ Red Rock Volleyball  - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-01",
+        "match_title": "@ Academy Volleyball - Game",
+        "hitting_eff": 0.6,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.19999999999999998,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-02",
+        "match_title": "@ SF Elite Volleyball Club - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.19999999999999998,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-02",
+        "match_title": "@Bay Area Eagles",
+        "hitting_eff": 0.4,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": 0.25,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "@ Golden State Volleyball Club - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.25,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "SynergyForce 13 Gold",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.25,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "Vision 13 Blue",
+        "hitting_eff": 0.14285714285714285,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.13571428571428573,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-02-16",
+        "match_title": "MVVC 13 Black",
+        "hitting_eff": 0.2857142857142857,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.1657142857142857,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-02-16",
+        "match_title": "Richmond SOL 14",
+        "hitting_eff": 0.0,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": 0.08571428571428572,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-02-17",
+        "match_title": "@ Synergy Force 14 Gold - Game",
+        "hitting_eff": 0.42857142857142855,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.17142857142857143,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-02-17",
+        "match_title": "@ Academy Volleyball - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": 0.17142857142857143,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-02-18",
+        "match_title": "@ Stingray-14 Black - Game",
+        "hitting_eff": 0.14285714285714285,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": 0.1714285714285714,
+        "pass_avg_rolling": 1.6666666666666667
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ MVVC 13 Red - Game",
+        "hitting_eff": 0.2222222222222222,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.15873015873015875,
+        "pass_avg_rolling": 1.6666666666666667
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ Absolute Volleyball Club - Game",
+        "hitting_eff": 0.2,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.19873015873015873,
+        "pass_avg_rolling": 1.5
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ MVVC 13 Black - Game",
+        "hitting_eff": 0.2857142857142857,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.17015873015873015,
+        "pass_avg_rolling": 1.5
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ OMNI Volleyball Club - Game",
+        "hitting_eff": 0.6,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.29015873015873017,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ Rage Volleyball - Game",
+        "hitting_eff": -0.4,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.18158730158730158,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Marin 13 Black - Game",
+        "hitting_eff": 0.3333333333333333,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.2038095238095238,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "Panda 13-1",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.1638095238095238,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Academy West 13 National - Game",
+        "hitting_eff": 0.6666666666666666,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.23999999999999994,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "Absolute 13 Black",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.11999999999999997,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Vision 13 Gold - Game",
+        "hitting_eff": -1.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": -2.2204460492503132e-17,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-22",
+        "match_title": "@ M1 13 Blue - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.06666666666666668,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-22",
+        "match_title": "@ STL Crossfire - Game",
+        "hitting_eff": 0.5,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.03333333333333331,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-22",
+        "match_title": "H. Prep 14 Mizuno",
+        "hitting_eff": -0.16666666666666666,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.13333333333333333,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ Arkansas Elite 13-1 - Game",
+        "hitting_eff": 0.23529411764705882,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.0862745098039216,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ CJV 13 National - Game",
+        "hitting_eff": 0.1111111111111111,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.13594771241830064,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ Shock 13 UA - Game",
+        "hitting_eff": 0.3333333333333333,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.20261437908496732,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ Mineral Area 13 Elite - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.10261437908496729,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ McAllen Fierce Volleyball - Game",
+        "hitting_eff": 1.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.3359477124183006,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ Synergy Force National - Game",
+        "hitting_eff": 0.6666666666666666,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.42222222222222217,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ Marin Black - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.4,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ MVVC Red - Game",
+        "hitting_eff": 1.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.5333333333333333,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ NorCal Black - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.5333333333333333,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ HP Illinois Select - Game",
+        "hitting_eff": 0.75,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.4833333333333333,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Uno Girls - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.35,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Headlines VBC - Game",
+        "hitting_eff": 0.5,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.45,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Union Green - Game",
+        "hitting_eff": -0.5,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": 0.14999999999999997,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Rockwood Thunder - Game",
+        "hitting_eff": -0.3333333333333333,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": 0.08333333333333331,
+        "pass_avg_rolling": 1.5
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ CVC 13 Royal - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.06666666666666668,
+        "pass_avg_rolling": 1.5
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ TVC 13 Royal - Game",
+        "hitting_eff": 0.3333333333333333,
+        "pass_avg": null,
+        "hitting_eff_rolling": -2.2204460492503132e-17,
+        "pass_avg_rolling": 1.5
+      }
+    ],
+    "Emma Ferro": [
+      {
+        "date": "2026-02-01",
+        "match_title": "vs. MVVC-White - Game",
+        "hitting_eff": -1.0,
+        "pass_avg": 1.6666666666666667,
+        "hitting_eff_rolling": -1.0,
+        "pass_avg_rolling": 1.6666666666666667
+      },
+      {
+        "date": "2026-02-01",
+        "match_title": "@ Red Rock Volleyball  - Game",
+        "hitting_eff": null,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": -1.0,
+        "pass_avg_rolling": 1.8333333333333335
+      },
+      {
+        "date": "2026-02-01",
+        "match_title": "@ Academy Volleyball - Game",
+        "hitting_eff": null,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": -1.0,
+        "pass_avg_rolling": 1.888888888888889
+      },
+      {
+        "date": "2026-02-02",
+        "match_title": "@ SF Elite Volleyball Club - Game",
+        "hitting_eff": 0.1111111111111111,
+        "pass_avg": 1.4,
+        "hitting_eff_rolling": -0.4444444444444444,
+        "pass_avg_rolling": 1.7666666666666666
+      },
+      {
+        "date": "2026-02-02",
+        "match_title": "@Bay Area Eagles",
+        "hitting_eff": 0.0,
+        "pass_avg": 1.4,
+        "hitting_eff_rolling": -0.2962962962962963,
+        "pass_avg_rolling": 1.6933333333333334
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "@ Golden State Volleyball Club - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": 0.05555555555555558,
+        "pass_avg_rolling": 1.56
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "SynergyForce 13 Gold",
+        "hitting_eff": null,
+        "pass_avg": 1.75,
+        "hitting_eff_rolling": 0.05555555555555558,
+        "pass_avg_rolling": 1.51
+      },
+      {
+        "date": "2026-02-16",
+        "match_title": "MVVC 13 Black",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.05555555555555558,
+        "pass_avg_rolling": 1.3875
+      },
+      {
+        "date": "2026-02-16",
+        "match_title": "Richmond SOL 14",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": 1.3833333333333335
+      },
+      {
+        "date": "2026-02-17",
+        "match_title": "@ Synergy Force 14 Gold - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.8,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.5166666666666666
+      },
+      {
+        "date": "2026-02-17",
+        "match_title": "@ Academy Volleyball - Game",
+        "hitting_eff": 1.0,
+        "pass_avg": 2.5,
+        "hitting_eff_rolling": 1.0,
+        "pass_avg_rolling": 2.0166666666666666
+      },
+      {
+        "date": "2026-02-18",
+        "match_title": "@ Stingray-14 Black - Game",
+        "hitting_eff": -0.5,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": 0.25,
+        "pass_avg_rolling": 1.7666666666666666
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ MVVC 13 Red - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.7,
+        "hitting_eff_rolling": 0.25,
+        "pass_avg_rolling": 1.75
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ Absolute Volleyball Club - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": 1.4285714285714286,
+        "hitting_eff_rolling": 0.16666666666666666,
+        "pass_avg_rolling": 1.6857142857142857
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ MVVC 13 Black - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.3636363636363635,
+        "hitting_eff_rolling": 0.16666666666666666,
+        "pass_avg_rolling": 1.5984415584415586
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ OMNI Volleyball Club - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.75,
+        "hitting_eff_rolling": -0.25,
+        "pass_avg_rolling": 1.4484415584415584
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ Rage Volleyball - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.6666666666666667,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": 1.581774891774892
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Marin 13 Black - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.5384615384615385,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": 1.5494671994671996
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "Panda 13-1",
+        "hitting_eff": null,
+        "pass_avg": 1.25,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.513752913752914
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Academy West 13 National - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.4444444444444444,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.5299145299145298
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "Absolute 13 Black",
+        "hitting_eff": 0.0,
+        "pass_avg": 1.6666666666666667,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": 1.5132478632478632
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Vision 13 Gold - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.6666666666666667,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": 1.5132478632478632
+      },
+      {
+        "date": "2026-03-22",
+        "match_title": "@ M1 13 Blue - Game",
+        "hitting_eff": null,
+        "pass_avg": 2.125,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": 1.6305555555555558
+      },
+      {
+        "date": "2026-03-22",
+        "match_title": "@ STL Crossfire - Game",
+        "hitting_eff": null,
+        "pass_avg": 2.2,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": 1.8205555555555555
+      },
+      {
+        "date": "2026-03-22",
+        "match_title": "H. Prep 14 Mizuno",
+        "hitting_eff": null,
+        "pass_avg": 1.4166666666666667,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": 1.815
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ Arkansas Elite 13-1 - Game",
+        "hitting_eff": 0.3333333333333333,
+        "pass_avg": 1.6666666666666667,
+        "hitting_eff_rolling": 0.3333333333333333,
+        "pass_avg_rolling": 1.8150000000000002
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ CJV 13 National - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.6,
+        "hitting_eff_rolling": 0.3333333333333333,
+        "pass_avg_rolling": 1.8016666666666665
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ Shock 13 UA - Game",
+        "hitting_eff": null,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": 0.3333333333333333,
+        "pass_avg_rolling": 1.7766666666666666
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ Mineral Area 13 Elite - Game",
+        "hitting_eff": -1.0,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": -0.33333333333333337,
+        "pass_avg_rolling": 1.7366666666666668
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ McAllen Fierce Volleyball - Game",
+        "hitting_eff": null,
+        "pass_avg": 2.1666666666666665,
+        "hitting_eff_rolling": -0.33333333333333337,
+        "pass_avg_rolling": 1.8866666666666667
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ Synergy Force National - Game",
+        "hitting_eff": null,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": -1.0,
+        "pass_avg_rolling": 1.9533333333333336
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ Marin Black - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.75,
+        "hitting_eff_rolling": -1.0,
+        "pass_avg_rolling": 1.9833333333333336
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ MVVC Red - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": 1.7777777777777777,
+        "hitting_eff_rolling": -0.5,
+        "pass_avg_rolling": 1.9388888888888889
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ NorCal Black - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.375,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": 1.8138888888888889
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ HP Illinois Select - Game",
+        "hitting_eff": -0.5,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": -0.25,
+        "pass_avg_rolling": 1.7805555555555557
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Uno Girls - Game",
+        "hitting_eff": null,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": -0.25,
+        "pass_avg_rolling": 1.7805555555555557
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Headlines VBC - Game",
+        "hitting_eff": null,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": -0.25,
+        "pass_avg_rolling": 1.8305555555555557
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Union Green - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.4,
+        "hitting_eff_rolling": -0.5,
+        "pass_avg_rolling": 1.7549999999999997
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Rockwood Thunder - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.5454545454545454,
+        "hitting_eff_rolling": -0.5,
+        "pass_avg_rolling": 1.789090909090909
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ CVC 13 Royal - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": 1.3,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": 1.649090909090909
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ TVC 13 Royal - Game",
+        "hitting_eff": null,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": 1.6490909090909092
+      }
+    ],
+    "Emma Lares": [
+      {
+        "date": "2026-02-01",
+        "match_title": "vs. MVVC-White - Game",
+        "hitting_eff": 0.36363636363636365,
+        "pass_avg": 1.6,
+        "hitting_eff_rolling": 0.36363636363636365,
+        "pass_avg_rolling": 1.6
+      },
+      {
+        "date": "2026-02-01",
+        "match_title": "@ Red Rock Volleyball  - Game",
+        "hitting_eff": -0.1,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": 0.13181818181818183,
+        "pass_avg_rolling": 1.3
+      },
+      {
+        "date": "2026-02-01",
+        "match_title": "@ Academy Volleyball - Game",
+        "hitting_eff": 0.1111111111111111,
+        "pass_avg": 1.5,
+        "hitting_eff_rolling": 0.12491582491582491,
+        "pass_avg_rolling": 1.3666666666666665
+      },
+      {
+        "date": "2026-02-02",
+        "match_title": "@ SF Elite Volleyball Club - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": 1.4,
+        "hitting_eff_rolling": 0.09368686868686868,
+        "pass_avg_rolling": 1.375
+      },
+      {
+        "date": "2026-02-02",
+        "match_title": "@Bay Area Eagles",
+        "hitting_eff": 0.0,
+        "pass_avg": 1.5555555555555556,
+        "hitting_eff_rolling": 0.07494949494949495,
+        "pass_avg_rolling": 1.411111111111111
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "@ Golden State Volleyball Club - Game",
+        "hitting_eff": -0.375,
+        "pass_avg": 1.8571428571428572,
+        "hitting_eff_rolling": -0.07277777777777779,
+        "pass_avg_rolling": 1.4625396825396826
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "SynergyForce 13 Gold",
+        "hitting_eff": 0.5714285714285714,
+        "pass_avg": 1.5,
+        "hitting_eff_rolling": 0.06150793650793649,
+        "pass_avg_rolling": 1.5625396825396827
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "Vision 13 Blue",
+        "hitting_eff": -0.4444444444444444,
+        "pass_avg": 1.8461538461538463,
+        "hitting_eff_rolling": -0.04960317460317461,
+        "pass_avg_rolling": 1.631770451770452
+      },
+      {
+        "date": "2026-02-16",
+        "match_title": "MVVC 13 Black",
+        "hitting_eff": 0.0,
+        "pass_avg": 1.8,
+        "hitting_eff_rolling": -0.04960317460317461,
+        "pass_avg_rolling": 1.7117704517704517
+      },
+      {
+        "date": "2026-02-16",
+        "match_title": "Richmond SOL 14",
+        "hitting_eff": 0.4444444444444444,
+        "pass_avg": 2.5,
+        "hitting_eff_rolling": 0.03928571428571427,
+        "pass_avg_rolling": 1.9006593406593406
+      },
+      {
+        "date": "2026-02-17",
+        "match_title": "@ Synergy Force 14 Gold - Game",
+        "hitting_eff": -0.15384615384615385,
+        "pass_avg": 1.2,
+        "hitting_eff_rolling": 0.08351648351648351,
+        "pass_avg_rolling": 1.7692307692307694
+      },
+      {
+        "date": "2026-02-17",
+        "match_title": "@ Academy Volleyball - Game",
+        "hitting_eff": 0.14285714285714285,
+        "pass_avg": 1.5555555555555556,
+        "hitting_eff_rolling": -0.0021978021978022013,
+        "pass_avg_rolling": 1.7803418803418805
+      },
+      {
+        "date": "2026-02-18",
+        "match_title": "@ Stingray-14 Black - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": 1.9,
+        "hitting_eff_rolling": 0.08669108669108669,
+        "pass_avg_rolling": 1.791111111111111
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ MVVC 13 Red - Game",
+        "hitting_eff": -0.25,
+        "pass_avg": 2.1875,
+        "hitting_eff_rolling": 0.036691086691086686,
+        "pass_avg_rolling": 1.868611111111111
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ Absolute Volleyball Club - Game",
+        "hitting_eff": 0.11764705882352941,
+        "pass_avg": 1.5,
+        "hitting_eff_rolling": -0.028668390433096318,
+        "pass_avg_rolling": 1.668611111111111
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ MVVC 13 Black - Game",
+        "hitting_eff": 0.375,
+        "pass_avg": 1.8571428571428572,
+        "hitting_eff_rolling": 0.07710084033613444,
+        "pass_avg_rolling": 1.8000396825396827
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ OMNI Volleyball Club - Game",
+        "hitting_eff": 0.375,
+        "pass_avg": 2.125,
+        "hitting_eff_rolling": 0.12352941176470589,
+        "pass_avg_rolling": 1.9139285714285716
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ Rage Volleyball - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": 1.625,
+        "hitting_eff_rolling": 0.12352941176470589,
+        "pass_avg_rolling": 1.8589285714285715
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Marin 13 Black - Game",
+        "hitting_eff": 0.07142857142857142,
+        "pass_avg": 1.75,
+        "hitting_eff_rolling": 0.18781512605042017,
+        "pass_avg_rolling": 1.7714285714285716
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "Panda 13-1",
+        "hitting_eff": 0.09090909090909091,
+        "pass_avg": 1.6,
+        "hitting_eff_rolling": 0.18246753246753245,
+        "pass_avg_rolling": 1.7914285714285714
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Academy West 13 National - Game",
+        "hitting_eff": 0.3333333333333333,
+        "pass_avg": 1.1578947368421053,
+        "hitting_eff_rolling": 0.1741341991341991,
+        "pass_avg_rolling": 1.6515789473684208
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "Absolute 13 Black",
+        "hitting_eff": -0.07142857142857142,
+        "pass_avg": 1.5714285714285714,
+        "hitting_eff_rolling": 0.08484848484848484,
+        "pass_avg_rolling": 1.5408646616541353
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Vision 13 Gold - Game",
+        "hitting_eff": -0.2222222222222222,
+        "pass_avg": 1.5833333333333333,
+        "hitting_eff_rolling": 0.040404040404040394,
+        "pass_avg_rolling": 1.5325313283208022
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ Synergy Force National - Game",
+        "hitting_eff": -0.2727272727272727,
+        "pass_avg": 2.1666666666666665,
+        "hitting_eff_rolling": -0.028427128427128433,
+        "pass_avg_rolling": 1.6158646616541354
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ Marin Black - Game",
+        "hitting_eff": 0.1111111111111111,
+        "pass_avg": 1.5,
+        "hitting_eff_rolling": -0.024386724386724394,
+        "pass_avg_rolling": 1.5958646616541352
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ MVVC Red - Game",
+        "hitting_eff": -0.3333333333333333,
+        "pass_avg": 3.0,
+        "hitting_eff_rolling": -0.1577200577200577,
+        "pass_avg_rolling": 1.9642857142857142
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ NorCal Black - Game",
+        "hitting_eff": 0.045454545454545456,
+        "pass_avg": 1.9230769230769231,
+        "hitting_eff_rolling": -0.13434343434343435,
+        "pass_avg_rolling": 2.0346153846153845
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ HP Illinois Select - Game",
+        "hitting_eff": 0.13333333333333333,
+        "pass_avg": 1.625,
+        "hitting_eff_rolling": -0.06323232323232324,
+        "pass_avg_rolling": 2.042948717948718
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Uno Girls - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": -0.008686868686868698,
+        "pass_avg_rolling": 2.0096153846153846
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Headlines VBC - Game",
+        "hitting_eff": 0.16666666666666666,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": 0.002424242424242412,
+        "pass_avg_rolling": 2.1096153846153847
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Union Green - Game",
+        "hitting_eff": -0.21428571428571427,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": 0.026233766233766213,
+        "pass_avg_rolling": 1.7096153846153848
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Rockwood Thunder - Game",
+        "hitting_eff": -0.09090909090909091,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": -0.0010389610389610476,
+        "pass_avg_rolling": 1.725
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ CVC 13 Royal - Game",
+        "hitting_eff": 0.1111111111111111,
+        "pass_avg": 1.75,
+        "hitting_eff_rolling": -0.00548340548340549,
+        "pass_avg_rolling": 1.75
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ TVC 13 Royal - Game",
+        "hitting_eff": 0.1,
+        "pass_avg": 1.9090909090909092,
+        "hitting_eff_rolling": 0.014516594516594506,
+        "pass_avg_rolling": 1.7318181818181817
+      }
+    ],
+    "Isabella Fernandez": [
+      {
+        "date": "2026-02-01",
+        "match_title": "vs. MVVC-White - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-01",
+        "match_title": "@ Red Rock Volleyball  - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-01",
+        "match_title": "@ Academy Volleyball - Game",
+        "hitting_eff": 0.5,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.5,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-02",
+        "match_title": "@ SF Elite Volleyball Club - Game",
+        "hitting_eff": -0.6,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.04999999999999999,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-02",
+        "match_title": "@Bay Area Eagles",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.033333333333333326,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "@ Golden State Volleyball Club - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.024999999999999994,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "SynergyForce 13 Gold",
+        "hitting_eff": -0.3333333333333333,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.08666666666666666,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "Vision 13 Blue",
+        "hitting_eff": 0.125,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.16166666666666668,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-16",
+        "match_title": "MVVC 13 Black",
+        "hitting_eff": -0.05555555555555555,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.05277777777777779,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-16",
+        "match_title": "Richmond SOL 14",
+        "hitting_eff": -0.5,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.1527777777777778,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-17",
+        "match_title": "@ Synergy Force 14 Gold - Game",
+        "hitting_eff": -0.5,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.25277777777777777,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-17",
+        "match_title": "@ Academy Volleyball - Game",
+        "hitting_eff": 0.5,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.08611111111111114,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-18",
+        "match_title": "@ Stingray-14 Black - Game",
+        "hitting_eff": 0.36363636363636365,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.03838383838383839,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ MVVC 13 Red - Game",
+        "hitting_eff": 0.25,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.022727272727272714,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ Absolute Volleyball Club - Game",
+        "hitting_eff": 0.18181818181818182,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.1590909090909091,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ MVVC 13 Black - Game",
+        "hitting_eff": 0.1,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.27909090909090906,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ OMNI Volleyball Club - Game",
+        "hitting_eff": 0.14285714285714285,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.20766233766233766,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ Rage Volleyball - Game",
+        "hitting_eff": -0.2,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.09493506493506491,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Marin 13 Black - Game",
+        "hitting_eff": 0.1,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.06493506493506492,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "Panda 13-1",
+        "hitting_eff": 0.1,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.04857142857142855,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Academy West 13 National - Game",
+        "hitting_eff": 0.42857142857142855,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.11428571428571425,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "Absolute 13 Black",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.08571428571428569,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Vision 13 Gold - Game",
+        "hitting_eff": 0.5,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.2257142857142857,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-22",
+        "match_title": "@ M1 13 Blue - Game",
+        "hitting_eff": 0.4444444444444444,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.29460317460317453,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-22",
+        "match_title": "@ STL Crossfire - Game",
+        "hitting_eff": 0.23076923076923078,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.3207570207570207,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-22",
+        "match_title": "H. Prep 14 Mizuno",
+        "hitting_eff": -0.17647058823529413,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.1997486173956762,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ Arkansas Elite 13-1 - Game",
+        "hitting_eff": 0.4,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.2797486173956762,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ CJV 13 National - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": 0.1797486173956762,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ Shock 13 UA - Game",
+        "hitting_eff": 0.5,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": 0.1908597285067873,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ Mineral Area 13 Elite - Game",
+        "hitting_eff": 0.3076923076923077,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.2062443438914027,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ McAllen Fierce Volleyball - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.24153846153846154,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ Synergy Force National - Game",
+        "hitting_eff": 0.1875,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.19903846153846153,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ Marin Black - Game",
+        "hitting_eff": 0.18181818181818182,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.23540209790209787,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ MVVC Red - Game",
+        "hitting_eff": 0.5,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": 0.23540209790209787,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ NorCal Black - Game",
+        "hitting_eff": 0.2,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.2138636363636363,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ HP Illinois Select - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.2138636363636363,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Uno Girls - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.17636363636363633,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Headlines VBC - Game",
+        "hitting_eff": 0.5,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.23999999999999994,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Union Green - Game",
+        "hitting_eff": 0.16666666666666666,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": 0.17333333333333328,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Rockwood Thunder - Game",
+        "hitting_eff": 0.14705882352941177,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.16274509803921564,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ CVC 13 Royal - Game",
+        "hitting_eff": 0.19047619047619047,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.20084033613445373,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ TVC 13 Royal - Game",
+        "hitting_eff": -0.0625,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.18834033613445372,
+        "pass_avg_rolling": 1.0
+      }
+    ],
+    "Jenna Gad": [
+      {
+        "date": "2026-02-01",
+        "match_title": "vs. MVVC-White - Game",
+        "hitting_eff": 0.5,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.5,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-01",
+        "match_title": "@ Red Rock Volleyball  - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.25,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-02",
+        "match_title": "@ SF Elite Volleyball Club - Game",
+        "hitting_eff": -0.5,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-02",
+        "match_title": "@Bay Area Eagles",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "@ Golden State Volleyball Club - Game",
+        "hitting_eff": -1.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.2,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "SynergyForce 13 Gold",
+        "hitting_eff": -0.16666666666666666,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.33333333333333337,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "Vision 13 Blue",
+        "hitting_eff": -1.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.5333333333333333,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-16",
+        "match_title": "Richmond SOL 14",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.4333333333333333,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-17",
+        "match_title": "@ Synergy Force 14 Gold - Game",
+        "hitting_eff": -1.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.6333333333333333,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-17",
+        "match_title": "@ Academy Volleyball - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.4333333333333333,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-18",
+        "match_title": "@ Stingray-14 Black - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.39999999999999997,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ MVVC 13 Red - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.19999999999999998,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ Absolute Volleyball Club - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.19999999999999998,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ MVVC 13 Black - Game",
+        "hitting_eff": 0.3333333333333333,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.06666666666666668,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ OMNI Volleyball Club - Game",
+        "hitting_eff": -0.3333333333333333,
+        "pass_avg": null,
+        "hitting_eff_rolling": 2.2204460492503132e-17,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Marin 13 Black - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 2.2204460492503132e-17,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Academy West 13 National - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 2.2204460492503132e-17,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ Synergy Force National - Game",
+        "hitting_eff": 1.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.2,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ Marin Black - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.16666666666666669,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ NorCal Black - Game",
+        "hitting_eff": -0.6666666666666666,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.08333333333333337,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ HP Illinois Select - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.08333333333333337,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Uno Girls - Game",
+        "hitting_eff": -0.5,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.04166666666666663,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Headlines VBC - Game",
+        "hitting_eff": -1.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.5416666666666666,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Union Green - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.4333333333333333,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Rockwood Thunder - Game",
+        "hitting_eff": 0.5,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.2,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ TVC 13 Royal - Game",
+        "hitting_eff": -0.25,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.25,
+        "pass_avg_rolling": null
+      }
+    ],
+    "None": [
+      {
+        "date": "2026-02-16",
+        "match_title": "MVVC 13 Black",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-16",
+        "match_title": "Richmond SOL 14",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Marin 13 Black - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "Panda 13-1",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Vision 13 Gold - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Rockwood Thunder - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": null
+      }
+    ],
+    "Sophia Fernandez": [
+      {
+        "date": "2026-02-01",
+        "match_title": "vs. MVVC-White - Game",
+        "hitting_eff": null,
+        "pass_avg": 3.0,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 3.0
+      },
+      {
+        "date": "2026-02-01",
+        "match_title": "@ Red Rock Volleyball  - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 3.0
+      },
+      {
+        "date": "2026-02-01",
+        "match_title": "@ Academy Volleyball - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 3.0
+      },
+      {
+        "date": "2026-02-02",
+        "match_title": "@ SF Elite Volleyball Club - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.4,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 2.2
+      },
+      {
+        "date": "2026-02-02",
+        "match_title": "@Bay Area Eagles",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 2.2
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "@ Golden State Volleyball Club - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.4
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "SynergyForce 13 Gold",
+        "hitting_eff": null,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.7
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "Vision 13 Blue",
+        "hitting_eff": 1.0,
+        "pass_avg": 1.3,
+        "hitting_eff_rolling": 1.0,
+        "pass_avg_rolling": 1.5666666666666667
+      },
+      {
+        "date": "2026-02-16",
+        "match_title": "MVVC 13 Black",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": 1.0,
+        "pass_avg_rolling": 1.6500000000000001
+      },
+      {
+        "date": "2026-02-16",
+        "match_title": "Richmond SOL 14",
+        "hitting_eff": null,
+        "pass_avg": 1.3333333333333333,
+        "hitting_eff_rolling": 1.0,
+        "pass_avg_rolling": 1.5444444444444443
+      },
+      {
+        "date": "2026-02-17",
+        "match_title": "@ Synergy Force 14 Gold - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": 1.0,
+        "pass_avg_rolling": 1.5444444444444443
+      },
+      {
+        "date": "2026-02-17",
+        "match_title": "@ Academy Volleyball - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": 1.0,
+        "pass_avg_rolling": 1.3166666666666664
+      },
+      {
+        "date": "2026-02-18",
+        "match_title": "@ Stingray-14 Black - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.1666666666666665
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ MVVC 13 Red - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.1666666666666665
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ OMNI Volleyball Club - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ Rage Volleyball - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Marin 13 Black - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "Panda 13-1",
+        "hitting_eff": null,
+        "pass_avg": 1.6666666666666667,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.3333333333333335
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Academy West 13 National - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.2222222222222223
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "Absolute 13 Black",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": 1.2222222222222223
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Vision 13 Gold - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": 1.1666666666666667
+      },
+      {
+        "date": "2026-03-22",
+        "match_title": "@ M1 13 Blue - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.3333333333333333,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": 1.25
+      },
+      {
+        "date": "2026-03-22",
+        "match_title": "@ STL Crossfire - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.5,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": 1.2083333333333333
+      },
+      {
+        "date": "2026-03-22",
+        "match_title": "H. Prep 14 Mizuno",
+        "hitting_eff": null,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": 1.2083333333333333
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ Shock 13 UA - Game",
+        "hitting_eff": null,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.3666666666666667
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ Mineral Area 13 Elite - Game",
+        "hitting_eff": -0.5,
+        "pass_avg": 1.5,
+        "hitting_eff_rolling": -0.5,
+        "pass_avg_rolling": 1.4666666666666666
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ McAllen Fierce Volleyball - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.6666666666666667,
+        "hitting_eff_rolling": -0.5,
+        "pass_avg_rolling": 1.5333333333333334
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ Synergy Force National - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": -0.5,
+        "pass_avg_rolling": 1.4333333333333333
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ Marin Black - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.25,
+        "hitting_eff_rolling": -0.5,
+        "pass_avg_rolling": 1.4833333333333334
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ MVVC Red - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": -0.5,
+        "pass_avg_rolling": 1.2833333333333334
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ NorCal Black - Game",
+        "hitting_eff": null,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.3833333333333333
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ HP Illinois Select - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.3125
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Uno Girls - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.4166666666666667
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Headlines VBC - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.5
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Union Green - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": 1.5
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Rockwood Thunder - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ CVC 13 Royal - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ TVC 13 Royal - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": 1.0
+      }
+    ],
+    "Tanisha Verma": [
+      {
+        "date": "2026-02-01",
+        "match_title": "vs. MVVC-White - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-01",
+        "match_title": "@ Red Rock Volleyball  - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-01",
+        "match_title": "@ Academy Volleyball - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-02",
+        "match_title": "@ SF Elite Volleyball Club - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-02",
+        "match_title": "@Bay Area Eagles",
+        "hitting_eff": 1.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.5,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "@ Golden State Volleyball Club - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.3333333333333333,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "SynergyForce 13 Gold",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.3333333333333333,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "Vision 13 Blue",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.25,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-16",
+        "match_title": "MVVC 13 Black",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.25,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-16",
+        "match_title": "Richmond SOL 14",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-17",
+        "match_title": "@ Synergy Force 14 Gold - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-17",
+        "match_title": "@ Academy Volleyball - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-18",
+        "match_title": "@ Stingray-14 Black - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ MVVC 13 Red - Game",
+        "hitting_eff": -1.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.3333333333333333,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ Absolute Volleyball Club - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.25,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ MVVC 13 Black - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.3333333333333333,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ OMNI Volleyball Club - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.25,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ Rage Volleyball - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.3333333333333333,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Marin 13 Black - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "Panda 13-1",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Academy West 13 National - Game",
+        "hitting_eff": null,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "Absolute 13 Black",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Vision 13 Gold - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-03-22",
+        "match_title": "@ M1 13 Blue - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-03-22",
+        "match_title": "@ STL Crossfire - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-03-22",
+        "match_title": "H. Prep 14 Mizuno",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ Arkansas Elite 13-1 - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ CJV 13 National - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ Shock 13 UA - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ Mineral Area 13 Elite - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ McAllen Fierce Volleyball - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ Synergy Force National - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ Marin Black - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ MVVC Red - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ NorCal Black - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ HP Illinois Select - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Uno Girls - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Headlines VBC - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Union Green - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Rockwood Thunder - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ CVC 13 Royal - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ TVC 13 Royal - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": null
+      }
+    ],
+    "Tatiana Rogers": [
+      {
+        "date": "2026-02-01",
+        "match_title": "vs. MVVC-White - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-02-01",
+        "match_title": "@ Red Rock Volleyball  - Game",
+        "hitting_eff": 0.3333333333333333,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": 0.16666666666666666,
+        "pass_avg_rolling": 1.5
+      },
+      {
+        "date": "2026-02-01",
+        "match_title": "@ Academy Volleyball - Game",
+        "hitting_eff": 0.5,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": 0.27777777777777773,
+        "pass_avg_rolling": 1.3333333333333333
+      },
+      {
+        "date": "2026-02-02",
+        "match_title": "@ SF Elite Volleyball Club - Game",
+        "hitting_eff": -0.3333333333333333,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.125,
+        "pass_avg_rolling": 1.3333333333333333
+      },
+      {
+        "date": "2026-02-02",
+        "match_title": "@Bay Area Eagles",
+        "hitting_eff": 0.038461538461538464,
+        "pass_avg": 1.5,
+        "hitting_eff_rolling": 0.10769230769230768,
+        "pass_avg_rolling": 1.375
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "@ Golden State Volleyball Club - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.10769230769230768,
+        "pass_avg_rolling": 1.5
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "SynergyForce 13 Gold",
+        "hitting_eff": 0.6666666666666666,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.17435897435897435,
+        "pass_avg_rolling": 1.25
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "Vision 13 Blue",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.07435897435897434,
+        "pass_avg_rolling": 1.5
+      },
+      {
+        "date": "2026-02-16",
+        "match_title": "MVVC 13 Black",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.14102564102564102,
+        "pass_avg_rolling": 1.5
+      },
+      {
+        "date": "2026-02-16",
+        "match_title": "Richmond SOL 14",
+        "hitting_eff": 0.3333333333333333,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.19999999999999996,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-17",
+        "match_title": "@ Synergy Force 14 Gold - Game",
+        "hitting_eff": -0.3333333333333333,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.1333333333333333,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-17",
+        "match_title": "@ Academy Volleyball - Game",
+        "hitting_eff": -0.25,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.050000000000000024,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-18",
+        "match_title": "@ Stingray-14 Black - Game",
+        "hitting_eff": 1.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.14999999999999997,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ MVVC 13 Red - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.14999999999999997,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ Absolute Volleyball Club - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": 1.5,
+        "hitting_eff_rolling": 0.08333333333333331,
+        "pass_avg_rolling": 1.5
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ MVVC 13 Black - Game",
+        "hitting_eff": 0.5,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.25,
+        "pass_avg_rolling": 1.5
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ OMNI Volleyball Club - Game",
+        "hitting_eff": 0.5,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.4,
+        "pass_avg_rolling": 1.5
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ Rage Volleyball - Game",
+        "hitting_eff": 0.125,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": 0.225,
+        "pass_avg_rolling": 1.75
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Marin 13 Black - Game",
+        "hitting_eff": -0.5,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.12499999999999997,
+        "pass_avg_rolling": 1.75
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "Panda 13-1",
+        "hitting_eff": -1.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.07500000000000002,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Academy West 13 National - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.17500000000000002,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "Absolute 13 Black",
+        "hitting_eff": 0.3333333333333333,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.20833333333333334,
+        "pass_avg_rolling": 2.0
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Vision 13 Gold - Game",
+        "hitting_eff": 0.3333333333333333,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.1666666666666667,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-22",
+        "match_title": "@ M1 13 Blue - Game",
+        "hitting_eff": 0.5,
+        "pass_avg": 1.5,
+        "hitting_eff_rolling": 0.033333333333333305,
+        "pass_avg_rolling": 1.5
+      },
+      {
+        "date": "2026-03-22",
+        "match_title": "@ STL Crossfire - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.2333333333333333,
+        "pass_avg_rolling": 1.5
+      },
+      {
+        "date": "2026-03-22",
+        "match_title": "H. Prep 14 Mizuno",
+        "hitting_eff": 0.5,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.3333333333333333,
+        "pass_avg_rolling": 1.5
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ CJV 13 National - Game",
+        "hitting_eff": 0.25,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": 0.31666666666666665,
+        "pass_avg_rolling": 1.25
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ Shock 13 UA - Game",
+        "hitting_eff": 0.4,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": 0.32999999999999996,
+        "pass_avg_rolling": 1.1666666666666667
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ Mineral Area 13 Elite - Game",
+        "hitting_eff": 1.0,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.43,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ McAllen Fierce Volleyball - Game",
+        "hitting_eff": 0.5714285714285714,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.5442857142857143,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ Synergy Force National - Game",
+        "hitting_eff": 0.4,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.5242857142857142,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ Marin Black - Game",
+        "hitting_eff": 0.3333333333333333,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.5409523809523809,
+        "pass_avg_rolling": 1.0
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ MVVC Red - Game",
+        "hitting_eff": 0.3333333333333333,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.5276190476190477,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ NorCal Black - Game",
+        "hitting_eff": 0.16666666666666666,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.3609523809523809,
+        "pass_avg_rolling": null
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Uno Girls - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.6666666666666667,
+        "hitting_eff_rolling": 0.3083333333333333,
+        "pass_avg_rolling": 1.6666666666666667
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Headlines VBC - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": 0.27777777777777773,
+        "pass_avg_rolling": 1.3333333333333335
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Rockwood Thunder - Game",
+        "hitting_eff": 0.3333333333333333,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.2777777777777777,
+        "pass_avg_rolling": 1.3333333333333335
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ CVC 13 Royal - Game",
+        "hitting_eff": -0.6666666666666666,
+        "pass_avg": null,
+        "hitting_eff_rolling": -0.0555555555555556,
+        "pass_avg_rolling": 1.3333333333333335
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ TVC 13 Royal - Game",
+        "hitting_eff": 0.3333333333333333,
+        "pass_avg": null,
+        "hitting_eff_rolling": -5.551115123125783e-17,
+        "pass_avg_rolling": 1.3333333333333335
+      }
+    ],
+    "Zlata Lutska": [
+      {
+        "date": "2026-02-01",
+        "match_title": "vs. MVVC-White - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.8,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.8
+      },
+      {
+        "date": "2026-02-01",
+        "match_title": "@ Red Rock Volleyball  - Game",
+        "hitting_eff": -1.0,
+        "pass_avg": 1.6666666666666667,
+        "hitting_eff_rolling": -1.0,
+        "pass_avg_rolling": 1.7333333333333334
+      },
+      {
+        "date": "2026-02-01",
+        "match_title": "@ Academy Volleyball - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.6,
+        "hitting_eff_rolling": -1.0,
+        "pass_avg_rolling": 1.6888888888888889
+      },
+      {
+        "date": "2026-02-02",
+        "match_title": "@ SF Elite Volleyball Club - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.3333333333333333,
+        "hitting_eff_rolling": -1.0,
+        "pass_avg_rolling": 1.6
+      },
+      {
+        "date": "2026-02-02",
+        "match_title": "@Bay Area Eagles",
+        "hitting_eff": null,
+        "pass_avg": 1.4,
+        "hitting_eff_rolling": -1.0,
+        "pass_avg_rolling": 1.56
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "@ Golden State Volleyball Club - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.5,
+        "hitting_eff_rolling": -1.0,
+        "pass_avg_rolling": 1.5
+      },
+      {
+        "date": "2026-02-15",
+        "match_title": "Vision 13 Blue",
+        "hitting_eff": null,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.3666666666666667
+      },
+      {
+        "date": "2026-02-16",
+        "match_title": "MVVC 13 Black",
+        "hitting_eff": null,
+        "pass_avg": 1.7619047619047619,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.3990476190476189
+      },
+      {
+        "date": "2026-02-16",
+        "match_title": "Richmond SOL 14",
+        "hitting_eff": null,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.5323809523809522
+      },
+      {
+        "date": "2026-02-17",
+        "match_title": "@ Synergy Force 14 Gold - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.7272727272727273,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.5978354978354978
+      },
+      {
+        "date": "2026-02-17",
+        "match_title": "@ Academy Volleyball - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.2307692307692308,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.543989343989344
+      },
+      {
+        "date": "2026-02-18",
+        "match_title": "@ Stingray-14 Black - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.8,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.703989343989344
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ MVVC 13 Red - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.375,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.6266083916083915
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ Absolute Volleyball Club - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.6666666666666667,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.5599417249417251
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ MVVC 13 Black - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.6666666666666667,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.547820512820513
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ OMNI Volleyball Club - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.75,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.6516666666666666
+      },
+      {
+        "date": "2026-02-23",
+        "match_title": "@ Rage Volleyball - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.5,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.5916666666666668
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Marin 13 Black - Game",
+        "hitting_eff": null,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.7166666666666668
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "Panda 13-1",
+        "hitting_eff": null,
+        "pass_avg": 1.6,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.7033333333333331
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Academy West 13 National - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.5,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.6700000000000004
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "Absolute 13 Black",
+        "hitting_eff": null,
+        "pass_avg": 1.6666666666666667,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.6533333333333335
+      },
+      {
+        "date": "2026-03-08",
+        "match_title": "@ Vision 13 Gold - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.2,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.5933333333333333
+      },
+      {
+        "date": "2026-03-22",
+        "match_title": "@ M1 13 Blue - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.3933333333333333
+      },
+      {
+        "date": "2026-03-22",
+        "match_title": "@ STL Crossfire - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.5,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.3733333333333335
+      },
+      {
+        "date": "2026-03-22",
+        "match_title": "H. Prep 14 Mizuno",
+        "hitting_eff": null,
+        "pass_avg": 1.5555555555555556,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.3844444444444446
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ Arkansas Elite 13-1 - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.3138888888888889
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ Shock 13 UA - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.5,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.3888888888888888
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ Mineral Area 13 Elite - Game",
+        "hitting_eff": null,
+        "pass_avg": 2.125,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.6701388888888888
+      },
+      {
+        "date": "2026-03-23",
+        "match_title": "@ McAllen Fierce Volleyball - Game",
+        "hitting_eff": 0.0,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": 1.5451388888888888
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ Synergy Force National - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.6,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": 1.55625
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ Marin Black - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.0,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": 1.4449999999999998
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ MVVC Red - Game",
+        "hitting_eff": null,
+        "pass_avg": null,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": 1.43125
+      },
+      {
+        "date": "2026-03-30",
+        "match_title": "@ NorCal Black - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.5,
+        "hitting_eff_rolling": 0.0,
+        "pass_avg_rolling": 1.275
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ HP Illinois Select - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.3333333333333333,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.3583333333333334
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Uno Girls - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.5,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.3333333333333333
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Headlines VBC - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.75,
+        "hitting_eff_rolling": null,
+        "pass_avg_rolling": 1.5208333333333333
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Union Green - Game",
+        "hitting_eff": 1.0,
+        "pass_avg": 1.8333333333333333,
+        "hitting_eff_rolling": 1.0,
+        "pass_avg_rolling": 1.5833333333333333
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ Rockwood Thunder - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.2857142857142858,
+        "hitting_eff_rolling": 1.0,
+        "pass_avg_rolling": 1.5404761904761906
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ CVC 13 Royal - Game",
+        "hitting_eff": null,
+        "pass_avg": 2.0,
+        "hitting_eff_rolling": 1.0,
+        "pass_avg_rolling": 1.6738095238095236
+      },
+      {
+        "date": "2026-04-07",
+        "match_title": "@ TVC 13 Royal - Game",
+        "hitting_eff": null,
+        "pass_avg": 1.4,
+        "hitting_eff_rolling": 1.0,
+        "pass_avg_rolling": 1.6538095238095238
+      }
+    ]
+  },
+  "game_state": {
+    "Brenna O'Connor": [
+      {
+        "situation": "winning_big",
+        "hitting_eff": 0.26,
+        "kill_pct": 44.0,
+        "pass_avg": 2.0,
+        "att_total": 50,
+        "ace_pct": 23.1,
+        "srv_err_pct": 9.4,
+        "serving_eff": 0.137,
+        "srv_total": 117
+      },
+      {
+        "situation": "winning",
+        "hitting_eff": 0.147,
+        "kill_pct": 26.5,
+        "pass_avg": 2.0,
+        "att_total": 34,
+        "ace_pct": 24.2,
+        "srv_err_pct": 10.8,
+        "serving_eff": 0.133,
+        "srv_total": 120
+      },
+      {
+        "situation": "close",
+        "hitting_eff": 0.055,
+        "kill_pct": 21.8,
+        "pass_avg": 1.333,
+        "att_total": 55,
+        "ace_pct": 16.9,
+        "srv_err_pct": 6.2,
+        "serving_eff": 0.108,
+        "srv_total": 130
+      },
+      {
+        "situation": "losing",
+        "hitting_eff": 0.296,
+        "kill_pct": 48.1,
+        "pass_avg": 2.0,
+        "att_total": 27,
+        "ace_pct": 14.3,
+        "srv_err_pct": 10.2,
+        "serving_eff": 0.041,
+        "srv_total": 49
+      },
+      {
+        "situation": "losing_big",
+        "hitting_eff": 0.2,
+        "kill_pct": 28.0,
+        "pass_avg": null,
+        "att_total": 25,
+        "ace_pct": 27.6,
+        "srv_err_pct": 3.4,
+        "serving_eff": 0.241,
+        "srv_total": 29
+      }
+    ],
+    "Ava Nguyen": [
+      {
+        "situation": "winning_big",
+        "hitting_eff": 0.153,
+        "kill_pct": 33.9,
+        "pass_avg": 1.574,
+        "att_total": 124,
+        "ace_pct": 30.4,
+        "srv_err_pct": 19.0,
+        "serving_eff": 0.114,
+        "srv_total": 79
+      },
+      {
+        "situation": "winning",
+        "hitting_eff": 0.098,
+        "kill_pct": 25.2,
+        "pass_avg": 1.706,
+        "att_total": 143,
+        "ace_pct": 25.3,
+        "srv_err_pct": 14.7,
+        "serving_eff": 0.107,
+        "srv_total": 75
+      },
+      {
+        "situation": "close",
+        "hitting_eff": 0.183,
+        "kill_pct": 31.7,
+        "pass_avg": 1.705,
+        "att_total": 186,
+        "ace_pct": 32.0,
+        "srv_err_pct": 10.7,
+        "serving_eff": 0.213,
+        "srv_total": 75
+      },
+      {
+        "situation": "losing",
+        "hitting_eff": 0.057,
+        "kill_pct": 24.5,
+        "pass_avg": 1.593,
+        "att_total": 106,
+        "ace_pct": 26.3,
+        "srv_err_pct": 5.3,
+        "serving_eff": 0.211,
+        "srv_total": 19
+      },
+      {
+        "situation": "losing_big",
+        "hitting_eff": 0.062,
+        "kill_pct": 26.6,
+        "pass_avg": 1.317,
+        "att_total": 64,
+        "ace_pct": 17.4,
+        "srv_err_pct": 8.7,
+        "serving_eff": 0.087,
+        "srv_total": 23
+      }
+    ],
+    "Emma Lares": [
+      {
+        "situation": "winning_big",
+        "hitting_eff": 0.011,
+        "kill_pct": 20.2,
+        "pass_avg": 1.743,
+        "att_total": 89,
+        "ace_pct": 23.4,
+        "srv_err_pct": 12.8,
+        "serving_eff": 0.106,
+        "srv_total": 94
+      },
+      {
+        "situation": "winning",
+        "hitting_eff": 0.089,
+        "kill_pct": 23.3,
+        "pass_avg": 1.862,
+        "att_total": 90,
+        "ace_pct": 31.6,
+        "srv_err_pct": 16.8,
+        "serving_eff": 0.147,
+        "srv_total": 95
+      },
+      {
+        "situation": "close",
+        "hitting_eff": 0.077,
+        "kill_pct": 22.2,
+        "pass_avg": 1.747,
+        "att_total": 117,
+        "ace_pct": 18.9,
+        "srv_err_pct": 12.6,
+        "serving_eff": 0.063,
+        "srv_total": 111
+      },
+      {
+        "situation": "losing",
+        "hitting_eff": -0.068,
+        "kill_pct": 16.2,
+        "pass_avg": 1.527,
+        "att_total": 74,
+        "ace_pct": 32.4,
+        "srv_err_pct": 14.7,
+        "serving_eff": 0.176,
+        "srv_total": 34
+      },
+      {
+        "situation": "losing_big",
+        "hitting_eff": 0.179,
+        "kill_pct": 30.8,
+        "pass_avg": 1.667,
+        "att_total": 39,
+        "ace_pct": 35.7,
+        "srv_err_pct": 7.1,
+        "serving_eff": 0.286,
+        "srv_total": 14
+      }
+    ],
+    "Emma Ferro": [
+      {
+        "situation": "winning_big",
+        "hitting_eff": -0.667,
+        "kill_pct": 0.0,
+        "pass_avg": 1.875,
+        "att_total": 3,
+        "ace_pct": 21.2,
+        "srv_err_pct": 9.1,
+        "serving_eff": 0.121,
+        "srv_total": 33
+      },
+      {
+        "situation": "winning",
+        "hitting_eff": 0.1,
+        "kill_pct": 30.0,
+        "pass_avg": 1.695,
+        "att_total": 10,
+        "ace_pct": 31.4,
+        "srv_err_pct": 20.0,
+        "serving_eff": 0.114,
+        "srv_total": 35
+      },
+      {
+        "situation": "close",
+        "hitting_eff": 0.143,
+        "kill_pct": 42.9,
+        "pass_avg": 1.607,
+        "att_total": 7,
+        "ace_pct": 26.7,
+        "srv_err_pct": 20.0,
+        "serving_eff": 0.067,
+        "srv_total": 30
+      },
+      {
+        "situation": "losing",
+        "hitting_eff": 0.0,
+        "kill_pct": 0.0,
+        "pass_avg": 1.714,
+        "att_total": 0,
+        "ace_pct": 30.8,
+        "srv_err_pct": 30.8,
+        "serving_eff": 0.0,
+        "srv_total": 13
+      },
+      {
+        "situation": "losing_big",
+        "hitting_eff": -0.333,
+        "kill_pct": 0.0,
+        "pass_avg": 1.511,
+        "att_total": 6,
+        "ace_pct": 22.2,
+        "srv_err_pct": 16.7,
+        "serving_eff": 0.056,
+        "srv_total": 18
+      }
+    ],
+    "Isabella Fernandez": [
+      {
+        "situation": "winning_big",
+        "hitting_eff": 0.176,
+        "kill_pct": 37.6,
+        "pass_avg": 2.0,
+        "att_total": 85,
+        "ace_pct": 19.4,
+        "srv_err_pct": 14.9,
+        "serving_eff": 0.045,
+        "srv_total": 67
+      },
+      {
+        "situation": "winning",
+        "hitting_eff": 0.111,
+        "kill_pct": 33.3,
+        "pass_avg": 2.0,
+        "att_total": 81,
+        "ace_pct": 21.2,
+        "srv_err_pct": 5.8,
+        "serving_eff": 0.154,
+        "srv_total": 52
+      },
+      {
+        "situation": "close",
+        "hitting_eff": 0.159,
+        "kill_pct": 31.7,
+        "pass_avg": 2.0,
+        "att_total": 145,
+        "ace_pct": 13.8,
+        "srv_err_pct": 13.8,
+        "serving_eff": 0.0,
+        "srv_total": 65
+      },
+      {
+        "situation": "losing",
+        "hitting_eff": 0.118,
+        "kill_pct": 30.3,
+        "pass_avg": null,
+        "att_total": 76,
+        "ace_pct": 34.5,
+        "srv_err_pct": 10.3,
+        "serving_eff": 0.241,
+        "srv_total": 29
+      },
+      {
+        "situation": "losing_big",
+        "hitting_eff": 0.0,
+        "kill_pct": 27.0,
+        "pass_avg": 1.0,
+        "att_total": 37,
+        "ace_pct": 13.0,
+        "srv_err_pct": 8.7,
+        "serving_eff": 0.043,
+        "srv_total": 23
+      }
+    ],
+    "Tanisha Verma": [
+      {
+        "situation": "winning_big",
+        "hitting_eff": 0.0,
+        "kill_pct": 0.0,
+        "pass_avg": null,
+        "att_total": 1,
+        "ace_pct": 50.0,
+        "srv_err_pct": 0.0,
+        "serving_eff": 0.5,
+        "srv_total": 2
+      },
+      {
+        "situation": "winning",
+        "hitting_eff": 0.2,
+        "kill_pct": 20.0,
+        "pass_avg": null,
+        "att_total": 5,
+        "ace_pct": null,
+        "srv_err_pct": null,
+        "serving_eff": null,
+        "srv_total": 0
+      },
+      {
+        "situation": "close",
+        "hitting_eff": 0.0,
+        "kill_pct": 0.0,
+        "pass_avg": 2.0,
+        "att_total": 5,
+        "ace_pct": 50.0,
+        "srv_err_pct": 50.0,
+        "serving_eff": 0.0,
+        "srv_total": 2
+      },
+      {
+        "situation": "losing",
+        "hitting_eff": -0.5,
+        "kill_pct": 0.0,
+        "pass_avg": null,
+        "att_total": 2,
+        "ace_pct": null,
+        "srv_err_pct": null,
+        "serving_eff": null,
+        "srv_total": 0
+      },
+      {
+        "situation": "losing_big",
+        "hitting_eff": 0.0,
+        "kill_pct": 0.0,
+        "pass_avg": null,
+        "att_total": 1,
+        "ace_pct": null,
+        "srv_err_pct": null,
+        "serving_eff": null,
+        "srv_total": 0
+      }
+    ],
+    "Zlata Lutska": [
+      {
+        "situation": "winning_big",
+        "hitting_eff": 0.5,
+        "kill_pct": 50.0,
+        "pass_avg": 1.564,
+        "att_total": 2,
+        "ace_pct": 33.3,
+        "srv_err_pct": 0.0,
+        "serving_eff": 0.333,
+        "srv_total": 12
+      },
+      {
+        "situation": "winning",
+        "hitting_eff": -1.0,
+        "kill_pct": 0.0,
+        "pass_avg": 1.617,
+        "att_total": 1,
+        "ace_pct": 10.0,
+        "srv_err_pct": 10.0,
+        "serving_eff": 0.0,
+        "srv_total": 10
+      },
+      {
+        "situation": "close",
+        "hitting_eff": 0.0,
+        "kill_pct": 0.0,
+        "pass_avg": 1.575,
+        "att_total": 0,
+        "ace_pct": 0.0,
+        "srv_err_pct": 0.0,
+        "serving_eff": 0.0,
+        "srv_total": 6
+      },
+      {
+        "situation": "losing",
+        "hitting_eff": 0.0,
+        "kill_pct": 0.0,
+        "pass_avg": 1.531,
+        "att_total": 0,
+        "ace_pct": 0.0,
+        "srv_err_pct": 0.0,
+        "serving_eff": 0.0,
+        "srv_total": 1
+      },
+      {
+        "situation": "losing_big",
+        "hitting_eff": 0.0,
+        "kill_pct": 0.0,
+        "pass_avg": 1.593,
+        "att_total": 0,
+        "ace_pct": 33.3,
+        "srv_err_pct": 33.3,
+        "serving_eff": 0.0,
+        "srv_total": 3
+      }
+    ],
+    "Amelia Rae Diaz": [
+      {
+        "situation": "winning_big",
+        "hitting_eff": -0.055,
+        "kill_pct": 24.7,
+        "pass_avg": 1.455,
+        "att_total": 73,
+        "ace_pct": 27.6,
+        "srv_err_pct": 24.1,
+        "serving_eff": 0.034,
+        "srv_total": 58
+      },
+      {
+        "situation": "winning",
+        "hitting_eff": 0.186,
+        "kill_pct": 37.1,
+        "pass_avg": 1.0,
+        "att_total": 70,
+        "ace_pct": 25.6,
+        "srv_err_pct": 5.1,
+        "serving_eff": 0.205,
+        "srv_total": 39
+      },
+      {
+        "situation": "close",
+        "hitting_eff": 0.092,
+        "kill_pct": 32.1,
+        "pass_avg": 1.429,
+        "att_total": 109,
+        "ace_pct": 18.9,
+        "srv_err_pct": 10.8,
+        "serving_eff": 0.081,
+        "srv_total": 37
+      },
+      {
+        "situation": "losing",
+        "hitting_eff": 0.2,
+        "kill_pct": 32.5,
+        "pass_avg": 1.375,
+        "att_total": 40,
+        "ace_pct": 9.1,
+        "srv_err_pct": 9.1,
+        "serving_eff": 0.0,
+        "srv_total": 11
+      },
+      {
+        "situation": "losing_big",
+        "hitting_eff": -0.026,
+        "kill_pct": 23.7,
+        "pass_avg": 1.1,
+        "att_total": 38,
+        "ace_pct": 0.0,
+        "srv_err_pct": 33.3,
+        "serving_eff": -0.333,
+        "srv_total": 6
+      }
+    ],
+    "Tatiana Rogers": [
+      {
+        "situation": "winning_big",
+        "hitting_eff": 0.152,
+        "kill_pct": 27.3,
+        "pass_avg": 1.364,
+        "att_total": 33,
+        "ace_pct": 25.5,
+        "srv_err_pct": 21.3,
+        "serving_eff": 0.043,
+        "srv_total": 47
+      },
+      {
+        "situation": "winning",
+        "hitting_eff": 0.32,
+        "kill_pct": 40.0,
+        "pass_avg": 1.286,
+        "att_total": 50,
+        "ace_pct": 20.5,
+        "srv_err_pct": 23.1,
+        "serving_eff": -0.026,
+        "srv_total": 39
+      },
+      {
+        "situation": "close",
+        "hitting_eff": 0.099,
+        "kill_pct": 31.0,
+        "pass_avg": 1.5,
+        "att_total": 71,
+        "ace_pct": 10.7,
+        "srv_err_pct": 17.9,
+        "serving_eff": -0.071,
+        "srv_total": 28
+      },
+      {
+        "situation": "losing",
+        "hitting_eff": 0.069,
+        "kill_pct": 31.0,
+        "pass_avg": 1.5,
+        "att_total": 29,
+        "ace_pct": 33.3,
+        "srv_err_pct": 9.5,
+        "serving_eff": 0.238,
+        "srv_total": 21
+      },
+      {
+        "situation": "losing_big",
+        "hitting_eff": 0.467,
+        "kill_pct": 60.0,
+        "pass_avg": null,
+        "att_total": 15,
+        "ace_pct": 12.5,
+        "srv_err_pct": 0.0,
+        "serving_eff": 0.125,
+        "srv_total": 8
+      }
+    ],
+    "Ava Shahnazari": [
+      {
+        "situation": "winning_big",
+        "hitting_eff": 0.213,
+        "kill_pct": 31.9,
+        "pass_avg": null,
+        "att_total": 47,
+        "ace_pct": 16.9,
+        "srv_err_pct": 11.9,
+        "serving_eff": 0.051,
+        "srv_total": 59
+      },
+      {
+        "situation": "winning",
+        "hitting_eff": 0.255,
+        "kill_pct": 36.2,
+        "pass_avg": 1.0,
+        "att_total": 47,
+        "ace_pct": 13.5,
+        "srv_err_pct": 5.4,
+        "serving_eff": 0.081,
+        "srv_total": 37
+      },
+      {
+        "situation": "close",
+        "hitting_eff": 0.255,
+        "kill_pct": 29.4,
+        "pass_avg": null,
+        "att_total": 51,
+        "ace_pct": 11.3,
+        "srv_err_pct": 7.5,
+        "serving_eff": 0.038,
+        "srv_total": 53
+      },
+      {
+        "situation": "losing",
+        "hitting_eff": 0.227,
+        "kill_pct": 40.9,
+        "pass_avg": null,
+        "att_total": 22,
+        "ace_pct": 23.5,
+        "srv_err_pct": 17.6,
+        "serving_eff": 0.059,
+        "srv_total": 17
+      },
+      {
+        "situation": "losing_big",
+        "hitting_eff": 0.067,
+        "kill_pct": 20.0,
+        "pass_avg": 1.25,
+        "att_total": 15,
+        "ace_pct": 39.1,
+        "srv_err_pct": 0.0,
+        "serving_eff": 0.391,
+        "srv_total": 23
+      }
+    ],
+    "Sophia Fernandez": [
+      {
+        "situation": "winning_big",
+        "hitting_eff": -0.333,
+        "kill_pct": 0.0,
+        "pass_avg": 1.15,
+        "att_total": 3,
+        "ace_pct": 15.4,
+        "srv_err_pct": 30.8,
+        "serving_eff": -0.154,
+        "srv_total": 26
+      },
+      {
+        "situation": "winning",
+        "hitting_eff": 0.0,
+        "kill_pct": 0.0,
+        "pass_avg": 1.778,
+        "att_total": 0,
+        "ace_pct": 23.5,
+        "srv_err_pct": 5.9,
+        "serving_eff": 0.176,
+        "srv_total": 17
+      },
+      {
+        "situation": "close",
+        "hitting_eff": 0.667,
+        "kill_pct": 66.7,
+        "pass_avg": 1.591,
+        "att_total": 3,
+        "ace_pct": 21.1,
+        "srv_err_pct": 15.8,
+        "serving_eff": 0.053,
+        "srv_total": 19
+      },
+      {
+        "situation": "losing",
+        "hitting_eff": 0.0,
+        "kill_pct": 0.0,
+        "pass_avg": 1.714,
+        "att_total": 0,
+        "ace_pct": 0.0,
+        "srv_err_pct": 25.0,
+        "serving_eff": -0.25,
+        "srv_total": 4
+      },
+      {
+        "situation": "losing_big",
+        "hitting_eff": 0.0,
+        "kill_pct": 0.0,
+        "pass_avg": 1.167,
+        "att_total": 0,
+        "ace_pct": 33.3,
+        "srv_err_pct": 0.0,
+        "serving_eff": 0.333,
+        "srv_total": 6
+      }
+    ],
+    "Jenna Gad": [
+      {
+        "situation": "winning_big",
+        "hitting_eff": -0.3,
+        "kill_pct": 5.0,
+        "pass_avg": null,
+        "att_total": 20,
+        "ace_pct": 0.0,
+        "srv_err_pct": 16.7,
+        "serving_eff": -0.167,
+        "srv_total": 6
+      },
+      {
+        "situation": "winning",
+        "hitting_eff": -0.2,
+        "kill_pct": 0.0,
+        "pass_avg": null,
+        "att_total": 15,
+        "ace_pct": 33.3,
+        "srv_err_pct": 0.0,
+        "serving_eff": 0.333,
+        "srv_total": 9
+      },
+      {
+        "situation": "close",
+        "hitting_eff": -0.062,
+        "kill_pct": 18.8,
+        "pass_avg": null,
+        "att_total": 16,
+        "ace_pct": 0.0,
+        "srv_err_pct": 33.3,
+        "serving_eff": -0.333,
+        "srv_total": 3
+      },
+      {
+        "situation": "losing",
+        "hitting_eff": 0.0,
+        "kill_pct": 20.0,
+        "pass_avg": null,
+        "att_total": 5,
+        "ace_pct": 0.0,
+        "srv_err_pct": 0.0,
+        "serving_eff": 0.0,
+        "srv_total": 2
+      },
+      {
+        "situation": "losing_big",
+        "hitting_eff": -0.286,
+        "kill_pct": 0.0,
+        "pass_avg": null,
+        "att_total": 7,
+        "ace_pct": 0.0,
+        "srv_err_pct": 0.0,
+        "serving_eff": 0.0,
+        "srv_total": 2
+      }
+    ],
+    "Aarnavi Muthyala": [
+      {
+        "situation": "winning_big",
+        "hitting_eff": 0.176,
+        "kill_pct": 23.5,
+        "pass_avg": null,
+        "att_total": 17,
+        "ace_pct": 25.0,
+        "srv_err_pct": 0.0,
+        "serving_eff": 0.25,
+        "srv_total": 8
+      },
+      {
+        "situation": "winning",
+        "hitting_eff": 0.045,
+        "kill_pct": 31.8,
+        "pass_avg": null,
+        "att_total": 22,
+        "ace_pct": 42.9,
+        "srv_err_pct": 14.3,
+        "serving_eff": 0.286,
+        "srv_total": 7
+      },
+      {
+        "situation": "close",
+        "hitting_eff": 0.125,
+        "kill_pct": 37.5,
+        "pass_avg": null,
+        "att_total": 8,
+        "ace_pct": 0.0,
+        "srv_err_pct": 0.0,
+        "serving_eff": 0.0,
+        "srv_total": 3
+      },
+      {
+        "situation": "losing",
+        "hitting_eff": -0.2,
+        "kill_pct": 0.0,
+        "pass_avg": null,
+        "att_total": 5,
+        "ace_pct": null,
+        "srv_err_pct": null,
+        "serving_eff": null,
+        "srv_total": 0
+      },
+      {
+        "situation": "losing_big",
+        "hitting_eff": 0.25,
+        "kill_pct": 25.0,
+        "pass_avg": null,
+        "att_total": 4,
+        "ace_pct": null,
+        "srv_err_pct": null,
+        "serving_eff": null,
+        "srv_total": 0
+      }
+    ],
+    "None": [
+      {
+        "situation": "winning",
+        "hitting_eff": 0.0,
+        "kill_pct": 0.0,
+        "pass_avg": null,
+        "att_total": 0,
+        "ace_pct": null,
+        "srv_err_pct": null,
+        "serving_eff": null,
+        "srv_total": 0
+      },
+      {
+        "situation": "close",
+        "hitting_eff": 0.0,
+        "kill_pct": 0.0,
+        "pass_avg": null,
+        "att_total": 0,
+        "ace_pct": null,
+        "srv_err_pct": null,
+        "serving_eff": null,
+        "srv_total": 0
+      },
+      {
+        "situation": "losing_big",
+        "hitting_eff": 0.0,
+        "kill_pct": 0.0,
+        "pass_avg": null,
+        "att_total": 0,
+        "ace_pct": null,
+        "srv_err_pct": null,
+        "serving_eff": null,
+        "srv_total": 0
+      }
+    ]
+  },
+  "in_system": {
+    "Aarnavi Muthyala": {
+      "out_of_system": {
+        "kills": 13,
+        "errors": 7,
+        "attempts": 41,
+        "hitting_eff": 0.146
+      },
+      "in_system": {
+        "kills": 2,
+        "errors": 2,
+        "attempts": 14,
+        "hitting_eff": 0.0
+      }
+    },
+    "Amelia Rae Diaz": {
+      "out_of_system": {
+        "kills": 67,
+        "errors": 49,
+        "attempts": 213,
+        "hitting_eff": 0.085
+      },
+      "in_system": {
+        "kills": 31,
+        "errors": 25,
+        "attempts": 110,
+        "hitting_eff": 0.055
+      }
+    },
+    "Ava Nguyen": {
+      "out_of_system": {
+        "kills": 111,
+        "errors": 62,
+        "attempts": 396,
+        "hitting_eff": 0.124
+      },
+      "in_system": {
+        "kills": 66,
+        "errors": 39,
+        "attempts": 210,
+        "hitting_eff": 0.129
+      }
+    },
+    "Ava Shahnazari": {
+      "out_of_system": {
+        "kills": 36,
+        "errors": 15,
+        "attempts": 123,
+        "hitting_eff": 0.171
+      },
+      "in_system": {
+        "kills": 8,
+        "errors": 0,
+        "attempts": 26,
+        "hitting_eff": 0.308
+      }
+    },
+    "Brenna O'Connor": {
+      "out_of_system": {
+        "kills": 16,
+        "errors": 9,
+        "attempts": 54,
+        "hitting_eff": 0.13
+      },
+      "in_system": {
+        "kills": 9,
+        "errors": 6,
+        "attempts": 32,
+        "hitting_eff": 0.094
+      }
+    },
+    "Emma Ferro": {
+      "out_of_system": {
+        "kills": 3,
+        "errors": 2,
+        "attempts": 12,
+        "hitting_eff": 0.083
+      },
+      "in_system": {
+        "kills": 2,
+        "errors": 6,
+        "attempts": 12,
+        "hitting_eff": -0.333
+      }
+    },
+    "Emma Lares": {
+      "out_of_system": {
+        "kills": 76,
+        "errors": 44,
+        "attempts": 293,
+        "hitting_eff": 0.109
+      },
+      "in_system": {
+        "kills": 13,
+        "errors": 25,
+        "attempts": 112,
+        "hitting_eff": -0.107
+      }
+    },
+    "Isabella Fernandez": {
+      "out_of_system": {
+        "kills": 100,
+        "errors": 62,
+        "attempts": 296,
+        "hitting_eff": 0.128
+      },
+      "in_system": {
+        "kills": 35,
+        "errors": 19,
+        "attempts": 119,
+        "hitting_eff": 0.134
+      }
+    },
+    "Jenna Gad": {
+      "out_of_system": {
+        "kills": 4,
+        "errors": 8,
+        "attempts": 41,
+        "hitting_eff": -0.098
+      },
+      "in_system": {
+        "kills": 1,
+        "errors": 4,
+        "attempts": 12,
+        "hitting_eff": -0.25
+      }
+    },
+    "Sophia Fernandez": {
+      "out_of_system": {
+        "kills": 0,
+        "errors": 1,
+        "attempts": 4,
+        "hitting_eff": -0.25
+      },
+      "in_system": {
+        "kills": 2,
+        "errors": 0,
+        "attempts": 2,
+        "hitting_eff": 1.0
+      }
+    },
+    "Tanisha Verma": {
+      "out_of_system": {
+        "kills": 0,
+        "errors": 0,
+        "attempts": 4,
+        "hitting_eff": 0.0
+      },
+      "in_system": {
+        "kills": 0,
+        "errors": 0,
+        "attempts": 1,
+        "hitting_eff": 0.0
+      }
+    },
+    "Tatiana Rogers": {
+      "out_of_system": {
+        "kills": 40,
+        "errors": 21,
+        "attempts": 107,
+        "hitting_eff": 0.178
+      },
+      "in_system": {
+        "kills": 18,
+        "errors": 7,
+        "attempts": 48,
+        "hitting_eff": 0.229
+      }
+    },
+    "Zlata Lutska": {
+      "out_of_system": {
+        "kills": 1,
+        "errors": 0,
+        "attempts": 2,
+        "hitting_eff": 0.5
+      },
+      "in_system": {
+        "kills": 0,
+        "errors": 1,
+        "attempts": 1,
+        "hitting_eff": -1.0
+      }
+    }
+  }
+}

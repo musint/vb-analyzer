@@ -1,0 +1,784 @@
+{
+  "attack_zones": [
+    {
+      "zone": "1.0",
+      "kills": 13,
+      "errors": 8,
+      "attempts": 42,
+      "hitting_eff": 0.119,
+      "top_player": "Brenna O'Connor"
+    },
+    {
+      "zone": "2.0",
+      "kills": 229,
+      "errors": 135,
+      "attempts": 688,
+      "hitting_eff": 0.137,
+      "top_player": "Isabella Fernandez"
+    },
+    {
+      "zone": "3.0",
+      "kills": 118,
+      "errors": 59,
+      "attempts": 433,
+      "hitting_eff": 0.136,
+      "top_player": "Ava Shahnazari"
+    },
+    {
+      "zone": "4.0",
+      "kills": 316,
+      "errors": 191,
+      "attempts": 1139,
+      "hitting_eff": 0.11,
+      "top_player": "Ava Nguyen"
+    },
+    {
+      "zone": "5.0",
+      "kills": 38,
+      "errors": 35,
+      "attempts": 163,
+      "hitting_eff": 0.018,
+      "top_player": "Ava Nguyen"
+    },
+    {
+      "zone": "6.0",
+      "kills": 12,
+      "errors": 15,
+      "attempts": 49,
+      "hitting_eff": -0.061,
+      "top_player": "Ava Nguyen"
+    }
+  ],
+  "receive_zones": [
+    {
+      "zone": "1.0",
+      "attempts": 285,
+      "pass_avg": 1.632,
+      "top_player": "Emma Lares"
+    },
+    {
+      "zone": "2.0",
+      "attempts": 8,
+      "pass_avg": 1.571,
+      "top_player": "Brenna O'Connor"
+    },
+    {
+      "zone": "3.0",
+      "attempts": 1,
+      "pass_avg": 2.0,
+      "top_player": "Tanisha Verma"
+    },
+    {
+      "zone": "4.0",
+      "attempts": 4,
+      "pass_avg": 1.0,
+      "top_player": "Amelia Rae Diaz"
+    },
+    {
+      "zone": "5.0",
+      "attempts": 381,
+      "pass_avg": 1.553,
+      "top_player": "Ava Nguyen"
+    },
+    {
+      "zone": "6.0",
+      "attempts": 849,
+      "pass_avg": 1.629,
+      "top_player": "Emma Ferro"
+    }
+  ],
+  "player_attack_zones": {
+    "Aarnavi Muthyala": [
+      {
+        "zone": "1.0",
+        "kills": 0,
+        "errors": 1,
+        "attempts": 2,
+        "hitting_eff": -0.5
+      },
+      {
+        "zone": "2.0",
+        "kills": 9,
+        "errors": 4,
+        "attempts": 35,
+        "hitting_eff": 0.143
+      },
+      {
+        "zone": "3.0",
+        "kills": 1,
+        "errors": 1,
+        "attempts": 3,
+        "hitting_eff": 0.0
+      },
+      {
+        "zone": "4.0",
+        "kills": 5,
+        "errors": 4,
+        "attempts": 14,
+        "hitting_eff": 0.071
+      },
+      {
+        "zone": "5.0",
+        "kills": 0,
+        "errors": 0,
+        "attempts": 2,
+        "hitting_eff": 0.0
+      }
+    ],
+    "Amelia Rae Diaz": [
+      {
+        "zone": "1.0",
+        "kills": 1,
+        "errors": 3,
+        "attempts": 10,
+        "hitting_eff": -0.2
+      },
+      {
+        "zone": "2.0",
+        "kills": 44,
+        "errors": 30,
+        "attempts": 131,
+        "hitting_eff": 0.107
+      },
+      {
+        "zone": "3.0",
+        "kills": 1,
+        "errors": 1,
+        "attempts": 7,
+        "hitting_eff": 0.0
+      },
+      {
+        "zone": "4.0",
+        "kills": 47,
+        "errors": 31,
+        "attempts": 137,
+        "hitting_eff": 0.117
+      },
+      {
+        "zone": "5.0",
+        "kills": 7,
+        "errors": 8,
+        "attempts": 39,
+        "hitting_eff": -0.026
+      },
+      {
+        "zone": "6.0",
+        "kills": 1,
+        "errors": 1,
+        "attempts": 4,
+        "hitting_eff": 0.0
+      }
+    ],
+    "Ava Nguyen": [
+      {
+        "zone": "1.0",
+        "kills": 3,
+        "errors": 1,
+        "attempts": 8,
+        "hitting_eff": 0.25
+      },
+      {
+        "zone": "2.0",
+        "kills": 11,
+        "errors": 8,
+        "attempts": 46,
+        "hitting_eff": 0.065
+      },
+      {
+        "zone": "3.0",
+        "kills": 0,
+        "errors": 0,
+        "attempts": 7,
+        "hitting_eff": 0.0
+      },
+      {
+        "zone": "4.0",
+        "kills": 147,
+        "errors": 78,
+        "attempts": 495,
+        "hitting_eff": 0.139
+      },
+      {
+        "zone": "5.0",
+        "kills": 15,
+        "errors": 8,
+        "attempts": 45,
+        "hitting_eff": 0.156
+      },
+      {
+        "zone": "6.0",
+        "kills": 4,
+        "errors": 7,
+        "attempts": 21,
+        "hitting_eff": -0.143
+      }
+    ],
+    "Ava Shahnazari": [
+      {
+        "zone": "2.0",
+        "kills": 3,
+        "errors": 3,
+        "attempts": 14,
+        "hitting_eff": 0.0
+      },
+      {
+        "zone": "3.0",
+        "kills": 53,
+        "errors": 15,
+        "attempts": 158,
+        "hitting_eff": 0.241
+      },
+      {
+        "zone": "4.0",
+        "kills": 2,
+        "errors": 0,
+        "attempts": 6,
+        "hitting_eff": 0.333
+      },
+      {
+        "zone": "5.0",
+        "kills": 0,
+        "errors": 0,
+        "attempts": 2,
+        "hitting_eff": 0.0
+      },
+      {
+        "zone": "6.0",
+        "kills": 1,
+        "errors": 0,
+        "attempts": 1,
+        "hitting_eff": 1.0
+      }
+    ],
+    "Brenna O'Connor": [
+      {
+        "zone": "1.0",
+        "kills": 4,
+        "errors": 1,
+        "attempts": 6,
+        "hitting_eff": 0.5
+      },
+      {
+        "zone": "2.0",
+        "kills": 37,
+        "errors": 12,
+        "attempts": 93,
+        "hitting_eff": 0.269
+      },
+      {
+        "zone": "3.0",
+        "kills": 14,
+        "errors": 9,
+        "attempts": 61,
+        "hitting_eff": 0.082
+      },
+      {
+        "zone": "4.0",
+        "kills": 4,
+        "errors": 3,
+        "attempts": 18,
+        "hitting_eff": 0.056
+      },
+      {
+        "zone": "5.0",
+        "kills": 1,
+        "errors": 3,
+        "attempts": 7,
+        "hitting_eff": -0.286
+      },
+      {
+        "zone": "6.0",
+        "kills": 0,
+        "errors": 0,
+        "attempts": 1,
+        "hitting_eff": 0.0
+      }
+    ],
+    "Emma Ferro": [
+      {
+        "zone": "2.0",
+        "kills": 0,
+        "errors": 0,
+        "attempts": 1,
+        "hitting_eff": 0.0
+      },
+      {
+        "zone": "3.0",
+        "kills": 1,
+        "errors": 1,
+        "attempts": 4,
+        "hitting_eff": 0.0
+      },
+      {
+        "zone": "4.0",
+        "kills": 4,
+        "errors": 2,
+        "attempts": 10,
+        "hitting_eff": 0.2
+      },
+      {
+        "zone": "5.0",
+        "kills": 0,
+        "errors": 0,
+        "attempts": 3,
+        "hitting_eff": 0.0
+      },
+      {
+        "zone": "6.0",
+        "kills": 1,
+        "errors": 5,
+        "attempts": 8,
+        "hitting_eff": -0.5
+      }
+    ],
+    "Emma Lares": [
+      {
+        "zone": "1.0",
+        "kills": 0,
+        "errors": 0,
+        "attempts": 2,
+        "hitting_eff": 0.0
+      },
+      {
+        "zone": "2.0",
+        "kills": 5,
+        "errors": 8,
+        "attempts": 33,
+        "hitting_eff": -0.091
+      },
+      {
+        "zone": "3.0",
+        "kills": 1,
+        "errors": 0,
+        "attempts": 1,
+        "hitting_eff": 1.0
+      },
+      {
+        "zone": "4.0",
+        "kills": 69,
+        "errors": 49,
+        "attempts": 320,
+        "hitting_eff": 0.062
+      },
+      {
+        "zone": "5.0",
+        "kills": 11,
+        "errors": 12,
+        "attempts": 47,
+        "hitting_eff": -0.021
+      },
+      {
+        "zone": "6.0",
+        "kills": 3,
+        "errors": 0,
+        "attempts": 6,
+        "hitting_eff": 0.5
+      }
+    ],
+    "Isabella Fernandez": [
+      {
+        "zone": "1.0",
+        "kills": 4,
+        "errors": 2,
+        "attempts": 13,
+        "hitting_eff": 0.154
+      },
+      {
+        "zone": "2.0",
+        "kills": 113,
+        "errors": 66,
+        "attempts": 316,
+        "hitting_eff": 0.149
+      },
+      {
+        "zone": "3.0",
+        "kills": 2,
+        "errors": 0,
+        "attempts": 8,
+        "hitting_eff": 0.25
+      },
+      {
+        "zone": "4.0",
+        "kills": 17,
+        "errors": 13,
+        "attempts": 76,
+        "hitting_eff": 0.053
+      },
+      {
+        "zone": "5.0",
+        "kills": 2,
+        "errors": 1,
+        "attempts": 10,
+        "hitting_eff": 0.1
+      },
+      {
+        "zone": "6.0",
+        "kills": 0,
+        "errors": 0,
+        "attempts": 1,
+        "hitting_eff": 0.0
+      }
+    ],
+    "Jenna Gad": [
+      {
+        "zone": "2.0",
+        "kills": 0,
+        "errors": 1,
+        "attempts": 3,
+        "hitting_eff": -0.333
+      },
+      {
+        "zone": "3.0",
+        "kills": 4,
+        "errors": 14,
+        "attempts": 54,
+        "hitting_eff": -0.185
+      },
+      {
+        "zone": "4.0",
+        "kills": 1,
+        "errors": 1,
+        "attempts": 4,
+        "hitting_eff": 0.0
+      },
+      {
+        "zone": "6.0",
+        "kills": 0,
+        "errors": 1,
+        "attempts": 2,
+        "hitting_eff": -0.5
+      }
+    ],
+    "Sophia Fernandez": [
+      {
+        "zone": "3.0",
+        "kills": 0,
+        "errors": 0,
+        "attempts": 1,
+        "hitting_eff": 0.0
+      },
+      {
+        "zone": "4.0",
+        "kills": 0,
+        "errors": 1,
+        "attempts": 2,
+        "hitting_eff": -0.5
+      },
+      {
+        "zone": "5.0",
+        "kills": 1,
+        "errors": 0,
+        "attempts": 1,
+        "hitting_eff": 1.0
+      },
+      {
+        "zone": "6.0",
+        "kills": 1,
+        "errors": 0,
+        "attempts": 2,
+        "hitting_eff": 0.5
+      }
+    ],
+    "Tanisha Verma": [
+      {
+        "zone": "2.0",
+        "kills": 0,
+        "errors": 1,
+        "attempts": 4,
+        "hitting_eff": -0.25
+      },
+      {
+        "zone": "3.0",
+        "kills": 0,
+        "errors": 0,
+        "attempts": 7,
+        "hitting_eff": 0.0
+      },
+      {
+        "zone": "4.0",
+        "kills": 0,
+        "errors": 0,
+        "attempts": 1,
+        "hitting_eff": 0.0
+      },
+      {
+        "zone": "6.0",
+        "kills": 1,
+        "errors": 0,
+        "attempts": 1,
+        "hitting_eff": 1.0
+      }
+    ],
+    "Tatiana Rogers": [
+      {
+        "zone": "2.0",
+        "kills": 7,
+        "errors": 2,
+        "attempts": 12,
+        "hitting_eff": 0.417
+      },
+      {
+        "zone": "3.0",
+        "kills": 41,
+        "errors": 18,
+        "attempts": 121,
+        "hitting_eff": 0.19
+      },
+      {
+        "zone": "4.0",
+        "kills": 20,
+        "errors": 9,
+        "attempts": 56,
+        "hitting_eff": 0.196
+      },
+      {
+        "zone": "5.0",
+        "kills": 1,
+        "errors": 3,
+        "attempts": 7,
+        "hitting_eff": -0.286
+      },
+      {
+        "zone": "6.0",
+        "kills": 0,
+        "errors": 0,
+        "attempts": 1,
+        "hitting_eff": 0.0
+      }
+    ],
+    "Zlata Lutska": [
+      {
+        "zone": "1.0",
+        "kills": 1,
+        "errors": 0,
+        "attempts": 1,
+        "hitting_eff": 1.0
+      },
+      {
+        "zone": "3.0",
+        "kills": 0,
+        "errors": 0,
+        "attempts": 1,
+        "hitting_eff": 0.0
+      },
+      {
+        "zone": "6.0",
+        "kills": 0,
+        "errors": 1,
+        "attempts": 1,
+        "hitting_eff": -1.0
+      }
+    ]
+  },
+  "player_receive_zones": {
+    "Aarnavi Muthyala": [
+      {
+        "zone": "5.0",
+        "attempts": 1,
+        "pass_avg": null
+      }
+    ],
+    "Amelia Rae Diaz": [
+      {
+        "zone": "1.0",
+        "attempts": 14,
+        "pass_avg": 1.25
+      },
+      {
+        "zone": "4.0",
+        "attempts": 2,
+        "pass_avg": 1.0
+      },
+      {
+        "zone": "5.0",
+        "attempts": 42,
+        "pass_avg": 1.314
+      },
+      {
+        "zone": "6.0",
+        "attempts": 14,
+        "pass_avg": 1.364
+      }
+    ],
+    "Ava Nguyen": [
+      {
+        "zone": "1.0",
+        "attempts": 67,
+        "pass_avg": 1.596
+      },
+      {
+        "zone": "2.0",
+        "attempts": 1,
+        "pass_avg": 1.0
+      },
+      {
+        "zone": "5.0",
+        "attempts": 172,
+        "pass_avg": 1.572
+      },
+      {
+        "zone": "6.0",
+        "attempts": 133,
+        "pass_avg": 1.623
+      }
+    ],
+    "Ava Shahnazari": [
+      {
+        "zone": "1.0",
+        "attempts": 1,
+        "pass_avg": 1.0
+      },
+      {
+        "zone": "4.0",
+        "attempts": 1,
+        "pass_avg": 1.0
+      },
+      {
+        "zone": "5.0",
+        "attempts": 1,
+        "pass_avg": 2.0
+      },
+      {
+        "zone": "6.0",
+        "attempts": 2,
+        "pass_avg": 1.0
+      }
+    ],
+    "Brenna O'Connor": [
+      {
+        "zone": "1.0",
+        "attempts": 1,
+        "pass_avg": 1.0
+      },
+      {
+        "zone": "2.0",
+        "attempts": 5,
+        "pass_avg": 1.8
+      }
+    ],
+    "Emma Ferro": [
+      {
+        "zone": "1.0",
+        "attempts": 47,
+        "pass_avg": 1.8
+      },
+      {
+        "zone": "4.0",
+        "attempts": 1,
+        "pass_avg": 1.0
+      },
+      {
+        "zone": "5.0",
+        "attempts": 18,
+        "pass_avg": 1.643
+      },
+      {
+        "zone": "6.0",
+        "attempts": 270,
+        "pass_avg": 1.667
+      }
+    ],
+    "Emma Lares": [
+      {
+        "zone": "1.0",
+        "attempts": 86,
+        "pass_avg": 1.731
+      },
+      {
+        "zone": "2.0",
+        "attempts": 1,
+        "pass_avg": null
+      },
+      {
+        "zone": "5.0",
+        "attempts": 104,
+        "pass_avg": 1.692
+      },
+      {
+        "zone": "6.0",
+        "attempts": 120,
+        "pass_avg": 1.721
+      }
+    ],
+    "Isabella Fernandez": [
+      {
+        "zone": "1.0",
+        "attempts": 2,
+        "pass_avg": 1.5
+      },
+      {
+        "zone": "5.0",
+        "attempts": 4,
+        "pass_avg": 2.0
+      },
+      {
+        "zone": "6.0",
+        "attempts": 1,
+        "pass_avg": 2.0
+      }
+    ],
+    "Sophia Fernandez": [
+      {
+        "zone": "1.0",
+        "attempts": 15,
+        "pass_avg": 1.818
+      },
+      {
+        "zone": "5.0",
+        "attempts": 6,
+        "pass_avg": 1.167
+      },
+      {
+        "zone": "6.0",
+        "attempts": 60,
+        "pass_avg": 1.385
+      }
+    ],
+    "Tanisha Verma": [
+      {
+        "zone": "3.0",
+        "attempts": 1,
+        "pass_avg": 2.0
+      }
+    ],
+    "Tatiana Rogers": [
+      {
+        "zone": "1.0",
+        "attempts": 6,
+        "pass_avg": 1.5
+      },
+      {
+        "zone": "2.0",
+        "attempts": 1,
+        "pass_avg": 1.0
+      },
+      {
+        "zone": "5.0",
+        "attempts": 17,
+        "pass_avg": 1.235
+      },
+      {
+        "zone": "6.0",
+        "attempts": 16,
+        "pass_avg": 1.727
+      }
+    ],
+    "Zlata Lutska": [
+      {
+        "zone": "1.0",
+        "attempts": 46,
+        "pass_avg": 1.439
+      },
+      {
+        "zone": "5.0",
+        "attempts": 16,
+        "pass_avg": 1.385
+      },
+      {
+        "zone": "6.0",
+        "attempts": 233,
+        "pass_avg": 1.612
+      }
+    ]
+  }
+}

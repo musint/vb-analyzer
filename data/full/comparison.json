@@ -1,0 +1,296 @@
+{
+  "players": [
+    {
+      "name": "Brenna O'Connor",
+      "color": "#38bdf8",
+      "raw": {
+        "hitting_eff": 0.109,
+        "serving_eff": 0.097,
+        "pass_avg": 1.667,
+        "digs": 238,
+        "consistency": 0.8,
+        "clutch_rating": 0.083
+      },
+      "normalized": {
+        "hitting_eff": 0.9,
+        "serving_eff": 0.7,
+        "pass_avg": 0.914,
+        "digs": 0.839,
+        "consistency": 0.667,
+        "clutch_rating": 0.522
+      }
+    },
+    {
+      "name": "Ava Nguyen",
+      "color": "#a78bfa",
+      "raw": {
+        "hitting_eff": 0.146,
+        "serving_eff": 0.128,
+        "pass_avg": 1.592,
+        "digs": 298,
+        "consistency": 0.799,
+        "clutch_rating": -0.05099999999999999
+      },
+      "normalized": {
+        "hitting_eff": 0.98,
+        "serving_eff": 0.774,
+        "pass_avg": 0.834,
+        "digs": 1.0,
+        "consistency": 0.653,
+        "clutch_rating": 0.399
+      }
+    },
+    {
+      "name": "Emma Lares",
+      "color": "#4ade80",
+      "raw": {
+        "hitting_eff": 0.058,
+        "serving_eff": 0.103,
+        "pass_avg": 1.747,
+        "digs": 262,
+        "consistency": 0.825,
+        "clutch_rating": -0.058
+      },
+      "normalized": {
+        "hitting_eff": 0.789,
+        "serving_eff": 0.714,
+        "pass_avg": 1.0,
+        "digs": 0.903,
+        "consistency": 1.0,
+        "clutch_rating": 0.393
+      }
+    },
+    {
+      "name": "Emma Ferro",
+      "color": "#fbbf24",
+      "raw": {
+        "hitting_eff": -0.103,
+        "serving_eff": 0.068,
+        "pass_avg": 1.677,
+        "digs": 203,
+        "consistency": 0.799,
+        "clutch_rating": 0.603
+      },
+      "normalized": {
+        "hitting_eff": 0.439,
+        "serving_eff": 0.63,
+        "pass_avg": 0.925,
+        "digs": 0.745,
+        "consistency": 0.653,
+        "clutch_rating": 1.0
+      }
+    },
+    {
+      "name": "Zlata Lutska",
+      "color": "#f472b6",
+      "raw": {
+        "hitting_eff": 0.0,
+        "serving_eff": 0.111,
+        "pass_avg": 1.546,
+        "digs": 226,
+        "clutch_rating": 0.0
+      },
+      "normalized": {
+        "hitting_eff": 0.663,
+        "serving_eff": 0.733,
+        "pass_avg": 0.785,
+        "digs": 0.807,
+        "consistency": null,
+        "clutch_rating": 0.446
+      }
+    },
+    {
+      "name": "Tanisha Verma",
+      "color": "#fb923c",
+      "raw": {
+        "hitting_eff": 0.05,
+        "serving_eff": -0.111,
+        "pass_avg": 1.333,
+        "digs": 110,
+        "clutch_rating": -0.05
+      },
+      "normalized": {
+        "hitting_eff": 0.772,
+        "serving_eff": 0.2,
+        "pass_avg": 0.557,
+        "digs": 0.495,
+        "consistency": null,
+        "clutch_rating": 0.4
+      }
+    },
+    {
+      "name": "Isabella Fernandez",
+      "color": "#f87171",
+      "raw": {
+        "hitting_eff": 0.126,
+        "serving_eff": 0.08,
+        "pass_avg": 1.667,
+        "digs": 107,
+        "consistency": 0.811,
+        "clutch_rating": -0.185
+      },
+      "normalized": {
+        "hitting_eff": 0.937,
+        "serving_eff": 0.659,
+        "pass_avg": 0.914,
+        "digs": 0.487,
+        "consistency": 0.813,
+        "clutch_rating": 0.276
+      }
+    },
+    {
+      "name": "Amelia Rae Diaz",
+      "color": "#34d399",
+      "raw": {
+        "hitting_eff": 0.047,
+        "serving_eff": 0.047,
+        "pass_avg": 1.333,
+        "digs": 86,
+        "consistency": 0.794,
+        "clutch_rating": -0.047
+      },
+      "normalized": {
+        "hitting_eff": 0.765,
+        "serving_eff": 0.58,
+        "pass_avg": 0.557,
+        "digs": 0.431,
+        "consistency": 0.587,
+        "clutch_rating": 0.403
+      }
+    },
+    {
+      "name": "Tatiana Rogers",
+      "color": "#38bdf8",
+      "raw": {
+        "hitting_eff": 0.143,
+        "serving_eff": 0.072,
+        "pass_avg": 1.481,
+        "digs": 80,
+        "consistency": 0.765,
+        "clutch_rating": -0.268
+      },
+      "normalized": {
+        "hitting_eff": 0.974,
+        "serving_eff": 0.64,
+        "pass_avg": 0.715,
+        "digs": 0.415,
+        "consistency": 0.2,
+        "clutch_rating": 0.2
+      }
+    },
+    {
+      "name": "Ava Shahnazari",
+      "color": "#a78bfa",
+      "raw": {
+        "hitting_eff": 0.155,
+        "serving_eff": 0.09,
+        "pass_avg": 1.25,
+        "digs": 48,
+        "consistency": 0.777,
+        "clutch_rating": 0.274
+      },
+      "normalized": {
+        "hitting_eff": 1.0,
+        "serving_eff": 0.683,
+        "pass_avg": 0.468,
+        "digs": 0.329,
+        "consistency": 0.36,
+        "clutch_rating": 0.698
+      }
+    },
+    {
+      "name": "Sophia Fernandez",
+      "color": "#4ade80",
+      "raw": {
+        "hitting_eff": 0.111,
+        "serving_eff": 0.04,
+        "pass_avg": 1.408,
+        "digs": 79,
+        "clutch_rating": -0.111
+      },
+      "normalized": {
+        "hitting_eff": 0.904,
+        "serving_eff": 0.563,
+        "pass_avg": 0.637,
+        "digs": 0.412,
+        "consistency": null,
+        "clutch_rating": 0.344
+      }
+    },
+    {
+      "name": "Jenna Gad",
+      "color": "#fbbf24",
+      "raw": {
+        "hitting_eff": -0.213,
+        "serving_eff": 0.045,
+        "pass_avg": null,
+        "digs": 6,
+        "consistency": 0.78,
+        "clutch_rating": -0.087
+      },
+      "normalized": {
+        "hitting_eff": 0.2,
+        "serving_eff": 0.575,
+        "pass_avg": null,
+        "digs": 0.216,
+        "consistency": 0.4,
+        "clutch_rating": 0.366
+      }
+    },
+    {
+      "name": "Aarnavi Muthyala",
+      "color": "#f472b6",
+      "raw": {
+        "hitting_eff": 0.029,
+        "serving_eff": 0.222,
+        "pass_avg": 1.0,
+        "digs": 8,
+        "consistency": 0.772,
+        "clutch_rating": 0.11399999999999999
+      },
+      "normalized": {
+        "hitting_eff": 0.726,
+        "serving_eff": 1.0,
+        "pass_avg": 0.2,
+        "digs": 0.221,
+        "consistency": 0.293,
+        "clutch_rating": 0.551
+      }
+    },
+    {
+      "name": "None",
+      "color": "#fb923c",
+      "raw": {
+        "hitting_eff": 0.0,
+        "serving_eff": 0.0,
+        "pass_avg": null,
+        "digs": 0,
+        "clutch_rating": 0.0
+      },
+      "normalized": {
+        "hitting_eff": 0.663,
+        "serving_eff": 0.467,
+        "pass_avg": null,
+        "digs": 0.2,
+        "consistency": null,
+        "clutch_rating": 0.446
+      }
+    }
+  ],
+  "radar_metrics": [
+    "hitting_eff",
+    "serving_eff",
+    "pass_avg",
+    "digs",
+    "consistency",
+    "clutch_rating"
+  ],
+  "radar_labels": [
+    "Hitting Eff",
+    "Serving Eff",
+    "Pass Avg",
+    "Digs",
+    "Consistency",
+    "Clutch Rating"
+  ]
+}

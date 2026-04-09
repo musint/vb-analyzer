@@ -1,0 +1,311 @@
+{
+  "summary": {
+    "our_runs": 353,
+    "opp_runs": 311,
+    "avg_our_length": 4.33,
+    "avg_opp_length": 4.15,
+    "longest_our": 14,
+    "longest_opp": 14
+  },
+  "starters": [
+    {
+      "player": "Ava Nguyen",
+      "runs_started": 28,
+      "rallies_played": 125,
+      "start_rate_pct": 22.4,
+      "breakdown": {
+        "attack_kill": 26,
+        "free_ball_kill": 1,
+        "serve_ace": 1
+      }
+    },
+    {
+      "player": "Amelia Rae Diaz",
+      "runs_started": 27,
+      "rallies_played": 114,
+      "start_rate_pct": 23.7,
+      "breakdown": {
+        "attack_kill": 27
+      }
+    },
+    {
+      "player": "Isabella Fernandez",
+      "runs_started": 23,
+      "rallies_played": 123,
+      "start_rate_pct": 18.7,
+      "breakdown": {
+        "attack_kill": 19,
+        "free_ball_kill": 4
+      }
+    },
+    {
+      "player": "Tatiana Rogers",
+      "runs_started": 19,
+      "rallies_played": 116,
+      "start_rate_pct": 16.4,
+      "breakdown": {
+        "attack_kill": 18,
+        "free_ball_kill": 1
+      }
+    },
+    {
+      "player": "Brenna O'Connor",
+      "runs_started": 18,
+      "rallies_played": 127,
+      "start_rate_pct": 14.2,
+      "breakdown": {
+        "attack_kill": 15,
+        "serve_ace": 3
+      }
+    },
+    {
+      "player": "Emma Lares",
+      "runs_started": 18,
+      "rallies_played": 128,
+      "start_rate_pct": 14.1,
+      "breakdown": {
+        "attack_kill": 15,
+        "free_ball_kill": 2,
+        "serve_ace": 1
+      }
+    },
+    {
+      "player": "Ava Shahnazari",
+      "runs_started": 13,
+      "rallies_played": 120,
+      "start_rate_pct": 10.8,
+      "breakdown": {
+        "attack_kill": 12,
+        "free_ball_kill": 1
+      }
+    },
+    {
+      "player": "Aarnavi Muthyala",
+      "runs_started": 4,
+      "rallies_played": 59,
+      "start_rate_pct": 6.8,
+      "breakdown": {
+        "attack_kill": 4
+      }
+    },
+    {
+      "player": "Emma Ferro",
+      "runs_started": 1,
+      "rallies_played": 123,
+      "start_rate_pct": 0.8,
+      "breakdown": {
+        "free_ball_kill": 1
+      }
+    },
+    {
+      "player": "Jenna Gad",
+      "runs_started": 1,
+      "rallies_played": 71,
+      "start_rate_pct": 1.4,
+      "breakdown": {
+        "attack_kill": 1
+      }
+    },
+    {
+      "player": "Sophia Fernandez",
+      "runs_started": 1,
+      "rallies_played": 105,
+      "start_rate_pct": 1.0,
+      "breakdown": {
+        "attack_kill": 1
+      }
+    }
+  ],
+  "killers": [
+    {
+      "player": "Emma Lares",
+      "runs_triggered": 39,
+      "rallies_played": 128,
+      "trigger_rate_pct": 30.5,
+      "breakdown": {
+        "attack_error": 9,
+        "dig_error": 11,
+        "free_ball_error": 3,
+        "free_ball_received_error": 1,
+        "serve_error": 15
+      }
+    },
+    {
+      "player": "Ava Nguyen",
+      "runs_triggered": 37,
+      "rallies_played": 125,
+      "trigger_rate_pct": 29.6,
+      "breakdown": {
+        "attack_error": 5,
+        "dig_error": 13,
+        "free_ball_error": 1,
+        "free_ball_received_error": 1,
+        "serve_error": 17
+      }
+    },
+    {
+      "player": "Brenna O'Connor",
+      "runs_triggered": 30,
+      "rallies_played": 127,
+      "trigger_rate_pct": 23.6,
+      "breakdown": {
+        "attack_error": 3,
+        "dig_error": 5,
+        "serve_error": 18,
+        "set_error": 4
+      }
+    },
+    {
+      "player": "Emma Ferro",
+      "runs_triggered": 16,
+      "rallies_played": 123,
+      "trigger_rate_pct": 13.0,
+      "breakdown": {
+        "attack_error": 3,
+        "dig_error": 4,
+        "free_ball_received_error": 1,
+        "serve_error": 8
+      }
+    },
+    {
+      "player": "Isabella Fernandez",
+      "runs_triggered": 15,
+      "rallies_played": 123,
+      "trigger_rate_pct": 12.2,
+      "breakdown": {
+        "attack_error": 3,
+        "dig_error": 6,
+        "free_ball_error": 1,
+        "serve_error": 5
+      }
+    },
+    {
+      "player": "Amelia Rae Diaz",
+      "runs_triggered": 14,
+      "rallies_played": 114,
+      "trigger_rate_pct": 12.3,
+      "breakdown": {
+        "attack_error": 7,
+        "dig_error": 1,
+        "serve_error": 6
+      }
+    },
+    {
+      "player": "Sophia Fernandez",
+      "runs_triggered": 13,
+      "rallies_played": 105,
+      "trigger_rate_pct": 12.4,
+      "breakdown": {
+        "attack_error": 1,
+        "dig_error": 5,
+        "serve_error": 7
+      }
+    },
+    {
+      "player": "Tatiana Rogers",
+      "runs_triggered": 13,
+      "rallies_played": 116,
+      "trigger_rate_pct": 11.2,
+      "breakdown": {
+        "attack_error": 4,
+        "dig_error": 2,
+        "free_ball_received_error": 1,
+        "serve_error": 6
+      }
+    },
+    {
+      "player": "Zlata Lutska",
+      "runs_triggered": 10,
+      "rallies_played": 126,
+      "trigger_rate_pct": 7.9,
+      "breakdown": {
+        "dig_error": 8,
+        "free_ball_error": 1,
+        "serve_error": 1
+      }
+    },
+    {
+      "player": "Ava Shahnazari",
+      "runs_triggered": 8,
+      "rallies_played": 120,
+      "trigger_rate_pct": 6.7,
+      "breakdown": {
+        "attack_error": 2,
+        "serve_error": 6
+      }
+    },
+    {
+      "player": "Tanisha Verma",
+      "runs_triggered": 5,
+      "rallies_played": 113,
+      "trigger_rate_pct": 4.4,
+      "breakdown": {
+        "dig_error": 3,
+        "serve_error": 1,
+        "set_error": 1
+      }
+    },
+    {
+      "player": "Jenna Gad",
+      "runs_triggered": 4,
+      "rallies_played": 71,
+      "trigger_rate_pct": 5.6,
+      "breakdown": {
+        "attack_error": 4
+      }
+    },
+    {
+      "player": "Aarnavi Muthyala",
+      "runs_triggered": 1,
+      "rallies_played": 59,
+      "trigger_rate_pct": 1.7,
+      "breakdown": {
+        "attack_error": 1
+      }
+    }
+  ],
+  "runs_by_phase": [
+    {
+      "phase": "early",
+      "our_runs": 176,
+      "opp_runs": 138
+    },
+    {
+      "phase": "middle",
+      "our_runs": 126,
+      "opp_runs": 125
+    },
+    {
+      "phase": "final",
+      "our_runs": 51,
+      "opp_runs": 48
+    }
+  ],
+  "runs_by_situation": [
+    {
+      "situation": "winning_big",
+      "our_runs": 52,
+      "opp_runs": 81
+    },
+    {
+      "situation": "winning",
+      "our_runs": 56,
+      "opp_runs": 59
+    },
+    {
+      "situation": "close",
+      "our_runs": 122,
+      "opp_runs": 105
+    },
+    {
+      "situation": "losing",
+      "our_runs": 66,
+      "opp_runs": 37
+    },
+    {
+      "situation": "losing_big",
+      "our_runs": 57,
+      "opp_runs": 29
+    }
+  ]
+}

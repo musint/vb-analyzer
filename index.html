@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>13-2 Statistical Deep Dive — Team Overview</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.plot.ly/plotly-2.35.0.min.js"></script>
+</head>
+<body>
+
+  <!-- ======== NAVIGATION ======== -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="logo-icon">13</span>
+        13-2 Statistical Deep Dive
+      </div>
+      <div class="nav-tabs">
+        <a href="index.html">Overview</a>
+        <a href="players.html">Players</a>
+        <a href="comparison.html">Comparison</a>
+        <a href="runs.html">Runs</a>
+        <a href="game.html">Game</a>
+        <a href="zones.html">Zones</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======== MAIN CONTENT ======== -->
+  <main class="main-content">
+
+    <!-- Page Header -->
+    <header class="page-header">
+      <h1 class="page-title">Team Overview</h1>
+      <p class="page-subtitle">Season performance, game state analysis, and progression trends</p>
+    </header>
+
+    <!-- KPI Row -->
+    <section class="section">
+      <div id="kpi-row" class="kpi-row">
+        <!-- JS populates KPI cards here -->
+      </div>
+    </section>
+
+    <!-- Team Progression Chart -->
+    <section class="section">
+      <div class="card">
+        <h2 class="section-title">Team Progression</h2>
+        <div id="progression-chart" class="chart-container"></div>
+      </div>
+    </section>
+
+    <!-- Attack by State + Pass by State (side by side) -->
+    <section class="section grid-2">
+      <div class="card">
+        <h2 class="section-title">Attack by Game State</h2>
+        <div id="attack-by-state-chart" class="chart-container"></div>
+      </div>
+      <div class="card">
+        <h2 class="section-title">Pass by Game State</h2>
+        <div id="pass-by-state-chart" class="chart-container"></div>
+      </div>
+    </section>
+
+    <!-- Game State Definitions -->
+    <section class="section">
+      <div class="card">
+        <h2 class="section-title">Game State Definitions</h2>
+        <div id="game-state-definitions"></div>
+      </div>
+    </section>
+
+    <!-- Game Results + Sideout by Phase (side by side) -->
+    <section class="section grid-2">
+      <div class="card">
+        <h2 class="section-title">Game Results</h2>
+        <div id="game-results-table" class="table-wrap"></div>
+      </div>
+      <div class="card">
+        <h2 class="section-title">Sideout by Phase</h2>
+        <div id="sideout-by-phase-chart" class="chart-container"></div>
+      </div>
+    </section>
+
+    <!-- Expected Sideout by Pass Quality -->
+    <section class="section">
+      <div class="card">
+        <h2 class="section-title">Expected Sideout by Pass Quality</h2>
+        <div id="expected-sideout-chart" class="chart-container"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/app.js"></script>
+  <script src="js/overview.js"></script>
+</body>
+</html>

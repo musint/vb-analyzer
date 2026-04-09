@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>13-2 Statistical Deep Dive — Court Zones</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.plot.ly/plotly-2.35.0.min.js"></script>
+</head>
+<body>
+
+  <!-- ======== NAVIGATION ======== -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="logo-icon">13</span>
+        13-2 Statistical Deep Dive
+      </div>
+      <div class="nav-tabs">
+        <a href="index.html">Overview</a>
+        <a href="players.html">Players</a>
+        <a href="comparison.html">Comparison</a>
+        <a href="runs.html">Runs</a>
+        <a href="game.html">Game</a>
+        <a href="zones.html">Zones</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======== MAIN CONTENT ======== -->
+  <main class="main-content">
+
+    <!-- Page Header -->
+    <header class="page-header">
+      <h1 class="page-title">Court Zones</h1>
+      <p class="page-subtitle">Attack efficiency and serve receive quality by court zone</p>
+    </header>
+
+    <!-- Player Filter -->
+    <section class="section">
+      <div class="card">
+        <div id="zone-player-filter">
+          <label class="section-label">Player Filter</label>
+          <!-- JS populates filter here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Attack Efficiency + Receive Quality (side by side) -->
+    <section class="section grid-2">
+      <div class="card">
+        <h2 class="section-title">Attack Efficiency</h2>
+        <div id="attack-court"></div>
+      </div>
+      <div class="card">
+        <h2 class="section-title">Receive Quality</h2>
+        <div id="receive-court"></div>
+      </div>
+    </section>
+
+    <!-- Attack Detail + Receive Detail (side by side) -->
+    <section class="section grid-2">
+      <div class="card">
+        <h2 class="section-title">Attack Detail</h2>
+        <div id="attack-detail-table" class="table-wrap"></div>
+      </div>
+      <div class="card">
+        <h2 class="section-title">Receive Detail</h2>
+        <div id="receive-detail-table" class="table-wrap"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/app.js"></script>
+  <script src="js/zones.js"></script>
+</body>
+</html>

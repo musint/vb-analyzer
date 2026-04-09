@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>13-2 Statistical Deep Dive — Game Detail</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.plot.ly/plotly-2.35.0.min.js"></script>
+</head>
+<body>
+
+  <!-- ======== NAVIGATION ======== -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="logo-icon">13</span>
+        13-2 Statistical Deep Dive
+      </div>
+      <div class="nav-tabs">
+        <a href="index.html">Overview</a>
+        <a href="players.html">Players</a>
+        <a href="comparison.html">Comparison</a>
+        <a href="runs.html">Runs</a>
+        <a href="game.html">Game</a>
+        <a href="zones.html">Zones</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======== MAIN CONTENT ======== -->
+  <main class="main-content">
+
+    <!-- Page Header -->
+    <header class="page-header">
+      <h1 class="page-title">Game Detail</h1>
+      <p class="page-subtitle">Match momentum, win probability, and set-by-set box scores</p>
+    </header>
+
+    <!-- Game Selector -->
+    <section class="section">
+      <div class="card">
+        <div id="game-selector">
+          <label class="section-label" for="game-dropdown">Select Game</label>
+          <!-- JS populates dropdown here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Game KPI Row -->
+    <section class="section">
+      <div id="game-kpis" class="kpi-row">
+        <!-- JS populates 5 KPI cards here -->
+      </div>
+    </section>
+
+    <!-- Score Momentum -->
+    <section class="section">
+      <div class="card">
+        <h2 class="section-title">Score Momentum</h2>
+        <div id="momentum-chart" class="chart-container" style="min-height: 400px;"></div>
+      </div>
+    </section>
+
+    <!-- Win Probability -->
+    <section class="section">
+      <div class="card">
+        <h2 class="section-title">Win Probability</h2>
+        <div id="win-prob-chart" class="chart-container"></div>
+      </div>
+    </section>
+
+    <!-- Box Scores -->
+    <section class="section">
+      <div class="card">
+        <h2 class="section-title">Box Scores</h2>
+        <div id="box-scores"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/app.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>

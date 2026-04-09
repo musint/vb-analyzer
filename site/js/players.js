@@ -128,22 +128,20 @@ function renderClutch(name) {
     return;
   }
 
+  // Each metric has its own max cap for proportional bar scaling
   const metrics = [
-    ["Hitting Eff", c.hitting_eff_clutch, c.hitting_eff_non_clutch, v => v != null ? Number(v).toFixed(3) : "N/A"],
-    ["Kill %",      c.kill_pct_clutch,    c.kill_pct_non_clutch,    v => v != null ? Number(v).toFixed(1) + "%" : "N/A"],
-    ["Pass Avg",    c.pass_avg_clutch,    c.pass_avg_non_clutch,    v => v != null ? Number(v).toFixed(2) : "N/A"],
-    ["Ace %",       c.ace_pct_clutch,     c.ace_pct_non_clutch,     v => v != null ? v.toFixed(1) + "%" : "N/A"],
-    ["Srv Error %", c.srv_err_pct_clutch, c.srv_err_pct_non_clutch, v => v != null ? v.toFixed(1) + "%" : "N/A"],
+    ["Hitting Eff", c.hitting_eff_clutch, c.hitting_eff_non_clutch, v => v != null ? Number(v).toFixed(3) : "N/A", 0.5],
+    ["Kill %",      c.kill_pct_clutch,    c.kill_pct_non_clutch,    v => v != null ? Number(v).toFixed(1) + "%" : "N/A", 100],
+    ["Pass Avg",    c.pass_avg_clutch,    c.pass_avg_non_clutch,    v => v != null ? Number(v).toFixed(2) : "N/A", 2.5],
+    ["Ace %",       c.ace_pct_clutch,     c.ace_pct_non_clutch,     v => v != null ? v.toFixed(1) + "%" : "N/A", 100],
+    ["Srv Error %", c.srv_err_pct_clutch, c.srv_err_pct_non_clutch, v => v != null ? v.toFixed(1) + "%" : "N/A", 100],
   ];
-
-  const allVals = metrics.flatMap(([, cv, nv]) => [cv, nv]).filter(v => v != null && !isNaN(v));
-  const maxVal = allVals.length ? Math.max(...allVals, 0.001) : 1;
 
   let html = '<div class="clutch-bars">';
 
-  metrics.forEach(([label, cv, nv, fmt]) => {
-    const clutchPct = cv != null && !isNaN(cv) ? Math.max(0, (cv / maxVal) * 100) : 0;
-    const normalPct = nv != null && !isNaN(nv) ? Math.max(0, (nv / maxVal) * 100) : 0;
+  metrics.forEach(([label, cv, nv, fmt, maxCap]) => {
+    const clutchPct = cv != null && !isNaN(cv) ? Math.min(100, Math.max(0, (cv / maxCap) * 100)) : 0;
+    const normalPct = nv != null && !isNaN(nv) ? Math.min(100, Math.max(0, (nv / maxCap) * 100)) : 0;
 
     html += `
       <div class="clutch-metric">

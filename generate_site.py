@@ -174,7 +174,7 @@ def generate_players(dfs):
         for _, row in clutch_df.iterrows():
             p = row["player"]
             clutch_by_player[p] = {}
-            for col in ["hitting_eff", "kill_pct", "pass_avg"]:
+            for col in ["hitting_eff", "kill_pct", "pass_avg", "aces", "srv_errors"]:
                 c_val = row.get(f"{col}_clutch")
                 nc_val = row.get(f"{col}_non_clutch")
                 clutch_by_player[p][f"{col}_clutch"] = float(c_val) if c_val is not None and str(c_val) != "nan" else None
@@ -182,15 +182,63 @@ def generate_players(dfs):
             cr = row.get("clutch_rating")
             clutch_by_player[p]["clutch_rating"] = float(cr) if cr is not None and str(cr) != "nan" else None
 
+    import numpy as np
+
     cons_df = consistency_index(actions_df)
     consistency_by_player = {}
+
+    # Hitting consistency from existing module
     if not cons_df.empty:
         for _, row in cons_df.iterrows():
             consistency_by_player[row["player"]] = {
-                "consistency_score": float(row["consistency_score"]),
-                "eff_std_dev": float(row["eff_std_dev"]),
-                "avg_eff": float(row["avg_eff"]),
-                "matches_with_attacks": int(row["matches_with_attacks"]),
+                "hitting": {
+                    "score": float(row["consistency_score"]),
+                    "std_dev": float(row["eff_std_dev"]),
+                    "avg": float(row["avg_eff"]),
+                    "matches": int(row["matches_with_attacks"]),
+                },
+            }
+
+    # Compute serving and passing consistency per player
+    our_actions = actions_df[actions_df["is_our_team"]].copy()
+    q_map = {"3": 3, "2": 2, "1": 1, "0": 0}
+    match_order = our_actions.groupby("video_id")["match_date"].first().sort_values()
+
+    for player, pdf in our_actions.groupby("player"):
+        if not player:
+            continue
+        consistency_by_player.setdefault(player, {})
+
+        # Serving consistency: per-match ace%
+        srv_per_match = []
+        for vid in match_order.index:
+            mdf = pdf[(pdf["video_id"] == vid) & (pdf["action_type"] == "serve")]
+            if len(mdf) >= 3:
+                aces = (mdf["quality"] == "ace").sum()
+                srv_per_match.append(aces / len(mdf))
+        if len(srv_per_match) >= 3:
+            std = float(np.std(srv_per_match))
+            consistency_by_player[player]["serving"] = {
+                "score": round(1 / (1 + std), 3),
+                "std_dev": round(std, 4),
+                "avg": round(float(np.mean(srv_per_match)), 3),
+                "matches": len(srv_per_match),
+            }
+
+        # Passing consistency: per-match pass avg
+        pass_per_match = []
+        for vid in match_order.index:
+            mdf = pdf[(pdf["video_id"] == vid) & (pdf["action_type"] == "receive")]
+            rq = mdf["quality"].map(q_map).dropna()
+            if len(rq) >= 3:
+                pass_per_match.append(float(rq.mean()))
+        if len(pass_per_match) >= 3:
+            std = float(np.std(pass_per_match))
+            consistency_by_player[player]["passing"] = {
+                "score": round(1 / (1 + std), 3),
+                "std_dev": round(std, 4),
+                "avg": round(float(np.mean(pass_per_match)), 3),
+                "matches": len(pass_per_match),
             }
 
     prog = season_progression(actions_df)
@@ -217,12 +265,18 @@ def generate_players(dfs):
                 sp = sit_stats[sit_stats["player"] == player]
                 if not sp.empty:
                     r = sp.iloc[0]
+                    srv_total = int(r["srv_total"])
+                    ace_pct = round(r["aces"] / srv_total * 100, 1) if srv_total > 0 else None
+                    srv_err_pct = round(r["srv_errors"] / srv_total * 100, 1) if srv_total > 0 else None
                     game_state_by_player[player].append({
                         "situation": sit,
                         "hitting_eff": float(r["hitting_eff"]),
                         "kill_pct": float(r["kill_pct"]),
                         "pass_avg": float(r["pass_avg"]) if r["pass_avg"] is not None else None,
                         "att_total": int(r["att_total"]),
+                        "ace_pct": ace_pct,
+                        "srv_err_pct": srv_err_pct,
+                        "srv_total": srv_total,
                     })
 
     return {

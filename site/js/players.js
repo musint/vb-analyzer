@@ -1,5 +1,5 @@
 /* ============================================================
-   VB Analyzer — Players Page Logic
+   13-2 Statistical Deep Dive — Players Page Logic
    ============================================================ */
 
 const STATE_LABELS = {
@@ -9,9 +9,14 @@ const STATE_LABELS = {
   losing: "Losing",
   losing_big: "Losing Big",
 };
-
-// State ordering for game-state chart
 const STATE_ORDER = ["winning_big", "winning", "close", "losing", "losing_big"];
+const STATE_COLORS = {
+  winning_big: "#4ade80",
+  winning: "#86efac",
+  close: "#e2e8f0",
+  losing: "#fca5a5",
+  losing_big: "#f87171",
+};
 
 let playersData = null;
 
@@ -50,8 +55,11 @@ function buildDropdown() {
 // ── Master render dispatcher ──────────────────────────────────
 function renderPlayer(name) {
   renderKPIs(name);
+  renderClutchDefinition();
   renderClutch(name);
-  renderGameStateChart(name);
+  renderGameStateHitting(name);
+  renderGameStatePassing(name);
+  renderGameStateServing(name);
   renderSeasonProgression(name);
   renderConsistency(name);
 }
@@ -89,6 +97,21 @@ function renderKPIs(name) {
   });
 }
 
+// ── Clutch Definition ─────────────────────────────────────────
+function renderClutchDefinition() {
+  const el = document.getElementById("clutch-definition");
+  el.innerHTML = `
+    <div class="pill-row" style="margin-bottom:16px">
+      <span class="game-state-pill state-close" style="font-size:0.8rem">
+        <strong>Clutch</strong> — Sets 1-2: both teams ≥ 20 pts &nbsp;|&nbsp; Set 3: both teams ≥ 10 pts
+      </span>
+    </div>
+    <p style="color:var(--muted);font-size:0.8rem;margin-bottom:16px">
+      Clutch moments are the high-pressure rallies at the end of close sets where every point matters most.
+      Stats below compare performance in clutch situations vs. all other (normal) rallies.
+    </p>`;
+}
+
 // ── Clutch Comparison ─────────────────────────────────────────
 function renderClutch(name) {
   const container = document.getElementById("clutch-comparison");
@@ -99,16 +122,16 @@ function renderClutch(name) {
     return;
   }
 
-  // Metrics to display: [label, clutch_val, normal_val, formatter]
   const metrics = [
     ["Hitting Eff", c.hitting_eff_clutch, c.hitting_eff_non_clutch, v => v != null ? Number(v).toFixed(3) : "N/A"],
     ["Kill %",      c.kill_pct_clutch,    c.kill_pct_non_clutch,    v => v != null ? Number(v).toFixed(1) + "%" : "N/A"],
     ["Pass Avg",    c.pass_avg_clutch,    c.pass_avg_non_clutch,    v => v != null ? Number(v).toFixed(2) : "N/A"],
+    ["Aces",        c.aces_clutch,        c.aces_non_clutch,        v => v != null ? Math.round(v).toString() : "N/A"],
+    ["Srv Errors",  c.srv_errors_clutch,  c.srv_errors_non_clutch,  v => v != null ? Math.round(v).toString() : "N/A"],
   ];
 
-  // Find absolute max across all values for bar scaling
   const allVals = metrics.flatMap(([, cv, nv]) => [cv, nv]).filter(v => v != null && !isNaN(v));
-  const maxVal = allVals.length ? Math.max(...allVals) : 1;
+  const maxVal = allVals.length ? Math.max(...allVals, 0.001) : 1;
 
   let html = '<div class="clutch-bars">';
 
@@ -129,8 +152,6 @@ function renderClutch(name) {
   });
 
   html += "</div>";
-
-  // Legend
   html += `
     <div class="clutch-legend">
       <span><span class="legend-dot clutch"></span>Clutch</span>
@@ -140,54 +161,114 @@ function renderClutch(name) {
   container.innerHTML = html;
 }
 
-// ── Performance by Game State ─────────────────────────────────
-function renderGameStateChart(name) {
-  const el = document.getElementById("player-game-state-chart");
+// ── Game State: Hitting ───────────────────────────────────────
+function renderGameStateHitting(name) {
+  const el = document.getElementById("game-state-hitting");
   const raw = (playersData.game_state || {})[name];
 
   if (!raw || !raw.length) {
-    el.innerHTML = '<p style="color:var(--muted);font-size:0.875rem;padding:1rem">No game-state data available.</p>';
+    el.innerHTML = '<p style="color:var(--muted);font-size:0.875rem;padding:1rem">No data.</p>';
     return;
   }
 
-  // Index by situation key
   const byState = {};
   raw.forEach(r => { byState[r.situation] = r; });
 
-  const labels = STATE_ORDER.map(k => STATE_LABELS[k] || k);
-  const effVals = STATE_ORDER.map(k => {
-    const v = byState[k]?.hitting_eff;
-    return (v != null && !isNaN(v)) ? +v.toFixed(3) : null;
-  });
-  const passVals = STATE_ORDER.map(k => {
-    const v = byState[k]?.pass_avg;
-    return (v != null && !isNaN(v)) ? +v.toFixed(3) : null;
-  });
+  const labels = STATE_ORDER.map(k => STATE_LABELS[k]);
+  const colors = STATE_ORDER.map(k => STATE_COLORS[k]);
+  const effVals = STATE_ORDER.map(k => byState[k]?.hitting_eff ?? null);
+  const attempts = STATE_ORDER.map(k => byState[k]?.att_total ?? 0);
 
-  const traces = [
+  Plotly.react(el, [{
+    x: labels, y: effVals, type: "bar",
+    marker: { color: colors },
+    text: effVals.map(v => v != null ? v.toFixed(3) : ""),
+    textposition: "auto",
+    textfont: { color: "#0f172a", size: 11 },
+    hovertemplate: "%{x}<br>Eff: %{y:.3f}<br>Attempts: %{customdata}<extra></extra>",
+    customdata: attempts,
+  }], darkLayout({
+    yaxis: { title: "Hitting Efficiency" },
+    height: 280,
+    margin: { t: 16, r: 16, b: 48, l: 52 },
+  }), PLOTLY_CONFIG);
+}
+
+// ── Game State: Passing ───────────────────────────────────────
+function renderGameStatePassing(name) {
+  const el = document.getElementById("game-state-passing");
+  const raw = (playersData.game_state || {})[name];
+
+  if (!raw || !raw.length) {
+    el.innerHTML = '<p style="color:var(--muted);font-size:0.875rem;padding:1rem">No data.</p>';
+    return;
+  }
+
+  const byState = {};
+  raw.forEach(r => { byState[r.situation] = r; });
+
+  const labels = STATE_ORDER.map(k => STATE_LABELS[k]);
+  const colors = STATE_ORDER.map(k => STATE_COLORS[k]);
+  const passVals = STATE_ORDER.map(k => byState[k]?.pass_avg ?? null);
+
+  Plotly.react(el, [{
+    x: labels, y: passVals, type: "bar",
+    marker: { color: colors },
+    text: passVals.map(v => v != null ? v.toFixed(2) : ""),
+    textposition: "auto",
+    textfont: { color: "#0f172a", size: 11 },
+    hovertemplate: "%{x}<br>Pass Avg: %{y:.2f}<extra></extra>",
+  }], darkLayout({
+    yaxis: { title: "Pass Average", range: [0, 3] },
+    height: 280,
+    margin: { t: 16, r: 16, b: 48, l: 52 },
+  }), PLOTLY_CONFIG);
+}
+
+// ── Game State: Serving ───────────────────────────────────────
+function renderGameStateServing(name) {
+  const el = document.getElementById("game-state-serving");
+  const raw = (playersData.game_state || {})[name];
+
+  if (!raw || !raw.length) {
+    el.innerHTML = '<p style="color:var(--muted);font-size:0.875rem;padding:1rem">No data.</p>';
+    return;
+  }
+
+  const byState = {};
+  raw.forEach(r => { byState[r.situation] = r; });
+
+  const labels = STATE_ORDER.map(k => STATE_LABELS[k]);
+  const aceVals = STATE_ORDER.map(k => byState[k]?.ace_pct ?? null);
+  const errVals = STATE_ORDER.map(k => byState[k]?.srv_err_pct ?? null);
+  const totals = STATE_ORDER.map(k => byState[k]?.srv_total ?? 0);
+
+  Plotly.react(el, [
     {
-      name: "Hitting Eff",
-      x: labels,
-      y: effVals,
-      type: "bar",
-      marker: { color: "rgba(34,211,238,0.8)" },
+      name: "Ace %", x: labels, y: aceVals, type: "bar",
+      marker: { color: "rgba(74,222,128,0.8)" },
+      text: aceVals.map(v => v != null ? v.toFixed(1) + "%" : ""),
+      textposition: "auto",
+      textfont: { color: "#0f172a", size: 11 },
+      hovertemplate: "%{x}<br>Ace%%: %{y:.1f}<br>Serves: %{customdata}<extra></extra>",
+      customdata: totals,
     },
     {
-      name: "Pass Avg",
-      x: labels,
-      y: passVals,
-      type: "bar",
-      marker: { color: "rgba(168,85,247,0.8)" },
+      name: "Error %", x: labels, y: errVals, type: "bar",
+      marker: { color: "rgba(248,113,113,0.8)" },
+      text: errVals.map(v => v != null ? v.toFixed(1) + "%" : ""),
+      textposition: "auto",
+      textfont: { color: "#0f172a", size: 11 },
+      hovertemplate: "%{x}<br>Err%%: %{y:.1f}<br>Serves: %{customdata}<extra></extra>",
+      customdata: totals,
     },
-  ];
-
-  const layout = darkLayout({
+  ], darkLayout({
     barmode: "group",
-    yaxis: { title: "Value" },
-    margin: { t: 24, r: 16, b: 48, l: 52 },
-  });
-
-  Plotly.react(el, traces, layout, PLOTLY_CONFIG);
+    yaxis: { title: "Percentage" },
+    height: 300,
+    margin: { t: 16, r: 16, b: 48, l: 52 },
+    legend: { orientation: "h", y: -0.2 },
+  }), PLOTLY_CONFIG);
 }
 
 // ── Season Progression ────────────────────────────────────────
@@ -210,32 +291,24 @@ function renderSeasonProgression(name) {
     return (v != null && !isNaN(v)) ? +Number(v).toFixed(3) : null;
   });
 
-  const traces = [
+  Plotly.react(el, [
     {
       name: "Hitting Eff (rolling)",
-      x: dates,
-      y: effRolling,
-      type: "scatter",
-      mode: "lines+markers",
-      yaxis: "y",
+      x: dates, y: effRolling,
+      type: "scatter", mode: "lines+markers", yaxis: "y",
       line: { color: "rgba(34,211,238,0.9)", width: 2 },
-      marker: { color: "rgba(34,211,238,0.9)", size: 5 },
+      marker: { size: 5 },
       connectgaps: false,
     },
     {
       name: "Pass Avg (rolling)",
-      x: dates,
-      y: passRolling,
-      type: "scatter",
-      mode: "lines+markers",
-      yaxis: "y2",
+      x: dates, y: passRolling,
+      type: "scatter", mode: "lines+markers", yaxis: "y2",
       line: { color: "rgba(168,85,247,0.9)", width: 2 },
-      marker: { color: "rgba(168,85,247,0.9)", size: 5 },
+      marker: { size: 5 },
       connectgaps: false,
     },
-  ];
-
-  const layout = darkLayout({
+  ], darkLayout({
     yaxis: {
       title: "Hitting Eff",
       tickfont: { color: "rgba(34,211,238,0.9)" },
@@ -243,8 +316,7 @@ function renderSeasonProgression(name) {
     },
     yaxis2: {
       title: "Pass Avg",
-      overlaying: "y",
-      side: "right",
+      overlaying: "y", side: "right",
       tickfont: { color: "rgba(168,85,247,0.9)" },
       titlefont: { color: "rgba(168,85,247,0.9)" },
       gridcolor: "rgba(0,0,0,0)",
@@ -252,9 +324,7 @@ function renderSeasonProgression(name) {
     },
     margin: { t: 24, r: 64, b: 48, l: 52 },
     legend: { orientation: "h", y: -0.2 },
-  });
-
-  Plotly.react(el, traces, layout, PLOTLY_CONFIG);
+  }), PLOTLY_CONFIG);
 }
 
 // ── Consistency Index ─────────────────────────────────────────
@@ -267,23 +337,46 @@ function renderConsistency(name) {
     return;
   }
 
-  const score = c.consistency_score;
-  let pillColor = "red";
-  if (score >= 0.7) pillColor = "green";
-  else if (score >= 0.4) pillColor = "gold";
+  const skills = [
+    { key: "hitting",  label: "Hitting",  icon: "Eff" },
+    { key: "serving",  label: "Serving",  icon: "Ace%" },
+    { key: "passing",  label: "Passing",  icon: "Avg" },
+  ];
 
-  const scoreDisplay = score != null ? (score * 100).toFixed(1) + "%" : "—";
-  const stdDev       = c.eff_std_dev    != null ? Number(c.eff_std_dev).toFixed(4) : "—";
-  const avgEff       = c.avg_eff        != null ? Number(c.avg_eff).toFixed(3)     : "—";
-  const matches      = c.matches_with_attacks ?? "—";
+  let html = '<div style="display:flex;gap:20px;flex-wrap:wrap">';
 
-  container.innerHTML = `
-    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
-      <span class="pill ${pillColor}" style="font-size:1.25rem;padding:8px 20px">${scoreDisplay}</span>
-      <div style="display:flex;flex-direction:column;gap:6px;font-size:0.85rem;color:var(--muted)">
-        <span>Std Dev (Eff): <strong style="color:var(--text)">${stdDev}</strong></span>
-        <span>Avg Hitting Eff: <strong style="color:var(--text)">${avgEff}</strong></span>
-        <span>Matches with attacks: <strong style="color:var(--text)">${matches}</strong></span>
-      </div>
-    </div>`;
+  skills.forEach(({ key, label, icon }) => {
+    const data = c[key];
+    if (!data) {
+      html += `
+        <div style="flex:1;min-width:200px;background:var(--surface2);border-radius:var(--radius);padding:16px">
+          <div style="font-weight:600;font-size:0.9rem;margin-bottom:8px">${label}</div>
+          <p style="color:var(--muted);font-size:0.8rem">Not enough data</p>
+        </div>`;
+      return;
+    }
+
+    const score = data.score;
+    let pillColor = "red";
+    if (score >= 0.7) pillColor = "green";
+    else if (score >= 0.4) pillColor = "gold";
+
+    html += `
+      <div style="flex:1;min-width:200px;background:var(--surface2);border-radius:var(--radius);padding:16px">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+          <span style="font-weight:600;font-size:0.9rem">${label}</span>
+          <span class="pill ${pillColor}" style="font-size:0.85rem;padding:4px 12px">${score.toFixed(3)}</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:4px;font-size:0.8rem;color:var(--muted)">
+          <span>Std Dev: <strong style="color:var(--text)">${data.std_dev.toFixed(4)}</strong></span>
+          <span>Avg ${icon}: <strong style="color:var(--text)">${data.avg.toFixed(3)}</strong></span>
+          <span>Matches: <strong style="color:var(--text)">${data.matches}</strong></span>
+        </div>
+      </div>`;
+  });
+
+  html += '</div>';
+  html += '<p style="color:var(--muted);font-size:0.75rem;margin-top:12px">Consistency = 1 / (1 + std_dev). Higher = more consistent match-to-match. Based on per-match stat variance across games with 3+ attempts.</p>';
+
+  container.innerHTML = html;
 }

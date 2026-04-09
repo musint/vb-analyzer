@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VB Analyzer — Player Detail</title>
+  <title>13-2 Statistical Deep Dive — Player Detail</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="https://cdn.plot.ly/plotly-2.35.0.min.js"></script>
 </head>
@@ -13,8 +13,8 @@
   <nav>
     <div class="nav-inner">
       <div class="nav-logo">
-        <span class="logo-icon">VB</span>
-        VB Analyzer
+        <span class="logo-icon">13</span>
+        13-2 Statistical Deep Dive
       </div>
       <div class="nav-tabs">
         <a href="index.html">Overview</a>
@@ -50,15 +50,30 @@
       </div>
     </section>
 
-    <!-- Clutch + Game State (side by side) -->
-    <section class="section grid-2">
+    <!-- Clutch Comparison -->
+    <section class="section">
       <div class="card">
         <h2 class="section-title">Clutch Comparison</h2>
+        <div id="clutch-definition"></div>
         <div id="clutch-comparison"></div>
       </div>
+    </section>
+
+    <!-- Performance by Game State — separate charts -->
+    <section class="section grid-2">
       <div class="card">
-        <h2 class="section-title">Performance by Game State</h2>
-        <div id="player-game-state-chart" class="chart-container"></div>
+        <h2 class="section-title">Hitting by Game State</h2>
+        <div id="game-state-hitting" class="chart-container"></div>
+      </div>
+      <div class="card">
+        <h2 class="section-title">Passing by Game State</h2>
+        <div id="game-state-passing" class="chart-container"></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="card">
+        <h2 class="section-title">Serving by Game State</h2>
+        <div id="game-state-serving" class="chart-container"></div>
       </div>
     </section>
 

@@ -1,5 +1,5 @@
 /* ============================================================
-   VB Analyzer — Shared Application Logic
+   13-2 Statistical Deep Dive — Shared Application Logic
    ============================================================ */
 
 // Highlight active nav tab based on current page
